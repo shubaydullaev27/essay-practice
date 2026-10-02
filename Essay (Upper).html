@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essay Practice — Upper-Intermediate</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#141416;--black-soft:#232327;--yellow:#FFD530;--yellow-deep:#E7BC12;--white:#fff;--paper:#F6F6F3;--panel:#fff;--ink:#1B1B1D;--ink-soft:#5B5C60;--rule:#E4E3DC;--good:#1E8F52;--good-bg:#E6F5EB;--bad:#D1382F;--bad-bg:#FBEAE8}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Public Sans',sans-serif;line-height:1.55;font-size:16px;padding:clamp(16px,4vw,48px) clamp(12px,3vw,20px) 80px}
+.sheet{max-width:780px;margin:0 auto;background:var(--panel);border-radius:6px;overflow:hidden;box-shadow:0 1px 0 rgba(20,20,22,.04),0 24px 48px -30px rgba(20,20,22,.35)}
+.masthead{background:var(--black);color:#fff;padding:clamp(24px,5vw,40px) clamp(20px,5vw,44px) clamp(20px,4vw,26px);position:relative}
+.dot-motif{position:absolute;top:20px;right:24px;display:grid;grid-template-columns:repeat(3,7px);gap:6px}
+.dot-motif span{width:7px;height:7px;border-radius:50%;background:var(--yellow)}
+.dot-motif span:nth-child(5){background:#fff}
+.eyebrow-row{font-size:12.5px;color:rgba(255,255,255,.6);margin-bottom:14px;padding-right:50px}
+.brand{color:var(--yellow);font-weight:600}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(26px,6vw,38px);line-height:1.1;margin:0 0 8px;letter-spacing:-.01em}
+.sub{font-size:clamp(13.5px,3vw,15px);color:rgba(255,255,255,.72);margin:0;max-width:58ch}
+.progress-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:14px;padding:12px clamp(16px,5vw,44px);background:var(--black-soft);border-bottom:2px solid var(--yellow);font-size:12.5px;color:rgba(255,255,255,.65)}
+.progress-track{flex:1;height:6px;background:rgba(255,255,255,.16);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--yellow);transition:width .35s ease}
+.tally{color:#fff;font-weight:700;font-size:13px;white-space:nowrap}
+.jump-nav{display:flex;gap:8px;overflow-x:auto;padding:10px clamp(16px,5vw,44px);background:var(--panel);border-bottom:1px solid var(--rule)}
+.jump-nav a{flex:0 0 auto;font-size:12.5px;font-weight:700;color:var(--ink-soft);text-decoration:none;padding:7px 12px;border-radius:20px;border:1.5px solid var(--rule);white-space:nowrap}
+.jump-nav a:hover{color:var(--ink);border-color:var(--ink-soft)}
+.jump-nav a.done{background:var(--yellow);border-color:var(--yellow);color:var(--black)}
+section.block{padding:clamp(22px,5vw,34px) clamp(18px,5vw,44px);border-bottom:1px solid var(--rule);scroll-margin-top:60px}
+section.block:last-of-type{border-bottom:none}
+.rnum{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(20px,4vw,24px);margin:0 0 16px;position:relative;padding-bottom:8px}
+h2::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:4px;background:var(--yellow);border-radius:2px}
+.prompt{border:1.5px solid var(--black);border-radius:6px;padding:clamp(14px,3vw,22px);background:#fff;font-size:16px;line-height:1.7;margin-bottom:14px}
+.essay{width:100%;min-height:260px;resize:vertical;font-family:'Public Sans',sans-serif;font-size:16px;line-height:1.7;padding:14px 16px;border:1.5px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink)}
+.essay:focus{outline:none;border-color:var(--black);box-shadow:0 0 0 3px var(--yellow);background:#fff}
+.meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-soft);margin-top:6px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+button{font-family:'Public Sans',sans-serif;font-size:14px;font-weight:700;border-radius:5px;padding:12px 20px;cursor:pointer;border:1.5px solid transparent;min-height:44px}
+button:active{transform:translateY(1px)}
+button:disabled{opacity:.55;cursor:wait}
+.btn-check{background:var(--yellow);color:var(--black)}
+.btn-check:hover:not(:disabled){background:var(--yellow-deep)}
+.btn-ghost{background:transparent;color:var(--ink-soft);border-color:var(--rule)}
+.btn-ghost:hover{color:var(--ink);border-color:var(--ink-soft)}
+.msg{font-size:13px;font-weight:600;margin-top:14px;color:var(--ink-soft)}
+.msg.bad{color:var(--bad)}.msg.good{color:var(--good)}
+.result{margin-top:18px}
+.summary-line{font-size:14.5px;background:var(--good-bg);color:#145c36;border-radius:6px;padding:12px 14px;margin-bottom:12px}
+.gx-wrap{border:1px solid var(--rule);border-radius:10px;overflow:auto}
+.gx{width:100%;border-collapse:collapse;min-width:520px}
+.gx th{background:var(--black);color:var(--yellow);text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:11px 14px;border-bottom:2px solid var(--yellow)}
+.gx td{padding:10px 14px;font-size:13.5px;border-top:1px solid var(--rule);vertical-align:top}
+.gx tr:nth-child(even) td{background:#FAFAF9}
+.wrong{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:var(--bad);background:var(--bad-bg);padding:2px 6px;border-radius:4px}
+.right{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:var(--good);background:var(--good-bg);padding:2px 6px;border-radius:4px}
+.kind{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:4px}
+footer.note{max-width:780px;margin:18px auto 0;font-size:12px;color:var(--ink-soft);text-align:center}
+@media(max-width:620px){.controls{flex-direction:column}.controls button{width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.guide{padding:clamp(22px,5vw,34px) clamp(18px,5vw,44px) clamp(26px,5vw,38px);background:radial-gradient(circle at 8% 0%,#fbf3d5 0%,var(--paper) 42%);border-bottom:3px solid var(--black)}
+.gs-title{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(22px,5vw,28px);margin:0 0 6px}
+.gs-intro{font-size:14.5px;color:var(--ink-soft);margin:0 0 16px;max-width:62ch}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:2px}
+.tab{flex:0 0 auto;min-height:0;padding:8px 14px;font-size:13px;background:#fff;color:var(--ink-soft);border:1.5px solid var(--rule);border-radius:20px}
+.tab.on{background:var(--black);color:var(--yellow);border-color:var(--black)}
+.pane{display:none}.pane.on{display:block}
+.pane h3{font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px}
+.pane p{margin:0 0 12px;font-size:14.5px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px}
+.box{background:#fff;border:1.5px solid var(--black);border-radius:6px;padding:12px 14px;font-size:14px}
+.box b{display:block;font-family:'Fraunces',serif;font-size:16px;margin-bottom:4px}
+.words{display:inline-block;background:var(--yellow);font-weight:800;padding:3px 10px;border-radius:20px;font-size:13px}
+.part{background:#fff;border:1.5px solid var(--rule);border-left:8px solid var(--yellow);border-radius:6px;padding:12px 14px;margin-bottom:10px;font-size:14px}
+.part h4{margin:0 0 4px;font-family:'Fraunces',serif;font-size:16px}
+.part .f{font-weight:600}.part .ph{color:var(--ink-soft);margin-top:6px;font-size:13px}
+.p2{border-left-color:var(--teal)}.p3{border-left-color:var(--plum)}.p4{border-left-color:var(--rose)}
+.tk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.tk{border-radius:8px;padding:12px 14px;font-size:13.5px;border:1.5px solid}
+.tk h4{margin:0 0 6px;font-size:13px;font-weight:800}.tk ul{margin:0;padding-left:18px}
+.k1{background:#FFF4C2;border-color:var(--yellow-deep)}.k2{background:var(--teal-bg);border-color:var(--teal)}.k3{background:var(--plum-bg);border-color:var(--plum)}
+.k4{background:var(--rose-bg);border-color:var(--rose)}.k5{background:var(--good-bg);border-color:var(--good)}.k6{background:#ECECE7;border-color:var(--ink-soft)}
+.model .part{line-height:1.7}.tag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:4px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.two ul{margin:0;padding-left:18px;font-size:14px}.two li{margin-bottom:6px}
+.avoid h4{color:var(--bad)}.do h4{color:var(--good)}
+.meta .ok{color:var(--good);font-weight:700}.meta .over{color:var(--bad);font-weight:700}
+</style></head><body>
+<div class="sheet">
+<div class="masthead"><div class="dot-motif"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="eyebrow-row"><span class="brand">English Practice Sheet</span> · Upper-Intermediate</div>
+<h1>Essay Practice</h1>
+<p class="sub">Read the guide, choose a topic, write 120–150 words, then press Check my essay.</p></div>
+<div class="guide" id="guide"><h2 class="gs-title">How to write an Agree &amp; Disagree essay</h2>
+<p class="gs-intro">You get a statement. React to it and support your opinion. Use the tabs below, then write your own essay.</p>
+<div class="tabs"><button class="tab on" data-p="g1">The task</button><button class="tab" data-p="g2">Structure</button><button class="tab" data-p="g3">Language toolkit</button><button class="tab" data-p="g4">Model essay</button><button class="tab" data-p="g5">Avoid &amp; do</button></div>
+<div class="pane on" id="g1"><h3>What you must do</h3><div class="three"><div class="box"><b>1. State your view</b>Say clearly if you AGREE or DISAGREE with the statement.</div><div class="box"><b>2. Support it</b>Give detailed REASONS that explain and justify your opinion.</div><div class="box"><b>3. Illustrate it</b>Add an EXAMPLE and/or a SUGGESTION and/or a RECOMMENDATION.</div></div><p>Length: <span class="words">120–150 words</span></p></div>
+<div class="pane" id="g2"><h3>Four paragraphs</h3>
+<div class="part"><h4>1. Introduction</h4><div class="f">Paraphrase the given statement + write your position: agree or disagree.</div><div class="ph">Nowadays, … · It is often said that … · I (completely) agree / disagree with this statement because … · In my opinion, …</div></div>
+<div class="part p2"><h4>2. First body paragraph</h4><div class="f">Develop your 1st idea: topic sentence → explanation → example.</div><div class="ph">Firstly, … · One reason is that … · To begin with, … · For example, …</div></div>
+<div class="part p3"><h4>3. Second body paragraph</h4><div class="f">Develop your 2nd idea: topic sentence → explanation → example.</div><div class="ph">Secondly, … · Moreover, … · However, … · On the other hand, … · For instance, …</div></div>
+<div class="part p4"><h4>4. Conclusion</h4><div class="f">Restate your opinion in new words + your suggestions and recommendations.</div><div class="ph">In conclusion, … · To sum up, … · Overall, … · I recommend that … · I suggest that …</div></div></div>
+<div class="pane" id="g3"><h3>Six functions, six colours</h3><div class="tk-grid"><div class="tk k1"><h4>Giving an opinion</h4><ul><li>I agree / disagree</li><li>In my opinion</li><li>I believe that</li><li>Personally,</li></ul></div><div class="tk k2"><h4>Adding reasons</h4><ul><li>Firstly / Secondly</li><li>Moreover</li><li>In addition</li><li>Furthermore</li></ul></div><div class="tk k3"><h4>Giving examples</h4><ul><li>For example</li><li>For instance</li><li>such as</li><li>A good example is</li></ul></div><div class="tk k4"><h4>Showing contrast</h4><ul><li>However</li><li>On the other hand</li><li>Nevertheless</li><li>Despite this</li></ul></div><div class="tk k5"><h4>Cause &amp; effect</h4><ul><li>As a result</li><li>Therefore</li><li>This leads to</li><li>Consequently</li></ul></div><div class="tk k6"><h4>Concluding</h4><ul><li>In conclusion</li><li>To sum up</li><li>Overall</li><li>I recommend that</li></ul></div></div></div>
+<div class="pane model" id="g4"><h3>Model essay: “Investing in education is very important.”</h3><p>145 words. Read how each paragraph does its job, then write your own ideas on your own topic.</p>
+<div class="part"><span class="tag">Introduction</span><br>Nowadays, many people believe that spending money on schools and universities is one of the best decisions a country can make. I completely agree with this statement because education gives young people better jobs and valuable knowledge.</div><div class="part p2"><span class="tag">Body 1: job opportunities</span><br>Firstly, education opens the door to better job opportunities. People with a good education can apply for well-paid positions and are less likely to be unemployed. For example, a graduate with strong English and computer skills can easily find work in an international company.</div><div class="part p3"><span class="tag">Body 2: knowledge acquisition</span><br>Secondly, education helps people to acquire knowledge. Students learn how to think critically, solve problems and understand the world around them. As a result, they make wiser decisions in their everyday lives.</div><div class="part p4"><span class="tag">Conclusion: recommendation</span><br>In conclusion, investing in education benefits both individuals and society. I recommend that young people study hard and use every opportunity to learn new skills, for instance by joining free courses online.</div></div>
+<div class="pane" id="g5"><div class="two"><div class="box avoid"><h4>Avoid</h4><ul><li>Starting with your opinion only. Paraphrase the topic first.</li><li>Giving reasons with no explanation or example.</li><li>Forgetting an example, suggestion or recommendation.</li><li>Repeating the same linking word again and again.</li><li>Writing under 120 or over 150 words.</li><li>A conclusion that repeats the introduction word for word.</li></ul></div><div class="box do"><h4>Do</h4><ul><li>Plan 4 paragraphs before you write.</li><li>One clear reason per body paragraph, then explain it, then give an example.</li><li>Vary your linking words with the toolkit.</li><li>Keep the same opinion from start to end.</li><li>Check your word count before sending.</li><li>End with a recommendation the reader can act on.</li></ul></div></div></div></div>
+<div class="progress-bar"><span>Checked</span><div class="progress-track"><div class="progress-fill" id="fill"></div></div><span class="tally" id="tally"></span></div>
+<div class="jump-nav" id="nav"></div>
+<section class="block" id="who"><label class="rnum" for="stuName">Your name</label><input id="stuName" class="essay" style="min-height:0;height:48px;resize:none" placeholder="Write your full name" autocomplete="name"></section>
+<div id="topics"></div>
+</div>
+<footer class="note">Your essay is saved in this browser and sent to your teacher when you press Check my essay.</footer>
+
+<script>
+/* ===== EDIT THESE TWO THINGS ===== */
+var API_URL = "https://bitter-thunder-6c8bessay-checker.sh-ubaydullaev27.workers.dev/";   // your Cloudflare Worker URL (see worker.js)
+var LEVEL = "Upper-intermediate";
+var TASK = ["write if you agree or disagree with this statement","give detailed reasons that can support your opinion","give an example and/or a suggestion and/or a recommendation"];
+var TOPICS = [
+  {title:"Investing in education", prompt:"Investing in education is very important.", min:120, max:150},
+  {title:"Phones in schools", prompt:"Using a phone should be banned in schools.", min:120, max:150},
+  {title:"Social networks and communication", prompt:"Social networks (Telegram, Instagram etc.) influences the way people communicate.", min:120, max:150},
+  {title:"Dependence on mobile phones", prompt:"Nowadays people are becoming increasingly dependent on mobile phones.", min:120, max:150},
+  {title:"Travel and cultures", prompt:"Traveling is the best way to learn about different cultures.", min:120, max:150},
+  {title:"Creativity and technical skills", prompt:"Creativity is as important as technical skills in the workplace.", min:120, max:150},
+  {title:"Watching the news", prompt:"People should avoid watching too much news.", min:120, max:150}
+];
+/* ================================= */
+
+var KEY="essay_platform_v1", store={};
+try{store=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function words(t){return t.trim()?t.trim().split(/\s+/).length:0}
+
+var nm=document.getElementById("stuName");nm.value=store.name||"";nm.addEventListener("input",function(){store.name=nm.value;save()});
+var nav=document.getElementById("nav"), box=document.getElementById("topics");
+TOPICS.forEach(function(t,i){
+  var id="t"+i, s=store[id]||{};
+  nav.insertAdjacentHTML("beforeend",'<a href="#section-'+id+'" id="nav-'+id+'">'+(i+1)+'</a>');
+  box.insertAdjacentHTML("beforeend",
+   '<section class="block" id="section-'+id+'"><div class="rnum">Topic '+(i+1)+'</div><h2>'+esc(t.title)+'</h2>'+
+   '<div class="prompt"><strong>'+esc(t.prompt)+'</strong><div style="margin-top:10px;font-size:14.5px">In your essay, you should:</div><ul style="margin:6px 0 0;padding-left:20px;font-size:14.5px">'+TASK.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul></div>'+
+   '<textarea class="essay" id="ta-'+id+'" placeholder="Write your essay here…" spellcheck="false"></textarea>'+
+   '<div class="meta"><span id="wc-'+id+'"></span><span>Target: '+t.min+'–'+t.max+' words</span></div>'+
+   '<div class="controls"><button class="btn-check" id="chk-'+id+'">Check my essay</button><button class="btn-ghost" id="clr-'+id+'">Clear</button></div>'+
+   '<div class="msg" id="msg-'+id+'"></div><div class="result" id="res-'+id+'"></div></section>');
+  var ta=document.getElementById("ta-"+id); ta.value=s.text||"";
+  ta.addEventListener("input",function(){store[id]=store[id]||{};store[id].text=ta.value;save();count(id,t)});
+  document.getElementById("chk-"+id).onclick=function(){check(id,t)};
+  document.getElementById("clr-"+id).onclick=function(){if(!ta.value||confirm("Clear this essay?")){ta.value="";store[id]={};save();count(id,t);document.getElementById("res-"+id).innerHTML="";document.getElementById("msg-"+id).textContent="";progress()}};
+  count(id,t); if(s.result)render(id,s.result);
+});
+progress();
+
+function count(id,t){var n=words(document.getElementById("ta-"+id).value),el=document.getElementById("wc-"+id);el.textContent=n+" words"+(n>t.max?" — too long":n<t.min?" — "+(t.min-n)+" more to go":" — good length");el.className=n>t.max?"over":n>=t.min?"ok":""}
+function progress(){var d=0;TOPICS.forEach(function(t,i){var id="t"+i,ok=store[id]&&store[id].done;if(ok)d++;document.getElementById("nav-"+id).classList.toggle("done",!!ok)});
+  document.getElementById("fill").style.width=(TOPICS.length?d/TOPICS.length*100:0)+"%";document.getElementById("tally").textContent=d+" / "+TOPICS.length}
+
+function render(id,r){
+  var errs=r.errors||[], h="";
+  if(r.summary)h+='<div class="summary-line">'+esc(r.summary)+'</div>';
+  if(!errs.length)h+='<div class="msg good">No grammar mistakes found. Great work!</div>';
+  else{h+='<div class="msg">'+errs.length+' mistake'+(errs.length>1?'s':'')+' found</div><div class="gx-wrap"><table class="gx"><thead><tr><th>Your sentence</th><th>Correction</th><th>Why</th></tr></thead><tbody>';
+    errs.forEach(function(e){h+='<tr><td><span class="wrong">'+esc(e.original)+'</span><span class="kind">'+esc(e.type)+'</span></td><td><span class="right">'+esc(e.correction)+'</span></td><td>'+esc(e.explanation)+'</td></tr>'});
+    h+='</tbody></table></div>'}
+  document.getElementById("res-"+id).innerHTML=h;
+}
+
+async function check(id,t){
+  var ta=document.getElementById("ta-"+id), msg=document.getElementById("msg-"+id), btn=document.getElementById("chk-"+id), n=words(ta.value);
+  msg.className="msg";
+  var who=nm.value.trim();
+  if(!who){msg.className="msg bad";msg.textContent="Write your name at the top first.";document.getElementById("who").scrollIntoView({behavior:"smooth"});nm.focus();return}
+  if(n<t.min){msg.className="msg bad";msg.textContent="Write at least "+t.min+" words. You have "+n+".";return}
+  if(API_URL.indexOf("http")!==0){msg.className="msg bad";msg.textContent="The checker is not connected yet. Ask your teacher.";return}
+  btn.disabled=true;btn.textContent="Checking…";msg.textContent="The AI is reading your essay. This takes a few seconds.";
+  try{
+    var r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:who,title:t.title,topic:t.prompt,level:LEVEL,words:n,essay:ta.value})});
+    if(!r.ok)throw new Error("Server error "+r.status);
+    var d=await r.json(), txt=(d.text||"").replace(/```json|```/g,"").trim(), res=null;
+    if(txt){try{res=JSON.parse(txt)}catch(e){}}
+    store[id]=store[id]||{};store[id].text=ta.value;store[id].done=true;store[id].result=res;save();
+    if(res)render(id,res);else document.getElementById("res-"+id).innerHTML="";
+    msg.className="msg good";msg.textContent="Your essay was sent to your teacher.";
+    progress();
+    document.getElementById("res-"+id).scrollIntoView({behavior:"smooth",block:"nearest"});
+  }catch(e){msg.className="msg bad";msg.textContent="Your essay was not sent. Check your internet and try again."}
+  btn.disabled=false;btn.textContent="Check my essay";
+}
+document.querySelectorAll(".tab").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tab,.pane").forEach(function(e){e.classList.remove("on")});b.classList.add("on");document.getElementById(b.dataset.p).classList.add("on")}});
+</script></body></html>
