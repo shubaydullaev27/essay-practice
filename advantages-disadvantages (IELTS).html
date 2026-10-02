@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essay Practice — Advantages &amp; Disadvantages</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#141416;--black-soft:#232327;--yellow:#FFD530;--yellow-deep:#E7BC12;--white:#fff;--paper:#F6F6F3;--panel:#fff;--ink:#1B1B1D;--ink-soft:#5B5C60;--rule:#E4E3DC;--good:#1E8F52;--good-bg:#E6F5EB;--bad:#D1382F;--bad-bg:#FBEAE8}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Public Sans',sans-serif;line-height:1.55;font-size:16px;padding:clamp(16px,4vw,48px) clamp(12px,3vw,20px) 80px}
+.sheet{max-width:780px;margin:0 auto;background:var(--panel);border-radius:6px;overflow:hidden;box-shadow:0 1px 0 rgba(20,20,22,.04),0 24px 48px -30px rgba(20,20,22,.35)}
+.masthead{background:var(--black);color:#fff;padding:clamp(24px,5vw,40px) clamp(20px,5vw,44px) clamp(20px,4vw,26px);position:relative}
+.dot-motif{position:absolute;top:20px;right:24px;display:grid;grid-template-columns:repeat(3,7px);gap:6px}
+.dot-motif span{width:7px;height:7px;border-radius:50%;background:var(--yellow)}
+.dot-motif span:nth-child(5){background:#fff}
+.eyebrow-row{font-size:12.5px;color:rgba(255,255,255,.6);margin-bottom:14px;padding-right:50px}
+.brand{color:var(--yellow);font-weight:600}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(26px,6vw,38px);line-height:1.1;margin:0 0 8px;letter-spacing:-.01em}
+.sub{font-size:clamp(13.5px,3vw,15px);color:rgba(255,255,255,.72);margin:0;max-width:58ch}
+.progress-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:14px;padding:12px clamp(16px,5vw,44px);background:var(--black-soft);border-bottom:2px solid var(--yellow);font-size:12.5px;color:rgba(255,255,255,.65)}
+.progress-track{flex:1;height:6px;background:rgba(255,255,255,.16);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--yellow);transition:width .35s ease}
+.tally{color:#fff;font-weight:700;font-size:13px;white-space:nowrap}
+.jump-nav{display:flex;gap:8px;overflow-x:auto;padding:10px clamp(16px,5vw,44px);background:var(--panel);border-bottom:1px solid var(--rule)}
+.jump-nav a{flex:0 0 auto;font-size:12.5px;font-weight:700;color:var(--ink-soft);text-decoration:none;padding:7px 12px;border-radius:20px;border:1.5px solid var(--rule);white-space:nowrap}
+.jump-nav a:hover{color:var(--ink);border-color:var(--ink-soft)}
+.jump-nav a.done{background:var(--yellow);border-color:var(--yellow);color:var(--black)}
+section.block{padding:clamp(22px,5vw,34px) clamp(18px,5vw,44px);border-bottom:1px solid var(--rule);scroll-margin-top:60px}
+section.block:last-of-type{border-bottom:none}
+.rnum{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(20px,4vw,24px);margin:0 0 16px;position:relative;padding-bottom:8px}
+h2::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:4px;background:var(--yellow);border-radius:2px}
+.prompt{border:1.5px solid var(--black);border-radius:6px;padding:clamp(14px,3vw,22px);background:#fff;font-size:16px;line-height:1.7;margin-bottom:14px}
+.essay{width:100%;min-height:260px;resize:vertical;font-family:'Public Sans',sans-serif;font-size:16px;line-height:1.7;padding:14px 16px;border:1.5px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink)}
+.essay:focus{outline:none;border-color:var(--black);box-shadow:0 0 0 3px var(--yellow);background:#fff}
+.meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-soft);margin-top:6px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+button{font-family:'Public Sans',sans-serif;font-size:14px;font-weight:700;border-radius:5px;padding:12px 20px;cursor:pointer;border:1.5px solid transparent;min-height:44px}
+button:active{transform:translateY(1px)}
+button:disabled{opacity:.55;cursor:wait}
+.btn-check{background:var(--yellow);color:var(--black)}
+.btn-check:hover:not(:disabled){background:var(--yellow-deep)}
+.btn-ghost{background:transparent;color:var(--ink-soft);border-color:var(--rule)}
+.btn-ghost:hover{color:var(--ink);border-color:var(--ink-soft)}
+.msg{font-size:13px;font-weight:600;margin-top:14px;color:var(--ink-soft)}
+.msg.bad{color:var(--bad)}.msg.good{color:var(--good)}
+.result{margin-top:18px}
+.summary-line{font-size:14.5px;background:var(--good-bg);color:#145c36;border-radius:6px;padding:12px 14px;margin-bottom:12px}
+.gx-wrap{border:1px solid var(--rule);border-radius:10px;overflow:auto}
+.gx{width:100%;border-collapse:collapse;min-width:520px}
+.gx th{background:var(--black);color:var(--yellow);text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:11px 14px;border-bottom:2px solid var(--yellow)}
+.gx td{padding:10px 14px;font-size:13.5px;border-top:1px solid var(--rule);vertical-align:top}
+.gx tr:nth-child(even) td{background:#FAFAF9}
+.wrong{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:var(--bad);background:var(--bad-bg);padding:2px 6px;border-radius:4px}
+.right{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:var(--good);background:var(--good-bg);padding:2px 6px;border-radius:4px}
+.kind{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:4px}
+footer.note{max-width:780px;margin:18px auto 0;font-size:12px;color:var(--ink-soft);text-align:center}
+@media(max-width:620px){.controls{flex-direction:column}.controls button{width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.guide{padding:clamp(22px,5vw,34px) clamp(18px,5vw,44px) clamp(26px,5vw,38px);background:radial-gradient(circle at 8% 0%,#fbf3d5 0%,var(--paper) 42%);border-bottom:3px solid var(--black)}
+.gs-title{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(22px,5vw,28px);margin:0 0 6px}
+.gs-intro{font-size:14.5px;color:var(--ink-soft);margin:0 0 16px;max-width:62ch}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:2px}
+.tab{flex:0 0 auto;min-height:0;padding:8px 14px;font-size:13px;background:#fff;color:var(--ink-soft);border:1.5px solid var(--rule);border-radius:20px}
+.tab.on{background:var(--black);color:var(--yellow);border-color:var(--black)}
+.pane{display:none}.pane.on{display:block}
+.pane h3{font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px}
+.pane p{margin:0 0 12px;font-size:14.5px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px}
+.box{background:#fff;border:1.5px solid var(--black);border-radius:6px;padding:12px 14px;font-size:14px}
+.box b{display:block;font-family:'Fraunces',serif;font-size:16px;margin-bottom:4px}
+.words{display:inline-block;background:var(--yellow);font-weight:800;padding:3px 10px;border-radius:20px;font-size:13px}
+.part{background:#fff;border:1.5px solid var(--rule);border-left:8px solid var(--yellow);border-radius:6px;padding:12px 14px;margin-bottom:10px;font-size:14px}
+.part h4{margin:0 0 4px;font-family:'Fraunces',serif;font-size:16px}
+.part .f{font-weight:600}.part .ph{color:var(--ink-soft);margin-top:6px;font-size:13px}
+.p2{border-left-color:var(--teal)}.p3{border-left-color:var(--plum)}.p4{border-left-color:var(--rose)}
+.tk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.tk{border-radius:8px;padding:12px 14px;font-size:13.5px;border:1.5px solid}
+.tk h4{margin:0 0 6px;font-size:13px;font-weight:800}.tk ul{margin:0;padding-left:18px}
+.k1{background:#FFF4C2;border-color:var(--yellow-deep)}.k2{background:var(--teal-bg);border-color:var(--teal)}.k3{background:var(--plum-bg);border-color:var(--plum)}
+.k4{background:var(--rose-bg);border-color:var(--rose)}.k5{background:var(--good-bg);border-color:var(--good)}.k6{background:#ECECE7;border-color:var(--ink-soft)}
+.model .part{line-height:1.7}.tag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:4px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.two ul{margin:0;padding-left:18px;font-size:14px}.two li{margin-bottom:6px}
+.avoid h4{color:var(--bad)}.do h4{color:var(--good)}
+.meta .ok{color:var(--good);font-weight:700}.meta .over{color:var(--bad);font-weight:700}
+
+.subhead{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:22px 0 8px}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.tool{min-height:0;padding:7px 12px;font-size:12.5px;border-radius:20px;border:1.5px solid var(--rule);background:#fff;color:var(--ink)}
+.tool.h1{background:#FFE98A}.tool.h2{background:#BFE8CF}.tool.h3{background:#F7C6D6}.tool.h4{background:#BDE3E1}.tool.h5{background:#DCC9FA}
+.tool.on{border-color:var(--black);box-shadow:0 0 0 2px var(--black)}
+.hint{font-size:12.5px;color:var(--ink-soft);margin-bottom:8px}
+.sample{border:1.5px solid var(--black);border-radius:6px;padding:clamp(14px,3vw,22px);background:#fff;font-size:16px;line-height:1.8}
+.sample[data-tool="erase"] mark{cursor:pointer;outline:1px dashed var(--bad)}
+.sp{margin:0 0 12px}.sp:last-child{margin:0}
+mark{border-radius:3px;padding:1px 2px;color:inherit}
+mark.h1{background:#FFE98A}mark.h2{background:#BFE8CF}mark.h3{background:#F7C6D6}mark.h4{background:#BDE3E1}mark.h5{background:#DCC9FA}
+.notes{min-height:90px}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:10px 0}
+.legend span{padding:8px 12px;border-radius:6px;font-size:13.5px;font-weight:600}
+</style></head><body>
+<div class="sheet">
+<div class="masthead"><div class="dot-motif"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="eyebrow-row"><span class="brand">English Practice Sheet</span> · IELTS Task 2</div>
+<h1>Advantages &amp; Disadvantages</h1>
+<p class="sub">Study the guide, analyse the band 9 sample, then write your own essay on the same topic.</p></div>
+<div class="guide" id="guide"><h2 class="gs-title">Advantages &amp; disadvantages essay</h2>
+<p class="gs-intro">Learn the essay type, study the toolkit, analyse a band 9 sample, then write your own essay on the same topic.</p>
+<div class="tabs"><button class="tab on" data-p="g1">Essay type</button><button class="tab" data-p="g2">Structure</button><button class="tab" data-p="g3">Language toolkit</button><button class="tab" data-p="g4">How to analyse</button></div>
+<div class="pane on" id="g1"><h3>What is it?</h3><p>You discuss the good points (advantages) and the bad points (disadvantages) of a trend, change or situation.</p><div class="three"><div class="box"><b>Typical questions</b>“What are the advantages and disadvantages of …?” · “Discuss the advantages and disadvantages …” · “… Give your own opinion.”</div><div class="box"><b>You must</b>Cover BOTH sides, support each point with explanation and an example, and answer exactly what the question asks.</div><div class="box"><b>Opinion?</b>Give your own opinion only if the question asks for it, or if you want a clear final judgement in the conclusion.</div></div><p>Length: at least <span class="words">250 words</span></p></div>
+<div class="pane" id="g2"><h3>Four paragraphs</h3>
+<div class="part"><h4>1. Introduction</h4><div class="f">Paraphrase the topic, say you will discuss both sides (and your view if asked).</div><div class="ph">Many … now … · This trend has benefits, but also drawbacks. · In this essay, I will examine both sides …</div></div>
+<div class="part p2"><h4>2. Advantages</h4><div class="f">Main advantage → explain → example. Add a second advantage if you can.</div><div class="ph">The main advantage is … · In addition, … · For example, …</div></div>
+<div class="part p3"><h4>3. Disadvantages</h4><div class="f">Main disadvantage → explain → example. Use contrast to move from advantages.</div><div class="ph">However, … · On the other hand, … · A further drawback is …</div></div>
+<div class="part p4"><h4>4. Conclusion</h4><div class="f">Sum up both sides and give a balanced view or your opinion.</div><div class="ph">Overall, … · On balance, … · I believe the benefits outweigh the drawbacks.</div></div></div>
+<div class="pane" id="g3"><h3>Language toolkit</h3><div class="tk-grid"><div class="tk k5"><h4>Advantages (verbs)</h4><ul><li>improves / enhances / benefits</li><li>helps people (to) do</li><li>allows / enables people to do</li><li>offers / provides opportunities</li><li>boosts / creates / increases</li></ul></div><div class="tk k4"><h4>Disadvantages (verbs)</h4><ul><li>worsens / exacerbates a problem</li><li>hinders / hampers / obstructs</li><li>prevents people from doing</li><li>deprives people of a chance</li><li>reduces / damages / destroys</li></ul></div><div class="tk k3"><h4>Cause and result</h4><ul><li>leads to / results in</li><li>brings about / gives rise to</li><li>is responsible for</li><li>triggers (anxiety, unrest)</li><li>ensures that …</li></ul></div><div class="tk k2"><h4>Linking words</h4><ul><li>In addition / Moreover / Furthermore</li><li>However / Nevertheless</li><li>On the other hand</li><li>While / Although …</li><li>For example / For instance</li></ul></div><div class="tk k1"><h4>Sentence frames</h4><ul><li>One major advantage of … is that …</li><li>A further drawback is that …</li><li>… has a positive / negative impact ON …</li><li>This allows people to …</li></ul></div><div class="tk k6"><h4>Concluding</h4><ul><li>Overall, …</li><li>On balance, …</li><li>In conclusion, …</li><li>The benefits outweigh the drawbacks.</li></ul></div></div><p style="margin-top:12px"><b>Watch the grammar:</b> impact <b>ON</b> · prevent people <b>FROM</b> doing · deprive people <b>OF</b> · allow people <b>TO</b> do. “Deteriorate” has no object: say <i>the situation deteriorated</i>.</p></div>
+<div class="pane" id="g4"><h3>How to use the band 9 sample</h3><p>1. Read the sample once. 2. Pick a colour below, then select words in the sample to highlight them. 3. Write 2–3 notes about why it is strong. 4. Write your own essay under it.</p><div class="legend"><span style="background:#FFE98A">Opinion / position</span><span style="background:#BFE8CF">Advantage language</span><span style="background:#F7C6D6">Disadvantage language</span><span style="background:#BDE3E1">Linking words</span><span style="background:#DCC9FA">Useful vocabulary</span></div><p>To remove a highlight, choose <b>Eraser</b> and click it.</p></div></div>
+<div class="progress-bar"><span>Sent</span><div class="progress-track"><div class="progress-fill" id="fill"></div></div><span class="tally" id="tally"></span></div>
+<div class="jump-nav" id="nav"></div>
+<section class="block" id="who"><label class="rnum" for="stuName">Your name</label><input id="stuName" class="essay" style="min-height:0;height:48px;resize:none" placeholder="Write your full name" autocomplete="name"></section>
+<div id="topics"></div>
+</div>
+<footer class="note">Your work is saved in this browser. Your essay is sent to your teacher when you press Check my essay. Language toolkit adapted from the IELTS with Fiona handout.</footer>
+<script>
+var API_URL="https://bitter-thunder-6c8bessay-checker.sh-ubaydullaev27.workers.dev/";
+var LEVEL="IELTS Task 2: advantages and disadvantages", MIN=250, MAX=320;
+var CATS=[["h1","Opinion"],["h2","Advantage language"],["h3","Disadvantage language"],["h4","Linking words"],["h5","Useful vocabulary"]];
+var TOPICS=[
+ {
+  "title": "Online meetings",
+  "prompt": "Business meetings and training are increasingly held online. What are the advantages and disadvantages of this?",
+  "sample": [
+   "Many companies now run their meetings and training sessions online instead of face to face. This shift brings clear benefits in terms of cost and flexibility, although it also carries some real drawbacks for team relationships. In this essay, I will examine both sides before explaining why I believe the advantages are greater.",
+   "The main advantage of virtual meetings is that they save time and money. Employees no longer need to commute or travel abroad for a single conference, which reduces expenses and frees up working hours. This is particularly valuable for parents, who can manage their schedules more easily from home. In addition, online training can be recorded, so staff are able to revisit the material whenever they need it. Furthermore, companies can invite experts from other countries without paying for their flights.",
+   "However, working remotely can weaken the social side of a workplace. When colleagues rarely meet in person, it is harder to build trust, and misunderstandings are more likely because body language is difficult to read on a screen. For instance, a new employee may hesitate to ask questions during a large video call, whereas in an office they could simply approach a coworker afterwards. Technical problems, such as an unstable connection, can also interrupt the discussion and waste everyone's time.",
+   "Overall, online meetings make work more efficient and convenient, but they can damage the sense of teamwork. I believe the benefits outweigh the drawbacks, provided that companies still organise occasional face-to-face events to keep relationships strong. This balanced approach would protect both productivity and the human side of work."
+  ]
+ },
+ {
+  "title": "Gap year",
+  "prompt": "In some countries, young people are encouraged to work or travel for a year between school and university. Discuss the advantages and disadvantages of this.",
+  "sample": [
+   "In several countries, school leavers are encouraged to spend a year working or travelling before they start university. This trend has obvious benefits for personal development, but it also involves certain risks. I will discuss both aspects and then give my own view.",
+   "One significant advantage is that a gap year helps young people mature. By earning a living or exploring unfamiliar places, they gain independence and a broader understanding of the world, which can make them more focused students later on. Moreover, a year of work allows them to save money, which eases the financial pressure of tuition fees. For example, a student who works in a café for twelve months may return to study with both savings and stronger communication skills. Furthermore, employers often value this kind of experience, so graduates may find it easier to secure good jobs later.",
+   "On the other hand, taking time off can hinder academic progress. Some young people lose the habit of studying and find it difficult to readapt to classroom life, while others never return to education at all. As a result, the break may delay graduation and increase the total cost of education. A gap year can also be expensive when it involves long-distance travel, which puts students from poorer families at a disadvantage.",
+   "In conclusion, a gap year offers valuable life experience but carries the danger of losing motivation. On balance, I believe it is worthwhile as long as students have a clear plan for the year and a confirmed place at university afterwards. Without such preparation, the year may simply be wasted."
+  ]
+ },
+ {
+  "title": "Tourism",
+  "prompt": "Tourism has grown rapidly over the last fifty years. Some people say it harms local communities and the environment, while others say it benefits the economy. Discuss the advantages and disadvantages and give your own opinion.",
+  "sample": [
+   "International tourism has expanded enormously over the past fifty years. While it undoubtedly boosts national economies, it also puts pressure on local people and natural environments. In this essay, I will look at both sides and argue that tourism is beneficial only when it is carefully managed.",
+   "The principal advantage of tourism is economic. It creates jobs in hotels, restaurants and transport, and it generates tax revenue that governments can invest in roads, schools and hospitals. In addition, it encourages cultural exchange, since visitors and locals learn about each other's traditions. For instance, many small towns have kept traditional crafts alive because tourists are willing to pay for them. Moreover, local farmers and artists gain a new market for their products, which strengthens small businesses.",
+   "Nevertheless, there are serious disadvantages. Mass tourism can damage fragile habitats and historic sites, and it often leads to pollution and litter. Furthermore, rising demand drives up property prices, which can deprive local residents of affordable housing. Employment is also seasonal in many resorts, so people may lose their income once the busy summer months are over. Over time, these pressures can make residents feel that their own home no longer belongs to them.",
+   "Overall, tourism can bring prosperity, but it can also harm the communities it depends on. In my opinion, governments should limit visitor numbers and reinvest a share of the profits in protecting local people and the environment. Only then can visitors and residents benefit equally from the industry. Without this balance, the damage may become permanent."
+  ]
+ },
+ {
+  "title": "Experience versus knowledge",
+  "prompt": "Nowadays, experience is more valued in the workplace than knowledge in many countries. Do you think the advantages of this outweigh the disadvantages?",
+  "sample": [
+   "In many countries, employers now prefer candidates with practical experience over those with theoretical knowledge. This approach has clear benefits for productivity, but it also carries some risks for professions that depend on formal training. In my opinion, the advantages outweigh the disadvantages, and I will explain why.",
+   "The main advantage of valuing experience is that it produces workers who can perform tasks immediately. A person who has spent several years in a factory or an office already knows how systems work in practice, so companies spend less time and money on training. In addition, experienced employees tend to solve problems faster because they have faced similar situations before. For example, a technician who has repaired hundreds of machines can often diagnose a fault in minutes, whereas a graduate may need to consult a manual.",
+   "However, there are disadvantages. Giving too much weight to experience can put young graduates at a disadvantage, as they struggle to find a first job because they have no work history. It may also discourage people from continuing their education, which could reduce innovation in the long term. Furthermore, in fields such as medicine or engineering, practical skill without solid theory can put lives at risk. Even so, these problems can be reduced if employers offer internships and training programmes.",
+   "In conclusion, although knowledge remains essential, giving priority to experience helps companies work efficiently and keeps employees adaptable. On balance, I believe the benefits outweigh the drawbacks, provided that new graduates are given real opportunities to gain practical skills."
+  ]
+ },
+ {
+  "title": "Technology in the arts",
+  "prompt": "Nowadays, technology is influencing modern art in areas such as design, painting and film. Do you think this is a positive or negative development?",
+  "sample": [
+   "Technology now plays a major role in design, painting and film. Although some critics worry that artists are losing traditional skills, I believe this is a positive development because it expands creative possibilities. In this essay, I will discuss both sides and explain my view.",
+   "The main concern is that digital tools may weaken basic craft skills. Students who rely on tablets and software may never learn to draw accurately by hand or to mix paint, which hampers their understanding of colour and form. Moreover, automatic features can make the creative process too easy, so the final work may lack originality. For instance, a designer who depends on ready-made templates may struggle when asked to sketch an idea on paper. Therefore, schools must protect traditional training.",
+   "Nevertheless, the benefits are considerable. Technology gives artists new ways to express their ideas, such as 3D modelling or computer-generated imagery in films that would be impossible to create by hand. It also allows creators to work faster and to share their work with a global audience through the internet. In addition, digital tools make art more accessible, since beginners can practise without expensive materials. A young painter, for example, can experiment with hundreds of colour combinations on a tablet at no cost.",
+   "Overall, technology may reduce some traditional skills, but it enhances creativity and opens the arts to more people. I therefore consider it a positive development, as long as art schools continue to teach basic techniques alongside digital ones. This balance would allow future artists to combine tradition with innovation."
+  ]
+ },
+ {
+  "title": "Ageing population",
+  "prompt": "In many countries, life expectancy is increasing. Discuss the advantages and disadvantages of this situation and give your opinion.",
+  "sample": [
+   "Thanks to better healthcare and living conditions, people in many countries are now living much longer than previous generations. This development has important benefits for families and communities, but it also creates serious challenges. I will discuss both sides before giving my own opinion.",
+   "The most obvious disadvantage is the pressure on public services. As the number of elderly citizens grows, hospitals and care homes must treat more patients, which increases government spending and can lead to long waiting times. In addition, fewer young workers are available to pay the taxes that support pensions. In some countries, for example, the state has already had to raise the retirement age because the system could no longer cope. Consequently, families may also face higher costs for private care.",
+   "On the other hand, longer lives bring valuable benefits. Older people have a wealth of experience that they can pass on to their families, and many remain active, healthy and willing to help, for instance by looking after grandchildren or working as volunteers. This allows young parents to continue their careers and strengthens bonds between generations. Furthermore, a longer life gives individuals more time to enjoy their hobbies, travel and spend time with loved ones.",
+   "In conclusion, an ageing population puts a strain on healthcare and pensions, yet it also enriches families and society. In my opinion, the advantages are greater, provided that governments invest in healthcare and encourage people to stay healthy and active for as long as possible. Only then can longer lives truly become a gift rather than a burden."
+  ]
+ }
+];
+var KEY="essay_platform_advdis_v1", store={}, tool=null;
+try{store=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function words(t){return t.trim()?t.trim().split(/\s+/).length:0}
+function st(id){return store[id]=store[id]||{}}
+function $(i){return document.getElementById(i)}
+var nm=$("stuName");nm.value=store.name||"";nm.addEventListener("input",function(){store.name=nm.value;save()});
+var nav=$("nav"),box=$("topics");
+TOPICS.forEach(function(t,i){
+  var id="t"+i;
+  nav.insertAdjacentHTML("beforeend",'<a href="#section-'+id+'" id="nav-'+id+'">'+(i+1)+'</a>');
+  box.insertAdjacentHTML("beforeend",
+   '<section class="block" id="section-'+id+'"><div class="rnum">Topic '+(i+1)+'</div><h2>'+esc(t.title)+'</h2>'+
+   '<div class="prompt"><strong>'+esc(t.prompt)+'</strong></div>'+
+   '<div class="subhead">Band 9 sample: highlight and analyse</div>'+
+   '<div class="toolbar" id="tb-'+id+'">'+CATS.map(function(c){return '<button class="tool '+c[0]+'" data-t="'+c[0]+'">'+c[1]+'</button>'}).join("")+'<button class="tool" data-t="erase">Eraser</button><button class="tool" data-t="clear">Clear all</button></div>'+
+   '<div class="hint">Choose a colour, then select words in the sample. Tap the colour again to stop.</div>'+
+   '<div class="sample" id="sm-'+id+'"></div>'+
+   '<div class="subhead">My analysis notes</div><textarea class="essay notes" id="nt-'+id+'" placeholder="Why is this a band 9 essay? Write 2–3 observations."></textarea>'+
+   '<div class="subhead">Your essay on the same topic</div>'+
+   '<textarea class="essay" id="ta-'+id+'" placeholder="Write your essay here…" spellcheck="false"></textarea>'+
+   '<div class="meta"><span id="wc-'+id+'"></span><span>Target: '+MIN+'–'+MAX+' words</span></div>'+
+   '<div class="controls"><button class="btn-check" id="chk-'+id+'">Check my essay</button><button class="btn-ghost" id="clr-'+id+'">Clear</button></div>'+
+   '<div class="msg" id="msg-'+id+'"></div><div class="result" id="res-'+id+'"></div></section>');
+  var s=st(id),ta=$("ta-"+id),nt=$("nt-"+id);
+  ta.value=s.text||"";nt.value=s.notes||"";draw(id);count(id);
+  ta.addEventListener("input",function(){st(id).text=ta.value;save();count(id)});
+  nt.addEventListener("input",function(){st(id).notes=nt.value;save()});
+  $("tb-"+id).addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var k=b.dataset.t;
+    if(k==="clear"){if(confirm("Remove all highlights in this sample?")){st(id).hl=[];save();draw(id)}return}
+    tool=(tool===k)?null:k;syncTools()});
+  $("sm-"+id).addEventListener("click",function(e){if(tool!=="erase")return;var m=e.target.closest("mark");if(!m)return;st(id).hl.splice(+m.dataset.k,1);save();draw(id)});
+  $("chk-"+id).onclick=function(){check(id,t)};
+  $("clr-"+id).onclick=function(){if(!ta.value||confirm("Clear your essay?")){ta.value="";var o=st(id);o.text="";o.done=false;o.result=null;save();count(id);$("res-"+id).innerHTML="";$("msg-"+id).textContent="";progress()}};
+  if(s.result)render(id,s.result);
+});
+progress();
+function syncTools(){document.querySelectorAll(".tool").forEach(function(b){b.classList.toggle("on",b.dataset.t===tool)});document.querySelectorAll(".sample").forEach(function(x){x.dataset.tool=tool||""})}
+function draw(id){var t=TOPICS[+id.slice(1)],hl=st(id).hl||[];
+  $("sm-"+id).innerHTML=t.sample.map(function(p,pi){var rs=[];hl.forEach(function(h,k){if(h.p===pi)rs.push({s:h.s,e:h.e,c:h.c,k:k})});
+    rs.sort(function(a,b){return a.s-b.s});var out="",pos=0;
+    rs.forEach(function(r){out+=esc(p.slice(pos,r.s))+'<mark class="'+r.c+'" data-k="'+r.k+'">'+esc(p.slice(r.s,r.e))+'</mark>';pos=r.e});
+    return '<p class="sp" data-id="'+id+'" data-p="'+pi+'">'+out+esc(p.slice(pos))+'</p>'}).join("")}
+function up(n){var el=n.nodeType===3?n.parentElement:n;return el&&el.closest?el.closest(".sp"):null}
+function applySel(){if(!tool||tool==="erase")return;var sel=window.getSelection();if(!sel.rangeCount||sel.isCollapsed)return;
+  var r=sel.getRangeAt(0),a=up(r.startContainer),b=up(r.endContainer);if(!a||a!==b)return;
+  var pre=document.createRange();pre.selectNodeContents(a);pre.setEnd(r.startContainer,r.startOffset);
+  var txt=a.textContent,s=pre.toString().length,e=s+r.toString().length;
+  while(s<e&&/\s/.test(txt[s]))s++;while(e>s&&/\s/.test(txt[e-1]))e--;if(e<=s)return;
+  var id=a.dataset.id,p=+a.dataset.p,o=st(id);
+  o.hl=(o.hl||[]).filter(function(x){return x.p!==p||x.e<=s||x.s>=e});o.hl.push({p:p,s:s,e:e,c:tool});
+  save();draw(id);sel.removeAllRanges()}
+var tm;document.addEventListener("selectionchange",function(){clearTimeout(tm);tm=setTimeout(applySel,600)});
+document.addEventListener("mouseup",function(){setTimeout(applySel,20)});
+function count(id){var n=words($("ta-"+id).value),el=$("wc-"+id);el.textContent=n+" words"+(n>MAX?" — too long":n<MIN?" — "+(MIN-n)+" more to go":" — good length");el.className=n>MAX?"over":n>=MIN?"ok":""}
+function progress(){var d=0;TOPICS.forEach(function(t,i){var id="t"+i,ok=st(id).done;if(ok)d++;$("nav-"+id).classList.toggle("done",!!ok)});
+  $("fill").style.width=(d/TOPICS.length*100)+"%";$("tally").textContent=d+" / "+TOPICS.length}
+function render(id,r){var errs=r.errors||[],h="";if(r.summary)h+='<div class="summary-line">'+esc(r.summary)+'</div>';
+  if(errs.length){h+='<div class="gx-wrap"><table class="gx"><thead><tr><th>Your sentence</th><th>Correction</th><th>Why</th></tr></thead><tbody>';
+    errs.forEach(function(e){h+='<tr><td><span class="wrong">'+esc(e.original)+'</span><span class="kind">'+esc(e.type)+'</span></td><td><span class="right">'+esc(e.correction)+'</span></td><td>'+esc(e.explanation)+'</td></tr>'});h+='</tbody></table></div>'}
+  $("res-"+id).innerHTML=h}
+async function check(id,t){
+  var ta=$("ta-"+id),msg=$("msg-"+id),btn=$("chk-"+id),n=words(ta.value);msg.className="msg";
+  var who=nm.value.trim();
+  if(!who){msg.className="msg bad";msg.textContent="Write your name at the top first.";$("who").scrollIntoView({behavior:"smooth"});nm.focus();return}
+  if(n<MIN){msg.className="msg bad";msg.textContent="Write at least "+MIN+" words. You have "+n+".";return}
+  btn.disabled=true;btn.textContent="Sending…";msg.textContent="Sending your essay…";
+  try{
+    var r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:who,title:"[Adv & Disadv] "+t.title,topic:t.prompt,level:LEVEL,words:n,essay:ta.value})});
+    if(!r.ok)throw new Error("Server error "+r.status);
+    var d=await r.json(),txt=(d.text||"").replace(/```json|```/g,"").trim(),res=null;
+    if(txt){try{res=JSON.parse(txt)}catch(e){}}
+    var o=st(id);o.text=ta.value;o.done=true;o.result=res;save();
+    if(res)render(id,res);else $("res-"+id).innerHTML="";
+    msg.className="msg good";msg.textContent="Your essay was sent to your teacher.";progress();
+  }catch(e){msg.className="msg bad";msg.textContent="Your essay was not sent. Check your internet and try again."}
+  btn.disabled=false;btn.textContent="Check my essay";
+}
+document.querySelectorAll(".tab").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tab,.pane").forEach(function(e){e.classList.remove("on")});b.classList.add("on");$(b.dataset.p).classList.add("on")}});
+</script></body></html>
