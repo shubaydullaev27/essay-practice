@@ -55,15 +55,56 @@ button:disabled{opacity:.55;cursor:wait}
 footer.note{max-width:780px;margin:18px auto 0;font-size:12px;color:var(--ink-soft);text-align:center}
 @media(max-width:620px){.controls{flex-direction:column}.controls button{width:100%}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.guide{padding:clamp(22px,5vw,34px) clamp(18px,5vw,44px) clamp(26px,5vw,38px);background:radial-gradient(circle at 8% 0%,#fbf3d5 0%,var(--paper) 42%);border-bottom:3px solid var(--black)}
+.gs-title{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(22px,5vw,28px);margin:0 0 6px}
+.gs-intro{font-size:14.5px;color:var(--ink-soft);margin:0 0 16px;max-width:62ch}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:2px}
+.tab{flex:0 0 auto;min-height:0;padding:8px 14px;font-size:13px;background:#fff;color:var(--ink-soft);border:1.5px solid var(--rule);border-radius:20px}
+.tab.on{background:var(--black);color:var(--yellow);border-color:var(--black)}
+.pane{display:none}.pane.on{display:block}
+.pane h3{font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px}
+.pane p{margin:0 0 12px;font-size:14.5px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px}
+.box{background:#fff;border:1.5px solid var(--black);border-radius:6px;padding:12px 14px;font-size:14px}
+.box b{display:block;font-family:'Fraunces',serif;font-size:16px;margin-bottom:4px}
+.words{display:inline-block;background:var(--yellow);font-weight:800;padding:3px 10px;border-radius:20px;font-size:13px}
+.part{background:#fff;border:1.5px solid var(--rule);border-left:8px solid var(--yellow);border-radius:6px;padding:12px 14px;margin-bottom:10px;font-size:14px}
+.part h4{margin:0 0 4px;font-family:'Fraunces',serif;font-size:16px}
+.part .f{font-weight:600}.part .ph{color:var(--ink-soft);margin-top:6px;font-size:13px}
+.p2{border-left-color:var(--teal)}.p3{border-left-color:var(--plum)}.p4{border-left-color:var(--rose)}
+.tk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.tk{border-radius:8px;padding:12px 14px;font-size:13.5px;border:1.5px solid}
+.tk h4{margin:0 0 6px;font-size:13px;font-weight:800}.tk ul{margin:0;padding-left:18px}
+.k1{background:#FFF4C2;border-color:var(--yellow-deep)}.k2{background:var(--teal-bg);border-color:var(--teal)}.k3{background:var(--plum-bg);border-color:var(--plum)}
+.k4{background:var(--rose-bg);border-color:var(--rose)}.k5{background:var(--good-bg);border-color:var(--good)}.k6{background:#ECECE7;border-color:var(--ink-soft)}
+.model .part{line-height:1.7}.tag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:4px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.two ul{margin:0;padding-left:18px;font-size:14px}.two li{margin-bottom:6px}
+.avoid h4{color:var(--bad)}.do h4{color:var(--good)}
+.meta .ok{color:var(--good);font-weight:700}.meta .over{color:var(--bad);font-weight:700}
 </style></head><body>
 <div class="sheet">
 <div class="masthead"><div class="dot-motif"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 <div class="eyebrow-row"><span class="brand">English Practice Sheet</span> · Upper-Intermediate</div>
 <h1>Essay Practice</h1>
-<p class="sub">Choose a topic, write your essay, then press Check my essay. The AI will show your grammar mistakes and how to fix them.</p></div>
+<p class="sub">Read the guide, choose a topic, write 120–150 words, then press Check my essay.</p></div>
+<div class="guide" id="guide"><h2 class="gs-title">How to write an Agree &amp; Disagree essay</h2>
+<p class="gs-intro">You get a statement. React to it and support your opinion. Use the tabs below, then write your own essay.</p>
+<div class="tabs"><button class="tab on" data-p="g1">The task</button><button class="tab" data-p="g2">Structure</button><button class="tab" data-p="g3">Language toolkit</button><button class="tab" data-p="g4">Model essay</button><button class="tab" data-p="g5">Avoid &amp; do</button></div>
+<div class="pane on" id="g1"><h3>What you must do</h3><div class="three"><div class="box"><b>1. State your view</b>Say clearly if you AGREE or DISAGREE with the statement.</div><div class="box"><b>2. Support it</b>Give detailed REASONS that explain and justify your opinion.</div><div class="box"><b>3. Illustrate it</b>Add an EXAMPLE and/or a SUGGESTION and/or a RECOMMENDATION.</div></div><p>Length: <span class="words">120–150 words</span></p></div>
+<div class="pane" id="g2"><h3>Four paragraphs</h3>
+<div class="part"><h4>1. Introduction</h4><div class="f">Paraphrase the given statement + write your position: agree or disagree.</div><div class="ph">Nowadays, … · It is often said that … · I (completely) agree / disagree with this statement because … · In my opinion, …</div></div>
+<div class="part p2"><h4>2. First body paragraph</h4><div class="f">Develop your 1st idea: topic sentence → explanation → example.</div><div class="ph">Firstly, … · One reason is that … · To begin with, … · For example, …</div></div>
+<div class="part p3"><h4>3. Second body paragraph</h4><div class="f">Develop your 2nd idea: topic sentence → explanation → example.</div><div class="ph">Secondly, … · Moreover, … · However, … · On the other hand, … · For instance, …</div></div>
+<div class="part p4"><h4>4. Conclusion</h4><div class="f">Restate your opinion in new words + your suggestions and recommendations.</div><div class="ph">In conclusion, … · To sum up, … · Overall, … · I recommend that … · I suggest that …</div></div></div>
+<div class="pane" id="g3"><h3>Six functions, six colours</h3><div class="tk-grid"><div class="tk k1"><h4>Giving an opinion</h4><ul><li>I agree / disagree</li><li>In my opinion</li><li>I believe that</li><li>Personally,</li></ul></div><div class="tk k2"><h4>Adding reasons</h4><ul><li>Firstly / Secondly</li><li>Moreover</li><li>In addition</li><li>Furthermore</li></ul></div><div class="tk k3"><h4>Giving examples</h4><ul><li>For example</li><li>For instance</li><li>such as</li><li>A good example is</li></ul></div><div class="tk k4"><h4>Showing contrast</h4><ul><li>However</li><li>On the other hand</li><li>Nevertheless</li><li>Despite this</li></ul></div><div class="tk k5"><h4>Cause &amp; effect</h4><ul><li>As a result</li><li>Therefore</li><li>This leads to</li><li>Consequently</li></ul></div><div class="tk k6"><h4>Concluding</h4><ul><li>In conclusion</li><li>To sum up</li><li>Overall</li><li>I recommend that</li></ul></div></div></div>
+<div class="pane model" id="g4"><h3>Model essay: “Investing in education is very important.”</h3><p>145 words. Read how each paragraph does its job, then write your own ideas on your own topic.</p>
+<div class="part"><span class="tag">Introduction</span><br>Nowadays, many people believe that spending money on schools and universities is one of the best decisions a country can make. I completely agree with this statement because education gives young people better jobs and valuable knowledge.</div><div class="part p2"><span class="tag">Body 1: job opportunities</span><br>Firstly, education opens the door to better job opportunities. People with a good education can apply for well-paid positions and are less likely to be unemployed. For example, a graduate with strong English and computer skills can easily find work in an international company.</div><div class="part p3"><span class="tag">Body 2: knowledge acquisition</span><br>Secondly, education helps people to acquire knowledge. Students learn how to think critically, solve problems and understand the world around them. As a result, they make wiser decisions in their everyday lives.</div><div class="part p4"><span class="tag">Conclusion: recommendation</span><br>In conclusion, investing in education benefits both individuals and society. I recommend that young people study hard and use every opportunity to learn new skills, for instance by joining free courses online.</div></div>
+<div class="pane" id="g5"><div class="two"><div class="box avoid"><h4>Avoid</h4><ul><li>Starting with your opinion only. Paraphrase the topic first.</li><li>Giving reasons with no explanation or example.</li><li>Forgetting an example, suggestion or recommendation.</li><li>Repeating the same linking word again and again.</li><li>Writing under 120 or over 150 words.</li><li>A conclusion that repeats the introduction word for word.</li></ul></div><div class="box do"><h4>Do</h4><ul><li>Plan 4 paragraphs before you write.</li><li>One clear reason per body paragraph, then explain it, then give an example.</li><li>Vary your linking words with the toolkit.</li><li>Keep the same opinion from start to end.</li><li>Check your word count before sending.</li><li>End with a recommendation the reader can act on.</li></ul></div></div></div></div>
 <div class="progress-bar"><span>Checked</span><div class="progress-track"><div class="progress-fill" id="fill"></div></div><span class="tally" id="tally"></span></div>
 <div class="jump-nav" id="nav"></div>
-<section class="block" id="who"><label class="rnum" for="stuName">Your name</label><input id="stuName" class="essay" style="min-height:0;height:48px;resize:none" placeholder="Write your full name" autocomplete="name"></section>
+<section class="block" id="who"><label class="rnum" for="stuName">Your name and PIN</label><div style="display:grid;grid-template-columns:2fr 1fr;gap:10px"><input id="stuName" class="essay" style="min-height:0;height:48px;resize:none" placeholder="Write your full name" autocomplete="name"><input id="stuPin" class="essay" style="min-height:0;height:48px;resize:none" inputmode="numeric" maxlength="4" placeholder="4-digit PIN" autocomplete="off"></div><div class="msg" id="syncMsg">Choose a 4-digit PIN and remember it. With your name and PIN your work is saved online, and you can continue on any phone or computer.</div></section>
 <div id="topics"></div>
 </div>
 <footer class="note">Your essay is saved in this browser and sent to your teacher when you press Check my essay.</footer>
@@ -74,32 +115,54 @@ var API_URL = "https://bitter-thunder-6c8bessay-checker.sh-ubaydullaev27.workers
 var LEVEL = "Upper-intermediate";
 var TASK = ["write if you agree or disagree with this statement","give detailed reasons that can support your opinion","give an example and/or a suggestion and/or a recommendation"];
 var TOPICS = [
-  {title:"Investing in education", prompt:"Investing in education is very important.", min:200},
-  {title:"Phones in schools", prompt:"Using a phone should be banned in schools.", min:200},
-  {title:"Social networks and communication", prompt:"Social networks (Telegram, Instagram etc.) influences the way people communicate.", min:200},
-  {title:"Dependence on mobile phones", prompt:"Nowadays people are becoming increasingly dependent on mobile phones.", min:200},
-  {title:"Travel and cultures", prompt:"Traveling is the best way to learn about different cultures.", min:200},
-  {title:"Creativity and technical skills", prompt:"Creativity is as important as technical skills in the workplace.", min:200},
-  {title:"Watching the news", prompt:"People should avoid watching too much news.", min:200}
+  {title:"Investing in education", prompt:"Investing in education is very important.", min:120, max:150},
+  {title:"Phones in schools", prompt:"Using a phone should be banned in schools.", min:120, max:150},
+  {title:"Social networks and communication", prompt:"Social networks (Telegram, Instagram etc.) influences the way people communicate.", min:120, max:150},
+  {title:"Dependence on mobile phones", prompt:"Nowadays people are becoming increasingly dependent on mobile phones.", min:120, max:150},
+  {title:"Travel and cultures", prompt:"Traveling is the best way to learn about different cultures.", min:120, max:150},
+  {title:"Creativity and technical skills", prompt:"Creativity is as important as technical skills in the workplace.", min:120, max:150},
+  {title:"Watching the news", prompt:"People should avoid watching too much news.", min:120, max:150}
 ];
 /* ================================= */
 
 var KEY="essay_platform_v1", store={};
 try{store=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
+var snap={},dirty=false,tmr,maxT,pt,PAGE="upper",storeOK=true;
+try{localStorage.setItem("_t","1");localStorage.removeItem("_t")}catch(e){storeOK=false}
+function sig(o){return JSON.stringify(o,function(k,v){return k==="u"?undefined:v})}
+TOPICS.forEach(function(t,i){var o=store["t"+i];if(o)snap["t"+i]=sig(o)});
+function save(q){if(!q){TOPICS.forEach(function(t,i){var id="t"+i,o=store[id];if(!o)return;var j=sig(o);if(snap[id]!==j){snap[id]=j;o.u=Date.now()}});dirty=true;schedulePush()}try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function words(t){return t.trim()?t.trim().split(/\s+/).length:0}
 
-var nm=document.getElementById("stuName");nm.value=store.name||"";nm.addEventListener("input",function(){store.name=nm.value;save()});
+var nm=document.getElementById("stuName"),pn=document.getElementById("stuPin"),sm=document.getElementById("syncMsg"),pulled="";
+nm.value=store.name||"";pn.value=store.pin||"";
+function say(t,c){sm.textContent=t;sm.className="msg "+(c||"")}
+function idok(){return nm.value.trim().length>1&&/^\d{4}$/.test(pn.value)&&API_URL.indexOf("http")===0}
+function api(path,body,ka){return fetch(API_URL.replace(/\/$/,"")+path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body),keepalive:!!ka}).then(function(r){if(!r.ok)throw 0;return r.json()})}
+function ident(){return {page:PAGE,name:nm.value.trim(),pin:pn.value}}
+function push(ka){clearTimeout(tmr);clearTimeout(maxT);maxT=0;if(!idok()||!dirty)return;dirty=false;var b=ident();b.data={};TOPICS.forEach(function(t,i){if(store["t"+i])b.data["t"+i]=store["t"+i]});
+  api("/save",b,ka).then(function(){say("Saved online ✓","good")}).catch(function(){dirty=true;say("Could not save online. Your work is still saved on this device.","bad")})}
+function schedulePush(){if(!idok())return;clearTimeout(tmr);tmr=setTimeout(push,20000);if(!maxT)maxT=setTimeout(push,90000)}
+function pull(){if(!idok())return;var k=nm.value.trim().toLowerCase()+"|"+pn.value;if(pulled===k)return;pulled=k;say("Looking for your saved work…");
+  api("/load",ident()).then(function(r){var c=r.data||{},ch=false;TOPICS.forEach(function(t,i){var id="t"+i,x=c[id],l=store[id];if(x&&(!l||(x.u||0)>(l.u||0))){store[id]=x;snap[id]=sig(x);ch=true}});
+    if(ch){save(true);build()}dirty=true;schedulePush();say(ch?"Your saved work was loaded ✓":"Ready. Your work will be saved online as you write.","good")}).catch(function(){pulled="";say("Could not reach the server. Your work is saved on this device.","bad")})}
+function ident2(){clearTimeout(pt);pt=setTimeout(pull,900)}
+nm.addEventListener("input",function(){store.name=nm.value;save(true);ident2()});
+pn.addEventListener("input",function(){pn.value=pn.value.replace(/\D/g,"").slice(0,4);store.pin=pn.value;save(true);ident2()});
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")push(true)});
+window.addEventListener("pagehide",function(){push(true)});
+if(!storeOK)say("This browser cannot keep your work. Enter your name and PIN to save online, or open the page in Chrome or Safari.","bad");
+pull();
 var nav=document.getElementById("nav"), box=document.getElementById("topics");
-TOPICS.forEach(function(t,i){
+function build(){nav.innerHTML="";box.innerHTML="";TOPICS.forEach(function(t,i){
   var id="t"+i, s=store[id]||{};
   nav.insertAdjacentHTML("beforeend",'<a href="#section-'+id+'" id="nav-'+id+'">'+(i+1)+'</a>');
   box.insertAdjacentHTML("beforeend",
    '<section class="block" id="section-'+id+'"><div class="rnum">Topic '+(i+1)+'</div><h2>'+esc(t.title)+'</h2>'+
    '<div class="prompt"><strong>'+esc(t.prompt)+'</strong><div style="margin-top:10px;font-size:14.5px">In your essay, you should:</div><ul style="margin:6px 0 0;padding-left:20px;font-size:14.5px">'+TASK.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul></div>'+
    '<textarea class="essay" id="ta-'+id+'" placeholder="Write your essay here…" spellcheck="false"></textarea>'+
-   '<div class="meta"><span id="wc-'+id+'"></span><span>Minimum '+t.min+' words</span></div>'+
+   '<div class="meta"><span id="wc-'+id+'"></span><span>Target: '+t.min+'–'+t.max+' words</span></div>'+
    '<div class="controls"><button class="btn-check" id="chk-'+id+'">Check my essay</button><button class="btn-ghost" id="clr-'+id+'">Clear</button></div>'+
    '<div class="msg" id="msg-'+id+'"></div><div class="result" id="res-'+id+'"></div></section>');
   var ta=document.getElementById("ta-"+id); ta.value=s.text||"";
@@ -107,10 +170,10 @@ TOPICS.forEach(function(t,i){
   document.getElementById("chk-"+id).onclick=function(){check(id,t)};
   document.getElementById("clr-"+id).onclick=function(){if(!ta.value||confirm("Clear this essay?")){ta.value="";store[id]={};save();count(id,t);document.getElementById("res-"+id).innerHTML="";document.getElementById("msg-"+id).textContent="";progress()}};
   count(id,t); if(s.result)render(id,s.result);
-});
-progress();
+});progress()}
+build();
 
-function count(id,t){var n=words(document.getElementById("ta-"+id).value);document.getElementById("wc-"+id).textContent=n+" words"}
+function count(id,t){var n=words(document.getElementById("ta-"+id).value),el=document.getElementById("wc-"+id);el.textContent=n+" words"+(n>t.max?" — too long":n<t.min?" — "+(t.min-n)+" more to go":" — good length");el.className=n>t.max?"over":n>=t.min?"ok":""}
 function progress(){var d=0;TOPICS.forEach(function(t,i){var id="t"+i,ok=store[id]&&store[id].done;if(ok)d++;document.getElementById("nav-"+id).classList.toggle("done",!!ok)});
   document.getElementById("fill").style.width=(TOPICS.length?d/TOPICS.length*100:0)+"%";document.getElementById("tally").textContent=d+" / "+TOPICS.length}
 
@@ -129,7 +192,7 @@ async function check(id,t){
   msg.className="msg";
   var who=nm.value.trim();
   if(!who){msg.className="msg bad";msg.textContent="Write your name at the top first.";document.getElementById("who").scrollIntoView({behavior:"smooth"});nm.focus();return}
-  if(n<20){msg.textContent="Write a little more first — at least 20 words.";return}
+  if(n<t.min){msg.className="msg bad";msg.textContent="Write at least "+t.min+" words. You have "+n+".";return}
   if(API_URL.indexOf("http")!==0){msg.className="msg bad";msg.textContent="The checker is not connected yet. Ask your teacher.";return}
   btn.disabled=true;btn.textContent="Checking…";msg.textContent="The AI is reading your essay. This takes a few seconds.";
   try{
@@ -145,4 +208,5 @@ async function check(id,t){
   }catch(e){msg.className="msg bad";msg.textContent="Your essay was not sent. Check your internet and try again."}
   btn.disabled=false;btn.textContent="Check my essay";
 }
+document.querySelectorAll(".tab").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tab,.pane").forEach(function(e){e.classList.remove("on")});b.classList.add("on");document.getElementById(b.dataset.p).classList.add("on")}});
 </script></body></html>
