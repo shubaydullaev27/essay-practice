@@ -117,7 +117,7 @@ mark.h1{background:#FFE98A}mark.h2{background:#BFE8CF}mark.h3{background:#F7C6D6
 <div class="pane" id="g4"><h3>How to use the band 9 sample</h3><p>1. Read the sample once. 2. Pick a colour below, then select words in the sample to highlight them. 3. Write 2–3 notes about why it is strong. 4. Write your own essay under it.</p><div class="legend"><span style="background:#FFE98A">Opinion / position</span><span style="background:#BFE8CF">Advantage language</span><span style="background:#F7C6D6">Disadvantage language</span><span style="background:#BDE3E1">Linking words</span><span style="background:#DCC9FA">Useful vocabulary</span></div><p>To remove a highlight, choose <b>Eraser</b> and click it.</p></div></div>
 <div class="progress-bar"><span>Sent</span><div class="progress-track"><div class="progress-fill" id="fill"></div></div><span class="tally" id="tally"></span></div>
 <div class="jump-nav" id="nav"></div>
-<section class="block" id="who"><label class="rnum" for="stuName">Your name</label><input id="stuName" class="essay" style="min-height:0;height:48px;resize:none" placeholder="Write your full name" autocomplete="name"></section>
+<section class="block" id="who"><label class="rnum" for="stuName">Your name and PIN</label><div style="display:grid;grid-template-columns:2fr 1fr;gap:10px"><input id="stuName" class="essay" style="min-height:0;height:48px;resize:none" placeholder="Write your full name" autocomplete="name"><input id="stuPin" class="essay" style="min-height:0;height:48px;resize:none" inputmode="numeric" maxlength="4" placeholder="4-digit PIN" autocomplete="off"></div><div class="msg" id="syncMsg">Choose a 4-digit PIN and remember it. With your name and PIN your work is saved online, and you can continue on any phone or computer.</div></section>
 <div id="topics"></div>
 </div>
 <footer class="note">Your work is saved in this browser. Your essay is sent to your teacher when you press Check my essay. Language toolkit adapted from the IELTS with Fiona handout.</footer>
@@ -189,14 +189,36 @@ var TOPICS=[
 ];
 var KEY="essay_platform_advdis_v1", store={}, tool=null;
 try{store=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
+var snap={},dirty=false,tmr,maxT,pt,PAGE="advdis",storeOK=true;
+try{localStorage.setItem("_t","1");localStorage.removeItem("_t")}catch(e){storeOK=false}
+function sig(o){return JSON.stringify(o,function(k,v){return k==="u"?undefined:v})}
+TOPICS.forEach(function(t,i){var o=store["t"+i];if(o)snap["t"+i]=sig(o)});
+function save(q){if(!q){TOPICS.forEach(function(t,i){var id="t"+i,o=store[id];if(!o)return;var j=sig(o);if(snap[id]!==j){snap[id]=j;o.u=Date.now()}});dirty=true;schedulePush()}try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function words(t){return t.trim()?t.trim().split(/\s+/).length:0}
 function st(id){return store[id]=store[id]||{}}
 function $(i){return document.getElementById(i)}
-var nm=$("stuName");nm.value=store.name||"";nm.addEventListener("input",function(){store.name=nm.value;save()});
+var nm=document.getElementById("stuName"),pn=document.getElementById("stuPin"),sm=document.getElementById("syncMsg"),pulled="";
+nm.value=store.name||"";pn.value=store.pin||"";
+function say(t,c){sm.textContent=t;sm.className="msg "+(c||"")}
+function idok(){return nm.value.trim().length>1&&/^\d{4}$/.test(pn.value)&&API_URL.indexOf("http")===0}
+function api(path,body,ka){return fetch(API_URL.replace(/\/$/,"")+path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body),keepalive:!!ka}).then(function(r){if(!r.ok)throw 0;return r.json()})}
+function ident(){return {page:PAGE,name:nm.value.trim(),pin:pn.value}}
+function push(ka){clearTimeout(tmr);clearTimeout(maxT);maxT=0;if(!idok()||!dirty)return;dirty=false;var b=ident();b.data={};TOPICS.forEach(function(t,i){if(store["t"+i])b.data["t"+i]=store["t"+i]});
+  api("/save",b,ka).then(function(){say("Saved online ✓","good")}).catch(function(){dirty=true;say("Could not save online. Your work is still saved on this device.","bad")})}
+function schedulePush(){if(!idok())return;clearTimeout(tmr);tmr=setTimeout(push,20000);if(!maxT)maxT=setTimeout(push,90000)}
+function pull(){if(!idok())return;var k=nm.value.trim().toLowerCase()+"|"+pn.value;if(pulled===k)return;pulled=k;say("Looking for your saved work…");
+  api("/load",ident()).then(function(r){var c=r.data||{},ch=false;TOPICS.forEach(function(t,i){var id="t"+i,x=c[id],l=store[id];if(x&&(!l||(x.u||0)>(l.u||0))){store[id]=x;snap[id]=sig(x);ch=true}});
+    if(ch){save(true);build()}dirty=true;schedulePush();say(ch?"Your saved work was loaded ✓":"Ready. Your work will be saved online as you write.","good")}).catch(function(){pulled="";say("Could not reach the server. Your work is saved on this device.","bad")})}
+function ident2(){clearTimeout(pt);pt=setTimeout(pull,900)}
+nm.addEventListener("input",function(){store.name=nm.value;save(true);ident2()});
+pn.addEventListener("input",function(){pn.value=pn.value.replace(/\D/g,"").slice(0,4);store.pin=pn.value;save(true);ident2()});
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")push(true)});
+window.addEventListener("pagehide",function(){push(true)});
+if(!storeOK)say("This browser cannot keep your work. Enter your name and PIN to save online, or open the page in Chrome or Safari.","bad");
+pull();
 var nav=$("nav"),box=$("topics");
-TOPICS.forEach(function(t,i){
+function build(){nav.innerHTML="";box.innerHTML="";TOPICS.forEach(function(t,i){
   var id="t"+i;
   nav.insertAdjacentHTML("beforeend",'<a href="#section-'+id+'" id="nav-'+id+'">'+(i+1)+'</a>');
   box.insertAdjacentHTML("beforeend",
@@ -223,8 +245,8 @@ TOPICS.forEach(function(t,i){
   $("chk-"+id).onclick=function(){check(id,t)};
   $("clr-"+id).onclick=function(){if(!ta.value||confirm("Clear your essay?")){ta.value="";var o=st(id);o.text="";o.done=false;o.result=null;save();count(id);$("res-"+id).innerHTML="";$("msg-"+id).textContent="";progress()}};
   if(s.result)render(id,s.result);
-});
-progress();
+});progress()}
+build();
 function syncTools(){document.querySelectorAll(".tool").forEach(function(b){b.classList.toggle("on",b.dataset.t===tool)});document.querySelectorAll(".sample").forEach(function(x){x.dataset.tool=tool||""})}
 function draw(id){var t=TOPICS[+id.slice(1)],hl=st(id).hl||[];
   $("sm-"+id).innerHTML=t.sample.map(function(p,pi){var rs=[];hl.forEach(function(h,k){if(h.p===pi)rs.push({s:h.s,e:h.e,c:h.c,k:k})});
