@@ -1,0 +1,304 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essay Practice — Upper-Intermediate</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#141416;--black-soft:#232327;--yellow:#FFD530;--yellow-deep:#E7BC12;--white:#fff;--paper:#F6F6F3;--panel:#fff;--ink:#1B1B1D;--ink-soft:#5B5C60;--rule:#E4E3DC;--good:#1E8F52;--good-bg:#E6F5EB;--bad:#D1382F;--bad-bg:#FBEAE8}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Public Sans',sans-serif;line-height:1.55;font-size:16px;padding:clamp(16px,4vw,48px) clamp(12px,3vw,20px) 80px}
+.sheet{max-width:780px;margin:0 auto;background:var(--panel);border-radius:6px;overflow:hidden;box-shadow:0 1px 0 rgba(20,20,22,.04),0 24px 48px -30px rgba(20,20,22,.35)}
+.masthead{background:var(--black);color:#fff;padding:clamp(24px,5vw,40px) clamp(20px,5vw,44px) clamp(20px,4vw,26px);position:relative}
+.dot-motif{position:absolute;top:20px;right:24px;display:grid;grid-template-columns:repeat(3,7px);gap:6px}
+.dot-motif span{width:7px;height:7px;border-radius:50%;background:var(--yellow)}
+.dot-motif span:nth-child(5){background:#fff}
+.eyebrow-row{font-size:12.5px;color:rgba(255,255,255,.6);margin-bottom:14px;padding-right:50px}
+.brand{color:var(--yellow);font-weight:600}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(26px,6vw,38px);line-height:1.1;margin:0 0 8px;letter-spacing:-.01em}
+.sub{font-size:clamp(13.5px,3vw,15px);color:rgba(255,255,255,.72);margin:0;max-width:58ch}
+.progress-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:14px;padding:12px clamp(16px,5vw,44px);background:var(--black-soft);border-bottom:2px solid var(--yellow);font-size:12.5px;color:rgba(255,255,255,.65)}
+.progress-track{flex:1;height:6px;background:rgba(255,255,255,.16);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--yellow);transition:width .35s ease}
+.tally{color:#fff;font-weight:700;font-size:13px;white-space:nowrap}
+.jump-nav{display:flex;gap:8px;overflow-x:auto;padding:10px clamp(16px,5vw,44px);background:var(--panel);border-bottom:1px solid var(--rule)}
+.jump-nav a{flex:0 0 auto;font-size:12.5px;font-weight:700;color:var(--ink-soft);text-decoration:none;padding:7px 12px;border-radius:20px;border:1.5px solid var(--rule);white-space:nowrap}
+.jump-nav a:hover{color:var(--ink);border-color:var(--ink-soft)}
+.jump-nav a.done{background:var(--yellow);border-color:var(--yellow);color:var(--black)}
+section.block{padding:clamp(22px,5vw,34px) clamp(18px,5vw,44px);border-bottom:1px solid var(--rule);scroll-margin-top:60px}
+section.block:last-of-type{border-bottom:none}
+.rnum{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(20px,4vw,24px);margin:0 0 16px;position:relative;padding-bottom:8px}
+h2::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:4px;background:var(--yellow);border-radius:2px}
+.prompt{border:1.5px solid var(--black);border-radius:6px;padding:clamp(14px,3vw,22px);background:#fff;font-size:16px;line-height:1.7;margin-bottom:14px}
+.essay{width:100%;min-height:260px;resize:vertical;font-family:'Public Sans',sans-serif;font-size:16px;line-height:1.7;padding:14px 16px;border:1.5px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink)}
+.essay:focus{outline:none;border-color:var(--black);box-shadow:0 0 0 3px var(--yellow);background:#fff}
+.meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-soft);margin-top:6px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+button{font-family:'Public Sans',sans-serif;font-size:14px;font-weight:700;border-radius:5px;padding:12px 20px;cursor:pointer;border:1.5px solid transparent;min-height:44px}
+button:active{transform:translateY(1px)}
+button:disabled{opacity:.55;cursor:wait}
+.btn-check{background:var(--yellow);color:var(--black)}
+.btn-check:hover:not(:disabled){background:var(--yellow-deep)}
+.btn-ghost{background:transparent;color:var(--ink-soft);border-color:var(--rule)}
+.btn-ghost:hover{color:var(--ink);border-color:var(--ink-soft)}
+.msg{font-size:13px;font-weight:600;margin-top:14px;color:var(--ink-soft)}
+.msg.bad{color:var(--bad)}.msg.good{color:var(--good)}
+.result{margin-top:18px}
+.summary-line{font-size:14.5px;background:var(--good-bg);color:#145c36;border-radius:6px;padding:12px 14px;margin-bottom:12px}
+.gx-wrap{border:1px solid var(--rule);border-radius:10px;overflow:auto}
+.gx{width:100%;border-collapse:collapse;min-width:520px}
+.gx th{background:var(--black);color:var(--yellow);text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:11px 14px;border-bottom:2px solid var(--yellow)}
+.gx td{padding:10px 14px;font-size:13.5px;border-top:1px solid var(--rule);vertical-align:top}
+.gx tr:nth-child(even) td{background:#FAFAF9}
+.wrong{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:var(--bad);background:var(--bad-bg);padding:2px 6px;border-radius:4px}
+.right{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:var(--good);background:var(--good-bg);padding:2px 6px;border-radius:4px}
+.kind{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:4px}
+footer.note{max-width:780px;margin:18px auto 0;font-size:12px;color:var(--ink-soft);text-align:center}
+@media(max-width:620px){.controls{flex-direction:column}.controls button{width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.guide{padding:clamp(22px,5vw,34px) clamp(18px,5vw,44px) clamp(26px,5vw,38px);background:radial-gradient(circle at 8% 0%,#fbf3d5 0%,var(--paper) 42%);border-bottom:3px solid var(--black)}
+.gs-title{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(22px,5vw,28px);margin:0 0 6px}
+.gs-intro{font-size:14.5px;color:var(--ink-soft);margin:0 0 16px;max-width:62ch}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:2px}
+.tab{flex:0 0 auto;min-height:0;padding:8px 14px;font-size:13px;background:#fff;color:var(--ink-soft);border:1.5px solid var(--rule);border-radius:20px}
+.tab.on{background:var(--black);color:var(--yellow);border-color:var(--black)}
+.pane{display:none}.pane.on{display:block}
+.pane h3{font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px}
+.pane p{margin:0 0 12px;font-size:14.5px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px}
+.box{background:#fff;border:1.5px solid var(--black);border-radius:6px;padding:12px 14px;font-size:14px}
+.box b{display:block;font-family:'Fraunces',serif;font-size:16px;margin-bottom:4px}
+.words{display:inline-block;background:var(--yellow);font-weight:800;padding:3px 10px;border-radius:20px;font-size:13px}
+.part{background:#fff;border:1.5px solid var(--rule);border-left:8px solid var(--yellow);border-radius:6px;padding:12px 14px;margin-bottom:10px;font-size:14px}
+.part h4{margin:0 0 4px;font-family:'Fraunces',serif;font-size:16px}
+.part .f{font-weight:600}.part .ph{color:var(--ink-soft);margin-top:6px;font-size:13px}
+.p2{border-left-color:var(--teal)}.p3{border-left-color:var(--plum)}.p4{border-left-color:var(--rose)}
+.tk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.tk{border-radius:8px;padding:12px 14px;font-size:13.5px;border:1.5px solid}
+.tk h4{margin:0 0 6px;font-size:13px;font-weight:800}.tk ul{margin:0;padding-left:18px}
+.k1{background:#FFF4C2;border-color:var(--yellow-deep)}.k2{background:var(--teal-bg);border-color:var(--teal)}.k3{background:var(--plum-bg);border-color:var(--plum)}
+.k4{background:var(--rose-bg);border-color:var(--rose)}.k5{background:var(--good-bg);border-color:var(--good)}.k6{background:#ECECE7;border-color:var(--ink-soft)}
+.model .part{line-height:1.7}.tag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:4px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.two ul{margin:0;padding-left:18px;font-size:14px}.two li{margin-bottom:6px}
+.avoid h4{color:var(--bad)}.do h4{color:var(--good)}
+.meta .ok{color:var(--good);font-weight:700}.meta .over{color:var(--bad);font-weight:700}
+
+.subhead{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:22px 0 8px}
+.tabs.sub{margin:6px 0 12px}.subtab{flex:0 0 auto;min-height:0;padding:8px 14px;font-size:12.5px;background:#fff;color:var(--ink-soft);border:1.5px solid var(--rule);border-radius:20px}.subtab.on{background:var(--black);color:var(--yellow);border-color:var(--black)}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.tool{min-height:0;padding:7px 12px;font-size:12.5px;border-radius:20px;border:1.5px solid var(--rule);background:#fff;color:var(--ink)}
+.tool.h1,mark.h1,.lg .h1{background:#FFE98A}.tool.h2,mark.h2,.lg .h2{background:#BFE8CF}.tool.h3,mark.h3,.lg .h3{background:#BDE3E1}
+.tool.h4,mark.h4,.lg .h4{background:#F7C6D6}.tool.h5,mark.h5,.lg .h5{background:#FFD3A8}.tool.h6,mark.h6,.lg .h6{background:#DCC9FA}
+.tool.on{border-color:var(--black);box-shadow:0 0 0 2px var(--black)}
+.hint{font-size:12.5px;color:var(--ink-soft);margin-bottom:8px}
+.sample{border:1.5px solid var(--black);border-radius:6px;padding:clamp(14px,3vw,22px);background:#fff;line-height:1.8}
+.sample[data-tool="erase"] mark{cursor:pointer;outline:1px dashed var(--bad)}
+.sp{margin:0 0 12px}.sp:last-child{margin:0}
+mark{border-radius:3px;padding:1px 2px;color:inherit}
+.notes{min-height:80px}
+.lg{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:10px 0}.lg span{padding:8px 12px;border-radius:6px;font-size:13.5px;font-weight:600}
+.idea{background:#fff;border:1.5px solid var(--rule);border-left:6px solid var(--good);border-radius:6px;padding:10px 14px;margin-bottom:8px;font-size:14px}
+.idea.no{border-left-color:var(--bad)}.idea b{display:block;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:2px}
+.vprog{display:flex;align-items:center;gap:12px;background:var(--black);color:#fff;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:13px;font-weight:700}
+.vprog .tr{flex:1;height:6px;background:rgba(255,255,255,.18);border-radius:3px;overflow:hidden}.vprog .fl{height:100%;width:0;background:var(--yellow);transition:width .3s}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.vc{background:#fff;border:1.5px solid var(--rule);border-top:5px solid var(--yellow);border-radius:10px;padding:14px 16px;font-size:14px;transition:background .2s,border-color .2s}
+.vh{display:flex;align-items:center;gap:10px;margin-bottom:8px}.vn{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--black);color:var(--yellow);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.vc b{font-family:'Fraunces',serif;font-size:18px;line-height:1.2}
+.vl{display:block;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:6px 0 2px}
+.vm{color:var(--ink)}.vx{background:#FFF8D9;border-left:4px solid var(--yellow-deep);border-radius:4px;padding:8px 10px;font-style:italic;line-height:1.55}
+.vx u{font-style:normal;font-weight:800;text-decoration:none;background:var(--yellow);border-radius:3px;padding:0 3px}
+.vc.used{background:var(--good-bg);border-color:var(--good);border-top-color:var(--good)}.vc.used .vn{background:var(--good);color:#fff}.vc.used .vx{background:#fff;border-left-color:var(--good)}
+.vc.used b::after{content:" ✓ used";font-family:'Public Sans',sans-serif;font-size:11px;font-weight:800;color:var(--good)}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.stats span{font-size:12px;font-weight:700;background:var(--paper);border:1px solid var(--rule);border-radius:20px;padding:4px 10px;color:var(--ink-soft)}
+</style></head><body>
+<div class="sheet">
+<div class="masthead"><div class="dot-motif"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="eyebrow-row"><span class="brand">English Practice Sheet</span> · Upper-Intermediate</div>
+<h1>Essay Practice</h1>
+<p class="sub">Read the guide, choose a topic, write 120–150 words, then press Check my essay.</p></div>
+<div class="guide" id="guide"><h2 class="gs-title">How to write an Agree &amp; Disagree essay</h2>
+<p class="gs-intro">You get a statement. React to it and support your opinion. Use the tabs below, then write your own essay.</p>
+<div class="tabs"><button class="tab on" data-p="g1">The task</button><button class="tab" data-p="g2">Structure</button><button class="tab" data-p="g3">Language toolkit</button><button class="tab" data-p="g4">Model essay</button><button class="tab" data-p="g5">Avoid &amp; do</button><button class="tab" data-p="g6">Using the tools</button></div>
+<div class="pane on" id="g1"><h3>What you must do</h3><div class="three"><div class="box"><b>1. State your view</b>Say clearly if you AGREE or DISAGREE with the statement.</div><div class="box"><b>2. Support it</b>Give detailed REASONS that explain and justify your opinion.</div><div class="box"><b>3. Illustrate it</b>Add an EXAMPLE and/or a SUGGESTION and/or a RECOMMENDATION.</div></div><p>Length: <span class="words">120–150 words</span></p></div>
+<div class="pane" id="g2"><h3>Four paragraphs</h3>
+<div class="part"><h4>1. Introduction</h4><div class="f">Paraphrase the given statement + write your position: agree or disagree.</div><div class="ph">Nowadays, … · It is often said that … · I (completely) agree / disagree with this statement because … · In my opinion, …</div></div>
+<div class="part p2"><h4>2. First body paragraph</h4><div class="f">Develop your 1st idea: topic sentence → explanation → example.</div><div class="ph">Firstly, … · One reason is that … · To begin with, … · For example, …</div></div>
+<div class="part p3"><h4>3. Second body paragraph</h4><div class="f">Develop your 2nd idea: topic sentence → explanation → example.</div><div class="ph">Secondly, … · Moreover, … · However, … · On the other hand, … · For instance, …</div></div>
+<div class="part p4"><h4>4. Conclusion</h4><div class="f">Restate your opinion in new words + your suggestions and recommendations.</div><div class="ph">In conclusion, … · To sum up, … · Overall, … · I recommend that … · I suggest that …</div></div></div>
+<div class="pane" id="g3"><h3>Six functions, six colours</h3><div class="tk-grid"><div class="tk k1"><h4>Giving an opinion</h4><ul><li>I agree / disagree</li><li>In my opinion</li><li>I believe that</li><li>Personally,</li></ul></div><div class="tk k2"><h4>Adding reasons</h4><ul><li>Firstly / Secondly</li><li>Moreover</li><li>In addition</li><li>Furthermore</li></ul></div><div class="tk k3"><h4>Giving examples</h4><ul><li>For example</li><li>For instance</li><li>such as</li><li>A good example is</li></ul></div><div class="tk k4"><h4>Showing contrast</h4><ul><li>However</li><li>On the other hand</li><li>Nevertheless</li><li>Despite this</li></ul></div><div class="tk k5"><h4>Cause &amp; effect</h4><ul><li>As a result</li><li>Therefore</li><li>This leads to</li><li>Consequently</li></ul></div><div class="tk k6"><h4>Concluding</h4><ul><li>In conclusion</li><li>To sum up</li><li>Overall</li><li>I recommend that</li></ul></div></div></div>
+<div class="pane model" id="g4"><h3>Model essay: “Investing in education is very important.”</h3><p>145 words. Read how each paragraph does its job, then write your own ideas on your own topic.</p>
+<div class="part"><span class="tag">Introduction</span><br>Nowadays, many people believe that spending money on schools and universities is one of the best decisions a country can make. I completely agree with this statement because education gives young people better jobs and valuable knowledge.</div><div class="part p2"><span class="tag">Body 1: job opportunities</span><br>Firstly, education opens the door to better job opportunities. People with a good education can apply for well-paid positions and are less likely to be unemployed. For example, a graduate with strong English and computer skills can easily find work in an international company.</div><div class="part p3"><span class="tag">Body 2: knowledge acquisition</span><br>Secondly, education helps people to acquire knowledge. Students learn how to think critically, solve problems and understand the world around them. As a result, they make wiser decisions in their everyday lives.</div><div class="part p4"><span class="tag">Conclusion: recommendation</span><br>In conclusion, investing in education benefits both individuals and society. I recommend that young people study hard and use every opportunity to learn new skills, for instance by joining free courses online.</div></div>
+<div class="pane" id="g5"><div class="two"><div class="box avoid"><h4>Avoid</h4><ul><li>Starting with your opinion only. Paraphrase the topic first.</li><li>Giving reasons with no explanation or example.</li><li>Forgetting an example, suggestion or recommendation.</li><li>Repeating the same linking word again and again.</li><li>Writing under 120 or over 150 words.</li><li>A conclusion that repeats the introduction word for word.</li></ul></div><div class="box do"><h4>Do</h4><ul><li>Plan 4 paragraphs before you write.</li><li>One clear reason per body paragraph, then explain it, then give an example.</li><li>Vary your linking words with the toolkit.</li><li>Keep the same opinion from start to end.</li><li>Check your word count before sending.</li><li>End with a recommendation the reader can act on.</li></ul></div></div></div>
+<div class="pane" id="g6"><h3>Study each model, then write your own</h3><p>Every topic has three tools: <b>Model essay</b> (highlight its language), <b>Ideas bank</b> (arguments for and against) and <b>Vocabulary</b> (cards turn green when you use the word in your own essay).</p><div class="lg"><span class="h1">Opinion</span><span class="h2">Reasons / adding</span><span class="h3">Examples</span><span class="h4">Contrast</span><span class="h5">Cause &amp; effect</span><span class="h6">Suggestion / recommendation</span></div><p>Choose a colour, select words in the model. Choose <b>Eraser</b> and click a highlight to remove it.</p></div></div>
+<div class="progress-bar"><span>Checked</span><div class="progress-track"><div class="progress-fill" id="fill"></div></div><span class="tally" id="tally"></span></div>
+<div class="jump-nav" id="nav"></div>
+<section class="block" id="who"><label class="rnum" for="stuName">Your name and PIN</label><div style="display:grid;grid-template-columns:2fr 1fr;gap:10px"><input id="stuName" class="essay" style="min-height:0;height:48px;resize:none" placeholder="Write your full name" autocomplete="name"><input id="stuPin" class="essay" style="min-height:0;height:48px;resize:none" inputmode="numeric" maxlength="4" placeholder="4-digit PIN" autocomplete="off"></div><div class="msg" id="syncMsg">Choose a 4-digit PIN and remember it. With your name and PIN your work is saved online, and you can continue on any phone or computer.</div></section>
+<div id="topics"></div>
+</div>
+<footer class="note">Your essay is saved in this browser and sent to your teacher when you press Check my essay.</footer>
+
+<script>
+/* ===== EDIT THESE TWO THINGS ===== */
+var API_URL = "https://bitter-thunder-6c8bessay-checker.sh-ubaydullaev27.workers.dev/";   // your Cloudflare Worker URL (see worker.js)
+var LEVEL = "Upper-intermediate";
+var TASK = ["write if you agree or disagree with this statement","give detailed reasons that can support your opinion","give an example and/or a suggestion and/or a recommendation"];
+var TOPICS = [
+  {title:"Investing in education", prompt:"Investing in education is very important.", min:120, max:150},
+  {title:"Phones in schools", prompt:"Using a phone should be banned in schools.", min:120, max:150},
+  {title:"Social networks and communication", prompt:"Social networks (Telegram, Instagram etc.) influences the way people communicate.", min:120, max:150},
+  {title:"Dependence on mobile phones", prompt:"Nowadays people are becoming increasingly dependent on mobile phones.", min:120, max:150},
+  {title:"Travel and cultures", prompt:"Traveling is the best way to learn about different cultures.", min:120, max:150},
+  {title:"Creativity and technical skills", prompt:"Creativity is as important as technical skills in the workplace.", min:120, max:150},
+  {title:"Watching the news", prompt:"People should avoid watching too much news.", min:120, max:150}
+];
+/* ================================= */
+
+
+var CATS=[["h1","Opinion"],["h2","Reasons / adding"],["h3","Examples"],["h4","Contrast"],["h5","Cause & effect"],["h6","Recommendation"]];
+var LINK=["firstly","secondly","moreover","in addition","furthermore","for example","for instance","such as","however","on the other hand","nevertheless","despite","as a result","therefore","consequently","this leads to","in conclusion","to sum up","overall","to begin with"];
+var D=[
+{s:["Nowadays, many people believe that spending money on schools and universities is one of the best decisions a country can make. I completely agree with this statement because education gives young people better jobs and valuable knowledge.", "Firstly, education opens the door to better job opportunities. People with a good education can apply for well-paid positions and are less likely to be unemployed. For example, a graduate with strong English and computer skills can easily find work in an international company.", "Secondly, education helps people to acquire knowledge. Students learn how to think critically, solve problems and understand the world around them. As a result, they make wiser decisions in their everyday lives.", "In conclusion, investing in education benefits both individuals and society. I recommend that young people study hard and use every opportunity to learn new skills, for instance by joining free courses online."],
+ i:[["Agree","Skills for work: graduates earn more and companies grow. Example: IT courses in Tashkent create programmers."],["Agree","Equal chances: free schooling lets talented children from poor families succeed."],["Disagree","Money alone is not enough: bad teaching wastes budgets. Example: new buildings but old methods."],["Disagree","Experience can matter more than degrees in some jobs, such as trades."]],
+ v:["scholarship::money awarded to a student to pay for their studies::She won a scholarship to study engineering abroad.", "literacy::the ability to read and write::Higher literacy rates help a country develop faster.", "vocational training::education that prepares people for a specific trade or job::Vocational training in welding can lead to a well-paid job within a year.", "curriculum::the subjects taught in a school or course::The new curriculum includes coding from the age of ten.", "employability::how attractive a person is to employers::Learning English greatly improves a graduate's employability.", "social mobility::the chance to move to a higher social or economic level::Free education increases social mobility for poor families.", "tuition fees::the money paid for teaching at a school or university::Many students work part-time to pay their tuition fees.", "lifelong learning::continuing to learn throughout your whole life::Online courses make lifelong learning possible for busy adults.", "skilled workforce::workers who have the training their jobs require::A skilled workforce attracts foreign investors.", "knowledge-based economy::an economy that depends on skills and information, not only raw materials::To compete in a knowledge-based economy, countries must invest in universities."]},
+{s:["It is often said that mobile phones should be banned in schools. I completely agree with this statement because phones distract students and encourage bad habits.","Firstly, phones make it hard to concentrate. Students check messages and social media during lessons instead of listening to the teacher. As a result, their marks often fall. For example, many teachers say that one notification can interrupt a whole class.","Secondly, phones cause problems between students. Moreover, cyberbullying and cheating in exams are much easier when phones are allowed. However, some people argue that phones are useful in emergencies. Nevertheless, schools already have telephones for urgent calls.","In conclusion, a ban helps schools stay focused and safe. I suggest that schools collect phones in the morning and return them after the last lesson."],
+ i:[["Agree","Concentration: notifications break attention. Example: students scrolling under the desk."],["Agree","Fair exams: phones make cheating easy; bullying spreads through group chats."],["Disagree","Safety: parents can contact children in an emergency."],["Disagree","Learning tools: dictionaries, translators and quizzes help in class."]],
+ v:["distraction::something that takes your attention away from what you should do::A buzzing phone is a constant distraction in class.", "disrupt::to interrupt something so that it cannot continue normally::Ringtones disrupt lessons and annoy teachers.", "prohibit::to forbid something by rule or law::The school prohibits the use of phones during exams.", "enforce a rule::to make sure people obey a rule::It is difficult to enforce a rule if students hide their phones.", "confiscate::to take something away as a punishment::The teacher confiscated his phone until the end of the day.", "academic performance::how well a student does in studies and exams::Studies suggest that heavy phone use harms academic performance.", "peer pressure::the influence of classmates or friends on your behaviour::Peer pressure makes many teenagers want the latest smartphone.", "online harassment::repeated unpleasant or threatening behaviour on the internet::Schools must act quickly when students report online harassment.", "learning aid::a tool that helps students learn, such as a dictionary app::A translation app can be a useful learning aid in language lessons.", "digital detox::a period when you deliberately stop using electronic devices::A phone-free school day works like a digital detox for teenagers."]},
+{s:["Nowadays, apps such as Telegram and Instagram are part of everyday life. I strongly agree that they have changed the way people communicate, mostly for the better.","Firstly, social networks make communication faster. People can send a message or a video to friends abroad in seconds, which keeps families close. For example, many students study abroad but still talk to their parents every day.","On the other hand, online chatting can replace real conversations. Some young people prefer texting to speaking, so their face-to-face skills may become weaker. As a result, misunderstandings happen more often.","To sum up, social networks have made communication quicker but less personal. I recommend that people meet friends in person every week and put their phones away during meals."],
+ i:[["Agree","Speed and distance: instant calls and voice messages. Example: a family video call across countries."],["Agree","New communities: people with the same hobby find each other online."],["Disagree","Weaker real-life skills: less eye contact and fewer long conversations."],["Disagree","Fake news and rude comments spread quickly."]],
+ v:["virtual interaction::communication that happens online, not in person::Virtual interaction cannot fully replace a real conversation.", "foster relationships::to help friendships and connections grow::Group chats help classmates foster relationships even during holidays.", "instant gratification::the wish to get pleasure or answers immediately::Social media trains people to expect instant gratification.", "superficial::not deep or serious, only on the surface::Many online friendships remain superficial.", "social isolation::having very little contact with other people::Spending every evening online can lead to social isolation.", "misinformation::false information, often spread without bad intent::Misinformation spreads quickly in popular Telegram channels.", "online etiquette::polite and acceptable behaviour on the internet::Good online etiquette means not writing in capital letters, which looks like shouting.", "digital footprint::the trail of data you leave when you use the internet::Employers often check a candidate's digital footprint before an interview.", "bridge the distance::to bring people closer despite living far apart::Video calls help migrant workers bridge the distance to their families.", "shape public opinion::to influence what people in society think::Influencers can shape public opinion about fashion or health."]},
+{s:["It is true that people depend on their mobile phones more and more. I completely agree, since phones now do the job of many different devices.","Firstly, a phone is a wallet, a map and an alarm clock in one. People use it to pay for shopping, find an address and wake up in the morning. Therefore, many of us feel lost without it. For instance, most commuters check their phones as soon as they sit on the metro.","Secondly, phones give us instant information, so we stop trying to remember things. Moreover, many people feel anxious when the battery is low. This leads to a habit that is hard to break.","In conclusion, phones are useful, but we rely on them too much. I suggest that people switch their phones off for one hour every evening and spend that time reading or walking."],
+ i:[["Agree","Everything in one device: banking, taxis, study. Example: paying with a QR code."],["Agree","Anxiety without a phone and constant checking."],["Disagree","Dependence is normal, like depending on electricity; tools make life easier."],["Disagree","Many people still control their use, for example with screen-time limits."]],
+ v:["overreliance::depending too much on something::Overreliance on GPS has made many drivers forget how to read a map.", "compulsive::done because you cannot stop yourself::Compulsive checking of notifications wastes hours every day.", "habit-forming::likely to become a regular habit that is hard to stop::Mobile games are designed to be habit-forming.", "attention span::the length of time you can concentrate::Short videos are shortening young people's attention span.", "diminish::to become or make something smaller or weaker::Constant phone use can diminish our ability to remember information.", "constant connectivity::always being online and reachable::Constant connectivity makes it hard for employees to relax after work.", "fear of missing out (FOMO)::worry that others are having better experiences without you::FOMO makes people check social media even at midnight.", "digital wellbeing::a healthy balance between technology and daily life::Many phones now include tools to support digital wellbeing.", "set boundaries::to decide clear limits for your behaviour::Parents should help children set boundaries for screen time.", "indispensable::so important that you cannot manage without it::For many people, a smartphone has become indispensable."]},
+{s:["Many people say that travelling is the best way to learn about other cultures. In my opinion, this is true because travellers experience a different way of life directly.","Firstly, visiting a country lets you see traditions with your own eyes. You can taste local food, hear the language and meet ordinary people. For example, a tourist in Samarkand can learn about the Silk Road by walking through its old markets.","Secondly, travelling changes how we think. We become more open-minded and stop judging others by stereotypes. However, books and documentaries can also teach us a lot. Nevertheless, they cannot replace real conversations with local people.","To sum up, travel gives deeper understanding than any other method. I recommend that students use their holidays to visit at least one new region, even on a small budget."],
+ i:[["Agree","First-hand experience: food, customs, language. Example: homestays."],["Agree","Breaks stereotypes by meeting real people."],["Disagree","Expensive and not possible for everyone; the internet and books are cheaper."],["Disagree","Tourists often see only popular places, not real daily life."]],
+ v:["cultural immersion::living fully inside another culture to learn from it::A homestay offers real cultural immersion because you live with a local family.", "cross-cultural understanding::knowing and respecting different cultures::Exchange programmes build cross-cultural understanding among students.", "heritage::traditions, buildings and history passed down from the past::Visiting historic cities helps tourists appreciate a country's heritage.", "authentic::real and genuine, not copied or made for tourists::We ate at a small family restaurant to enjoy authentic local food.", "off the beaten track::in a place that few tourists visit::The best memories often come from villages off the beaten track.", "prejudice::an unfair opinion formed without knowing the facts::Meeting people from other countries can reduce prejudice.", "tolerance::willingness to accept different beliefs and customs::Travel teaches tolerance by showing us that there are many ways to live.", "first-hand experience::knowledge gained by doing or seeing something yourself::First-hand experience of a foreign market teaches you more than any guidebook.", "culture shock::the confusion felt in a very different culture::She felt culture shock when she saw how different the food and manners were.", "adapt to::to change your behaviour to suit a new situation::Travellers must adapt to unfamiliar customs and climates."]},
+{s:["Nowadays, employers look for more than technical knowledge. I agree that creativity is as important as technical skills in the workplace because both are needed for success.","Firstly, technical skills help people do their tasks correctly, but creativity helps them find better ways to do them. For example, a creative engineer may design a cheaper and safer machine.","Secondly, creative workers solve unexpected problems. When a plan fails, they can think of a new one. Moreover, this makes a company more competitive. On the other hand, without technical skills even the best idea cannot become a real product.","In conclusion, a successful employee needs both. I suggest that schools and companies offer training in problem-solving as well as technical subjects."],
+ i:[["Agree","Innovation: new products need imagination. Example: designing an app people enjoy."],["Agree","Teamwork and problem-solving depend on flexible thinking."],["Disagree","Technical skills come first: a doctor or pilot must be accurate, not original."],["Disagree","Creativity is hard to measure, so employers prefer proven skills."]],
+ v:["think outside the box::to think in new and original ways::Good managers encourage staff to think outside the box.", "ingenuity::the skill of inventing clever solutions::The engineer's ingenuity saved the company thousands of dollars.", "expertise::expert knowledge or skill in a subject::Hospitals need doctors with specialist expertise.", "proficiency::a high level of ability, especially in a skill::The job requires proficiency in spreadsheet software.", "versatile::able to do many different tasks well::A versatile employee can work in marketing and customer service.", "adaptable::able to change easily to suit new conditions::Adaptable workers cope better when technology changes.", "competitive edge::an advantage over other companies or candidates::Creative advertising gave the brand a competitive edge.", "transferable skills::skills that are useful in many different jobs::Communication and teamwork are transferable skills.", "drive innovation::to push a company or industry to create new things::Young designers often drive innovation in the fashion industry.", "hands-on::involving practical experience, not only theory::The course offers hands-on training in real workshops."]},
+{s:["It is often said that people should avoid watching too much news. I agree with this view because constant news can harm both our mood and our time.","Firstly, most news stories are negative, so watching them for hours makes people stressed and worried. As a result, some viewers start to believe that the world is more dangerous than it really is. For example, a person who follows crime reports all day may be afraid to go out.","Secondly, news takes up valuable time. Instead of studying or exercising, people sit in front of the screen. Nevertheless, it is important to know what is happening in the world. For this reason, a short daily update is enough.","To sum up, moderation is the key. I recommend that people check reliable news for twenty minutes a day and spend the rest of their free time on healthy activities."],
+ i:[["Agree","Mental health: bad news increases stress and anxiety."],["Agree","Time: hours of headlines replace study, sport or family time."],["Disagree","Informed citizens vote and make better decisions."],["Disagree","Local news can keep people safe, for example weather or traffic alerts."]],
+ v:["sensationalism::presenting news in an exciting way to shock people::Sensationalism makes small events look like disasters.", "information overload::receiving more information than you can handle::Following ten news apps at once can cause information overload.", "doomscrolling::spending a long time reading bad news online::He lost sleep because of late-night doomscrolling.", "desensitised::no longer shocked or emotional about bad events::After years of violent headlines, many viewers feel desensitised.", "biased::unfairly supporting one side::Some channels are biased towards the government.", "credible source::a source of information that can be trusted::A university report is a more credible source than an anonymous post.", "fact-check::to check whether information is true::Always fact-check a shocking story before you share it.", "media literacy::the ability to judge and understand media messages::Schools should teach media literacy so that students can recognise fake news.", "current affairs::important events happening in politics and society now::Reading about current affairs helps students write better essays.", "well-informed::having good knowledge about what is happening::Voters should be well-informed before an election."]}
+];
+var KEY="essay_platform_v1", store={};
+try{store=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+var tool=null,snap={},dirty=false,tmr,maxT,pt,PAGE="upper",storeOK=true;
+try{localStorage.setItem("_t","1");localStorage.removeItem("_t")}catch(e){storeOK=false}
+function sig(o){return JSON.stringify(o,function(k,v){return k==="u"?undefined:v})}
+TOPICS.forEach(function(t,i){var o=store["t"+i];if(o)snap["t"+i]=sig(o)});
+function save(q){if(!q){TOPICS.forEach(function(t,i){var id="t"+i,o=store[id];if(!o)return;var j=sig(o);if(snap[id]!==j){snap[id]=j;o.u=Date.now()}});dirty=true;schedulePush()}try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function words(t){return t.trim()?t.trim().split(/\s+/).length:0}
+
+var nm=document.getElementById("stuName"),pn=document.getElementById("stuPin"),sm=document.getElementById("syncMsg"),pulled="";
+nm.value=store.name||"";pn.value=store.pin||"";
+function say(t,c){sm.textContent=t;sm.className="msg "+(c||"")}
+function idok(){return nm.value.trim().length>1&&/^\d{4}$/.test(pn.value)&&API_URL.indexOf("http")===0}
+function api(path,body,ka){return fetch(API_URL.replace(/\/$/,"")+path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body),keepalive:!!ka}).then(function(r){if(!r.ok)throw 0;return r.json()})}
+function ident(){return {page:PAGE,name:nm.value.trim(),pin:pn.value}}
+function push(ka){clearTimeout(tmr);clearTimeout(maxT);maxT=0;if(!idok()||!dirty)return;dirty=false;var b=ident();b.data={};TOPICS.forEach(function(t,i){if(store["t"+i])b.data["t"+i]=store["t"+i]});
+  api("/save",b,ka).then(function(){say("Saved online ✓","good")}).catch(function(){dirty=true;say("Could not save online. Your work is still saved on this device.","bad")})}
+function schedulePush(){if(!idok())return;clearTimeout(tmr);tmr=setTimeout(push,20000);if(!maxT)maxT=setTimeout(push,90000)}
+function pull(){if(!idok())return;var k=nm.value.trim().toLowerCase()+"|"+pn.value;if(pulled===k)return;pulled=k;say("Looking for your saved work…");
+  api("/load",ident()).then(function(r){var c=r.data||{},ch=false;TOPICS.forEach(function(t,i){var id="t"+i,x=c[id],l=store[id];if(x&&(!l||(x.u||0)>(l.u||0))){store[id]=x;snap[id]=sig(x);ch=true}});
+    if(ch){save(true);build()}dirty=true;schedulePush();say(ch?"Your saved work was loaded ✓":"Ready. Your work will be saved online as you write.","good")}).catch(function(){pulled="";say("Could not reach the server. Your work is saved on this device.","bad")})}
+function ident2(){clearTimeout(pt);pt=setTimeout(pull,900)}
+nm.addEventListener("input",function(){store.name=nm.value;save(true);ident2()});
+pn.addEventListener("input",function(){pn.value=pn.value.replace(/\D/g,"").slice(0,4);store.pin=pn.value;save(true);ident2()});
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")push(true)});
+window.addEventListener("pagehide",function(){push(true)});
+if(!storeOK)say("This browser cannot keep your work. Enter your name and PIN to save online, or open the page in Chrome or Safari.","bad");
+pull();
+
+function $(i){return document.getElementById(i)}
+function st(id){return store[id]=store[id]||{}}
+function sample(i){return D[i].s}
+function panels(id,i){var d=D[i];
+ return '<div class="tabs sub" id="sb-'+id+'"><button class="subtab on" data-q="1">Model essay</button><button class="subtab" data-q="2">Ideas bank</button><button class="subtab" data-q="3">Vocabulary</button></div>'+
+ '<div class="pane on" id="q1-'+id+'"><div class="toolbar" id="tb-'+id+'">'+CATS.map(function(c){return '<button class="tool '+c[0]+'" data-t="'+c[0]+'">'+c[1]+'</button>'}).join("")+'<button class="tool" data-t="erase">Eraser</button><button class="tool" data-t="clear">Clear all</button></div><div class="hint">Choose a colour, then select words in the model. Tap the colour again to stop.</div><div class="sample" id="sm-'+id+'"></div><div class="subhead">My analysis notes</div><textarea class="essay notes" id="nt-'+id+'" placeholder="Which linking words and phrases help the writer? Write 2–3 notes."></textarea></div>'+
+ '<div class="pane" id="q2-'+id+'"><div class="hint">Extra ideas you can use. Pick ONE or TWO and develop them with an explanation and your own example.</div>'+d.i.map(function(x){return '<div class="idea '+(x[0]=="Agree"?"":"no")+'"><b>'+(x[0]=="Agree"?"Idea to agree":"Idea to disagree")+'</b>'+esc(x[1])+'</div>'}).join("")+'</div>'+
+ '<div class="pane" id="q3-'+id+'"><div class="hint">Learn each word, read the example, then use as many as you can in your own essay. A card turns green when you use it.</div><div class="vprog"><span>Words used</span><div class="tr"><div class="fl" id="vf-'+id+'"></div></div><span id="vt-'+id+'">0 / '+d.v.length+'</span></div><div class="vgrid">'+d.v.map(function(x,k){var p=x.split("::");return '<div class="vc" data-w="'+esc(p[0])+'"><div class="vh"><span class="vn">'+(k+1)+'</span><b>'+esc(p[0])+'</b></div><span class="vl">Meaning</span><div class="vm">'+esc(p[1])+'</div><span class="vl">Example</span><div class="vx">'+hlx(p[2],p[0])+'</div></div>'}).join("")+'</div></div>'}
+function hlx(ex,w){var pm=w.match(/\((.*?)\)/),e=esc(ex);if(pm&&new RegExp("("+pm[1]+")").test(e))return e.replace(new RegExp("("+pm[1]+")"),"<u>$1</u>");var k=w.replace(/\(.*?\)/g,"").trim().replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),m=new RegExp("("+k+")","i");if(m.test(e))return e.replace(m,"<u>$1</u>");var t=k.split(" ")[0];t=t.length>6?t.slice(0,-2):t;m=new RegExp("\\b("+t+"\\w*)","i");return e.replace(m,"<u>$1</u>")}
+function wire(id,i){var nt=$("nt-"+id);nt.value=st(id).notes||"";nt.addEventListener("input",function(){st(id).notes=nt.value;save()});draw(id,i);
+ $("sb-"+id).addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;this.querySelectorAll(".subtab").forEach(function(x){x.classList.toggle("on",x===b)});[1,2,3].forEach(function(n){$("q"+n+"-"+id).classList.toggle("on",String(n)===b.dataset.q)})});
+ $("tb-"+id).addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var k=b.dataset.t;if(k==="clear"){if(confirm("Remove all highlights in this model?")){st(id).hl=[];save();draw(id,i)}return}tool=(tool===k)?null:k;syncTools()});
+ $("sm-"+id).addEventListener("click",function(e){if(tool!=="erase")return;var m=e.target.closest("mark");if(!m)return;st(id).hl.splice(+m.dataset.k,1);save();draw(id,i)})}
+function syncTools(){document.querySelectorAll(".tool").forEach(function(b){b.classList.toggle("on",b.dataset.t===tool)});document.querySelectorAll(".sample").forEach(function(x){x.dataset.tool=tool||""})}
+function draw(id,i){var P=sample(i),hl=st(id).hl||[];
+ $("sm-"+id).innerHTML=P.map(function(p,pi){var rs=[];hl.forEach(function(h,k){if(h.p===pi)rs.push({s:h.s,e:h.e,c:h.c,k:k})});rs.sort(function(a,b){return a.s-b.s});var out="",pos=0;
+  rs.forEach(function(r){out+=esc(p.slice(pos,r.s))+'<mark class="'+r.c+'" data-k="'+r.k+'">'+esc(p.slice(r.s,r.e))+'</mark>';pos=r.e});
+  return '<p class="sp" data-id="'+id+'" data-p="'+pi+'">'+out+esc(p.slice(pos))+'</p>'}).join("")}
+function up(n){var el=n.nodeType===3?n.parentElement:n;return el&&el.closest?el.closest(".sp"):null}
+function applySel(){if(!tool||tool==="erase")return;var sel=window.getSelection();if(!sel.rangeCount||sel.isCollapsed)return;
+ var r=sel.getRangeAt(0),a=up(r.startContainer),b=up(r.endContainer);if(!a||a!==b)return;
+ var pre=document.createRange();pre.selectNodeContents(a);pre.setEnd(r.startContainer,r.startOffset);
+ var txt=a.textContent,s=pre.toString().length,e=s+r.toString().length;
+ while(s<e&&/\s/.test(txt[s]))s++;while(e>s&&/\s/.test(txt[e-1]))e--;if(e<=s)return;
+ var id=a.dataset.id,p=+a.dataset.p,o=st(id);o.hl=(o.hl||[]).filter(function(x){return x.p!==p||x.e<=s||x.s>=e});o.hl.push({p:p,s:s,e:e,c:tool});
+ save();draw(id,+id.slice(1));sel.removeAllRanges()}
+var stm;document.addEventListener("selectionchange",function(){clearTimeout(stm);stm=setTimeout(applySel,600)});
+document.addEventListener("mouseup",function(){setTimeout(applySel,20)});
+function extra(id){var i=+id.slice(1),t=$("ta-"+id).value,l=t.toLowerCase(),paras=t.split(/\n\s*\n/).filter(function(x){return x.trim()}).length;
+ var lk=LINK.filter(function(w){return l.indexOf(w)>-1}).length,vu=0;
+ var nt=l.replace(/-/g," ");document.querySelectorAll("#q3-"+id+" .vc").forEach(function(c){var raw=c.dataset.w.toLowerCase(),par=(raw.match(/\((.*?)\)/)||[])[1],key=raw.replace(/\(.*?\)/g,"").replace(/-/g," ").trim(),u=false;
+ var tk=key.split(/\s+/).filter(function(x){return x.length>2&&["the","and","for"].indexOf(x)<0}).map(function(x){return x.length>5?x.slice(0,-2):x});
+ if(tk.length&&tk.every(function(x){return nt.indexOf(x)>-1}))u=true;if(par&&nt.indexOf(par)>-1)u=true;c.classList.toggle("used",u);if(u)vu++});
+ var vf=$("vf-"+id),vt=$("vt-"+id);if(vf){vf.style.width=(vu/D[i].v.length*100)+"%";vt.textContent=vu+" / "+D[i].v.length}
+ $("stt-"+id).innerHTML='<span>'+paras+' paragraph'+(paras==1?'':'s')+' (aim for 4)</span><span>'+lk+' linking word'+(lk==1?'':'s')+' used</span><span>'+vu+' / '+D[i].v.length+' vocabulary words</span>'}
+var nav=document.getElementById("nav"), box=document.getElementById("topics");
+function build(){nav.innerHTML="";box.innerHTML="";TOPICS.forEach(function(t,i){
+  var id="t"+i, s=store[id]||{};
+  nav.insertAdjacentHTML("beforeend",'<a href="#section-'+id+'" id="nav-'+id+'">'+(i+1)+'</a>');
+  box.insertAdjacentHTML("beforeend",
+   '<section class="block" id="section-'+id+'"><div class="rnum">Topic '+(i+1)+'</div><h2>'+esc(t.title)+'</h2>'+
+   '<div class="prompt"><strong>'+esc(t.prompt)+'</strong><div style="margin-top:10px;font-size:14.5px">In your essay, you should:</div><ul style="margin:6px 0 0;padding-left:20px;font-size:14.5px">'+TASK.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul></div>'+
+   panels(id,i)+'<div class="subhead">Your essay</div><textarea class="essay" id="ta-'+id+'" placeholder="Write your essay here…" spellcheck="false"></textarea>'+
+   '<div class="meta"><span id="wc-'+id+'"></span><span>Target: '+t.min+'–'+t.max+' words</span></div><div class="stats" id="stt-'+id+'"></div>'+
+   '<div class="controls"><button class="btn-check" id="chk-'+id+'">Check my essay</button><button class="btn-ghost" id="clr-'+id+'">Clear</button></div>'+
+   '<div class="msg" id="msg-'+id+'"></div><div class="result" id="res-'+id+'"></div></section>');
+  var ta=document.getElementById("ta-"+id); ta.value=s.text||"";
+  ta.addEventListener("input",function(){store[id]=store[id]||{};store[id].text=ta.value;save();count(id,t)});
+  document.getElementById("chk-"+id).onclick=function(){check(id,t)};
+  document.getElementById("clr-"+id).onclick=function(){if(!ta.value||confirm("Clear this essay?")){ta.value="";var o=st(id);o.text="";o.done=false;o.result=null;save();count(id,t);document.getElementById("res-"+id).innerHTML="";document.getElementById("msg-"+id).textContent="";progress()}};
+  wire(id,i);count(id,t); if(s.result)render(id,s.result);
+});progress()}
+build();
+
+function count(id,t){extra(id);var n=words(document.getElementById("ta-"+id).value),el=document.getElementById("wc-"+id);el.textContent=n+" words"+(n>t.max?" — over the target, you can still send it":n<t.min?" — "+(t.min-n)+" more to go":" — good length");el.className=n>t.max?"over":n>=t.min?"ok":""}
+function progress(){var d=0;TOPICS.forEach(function(t,i){var id="t"+i,ok=store[id]&&store[id].done;if(ok)d++;document.getElementById("nav-"+id).classList.toggle("done",!!ok)});
+  document.getElementById("fill").style.width=(TOPICS.length?d/TOPICS.length*100:0)+"%";document.getElementById("tally").textContent=d+" / "+TOPICS.length}
+
+function render(id,r){
+  var errs=r.errors||[], h="";
+  if(r.summary)h+='<div class="summary-line">'+esc(r.summary)+'</div>';
+  if(!errs.length)h+='<div class="msg good">No grammar mistakes found. Great work!</div>';
+  else{h+='<div class="msg">'+errs.length+' mistake'+(errs.length>1?'s':'')+' found</div><div class="gx-wrap"><table class="gx"><thead><tr><th>Your sentence</th><th>Correction</th><th>Why</th></tr></thead><tbody>';
+    errs.forEach(function(e){h+='<tr><td><span class="wrong">'+esc(e.original)+'</span><span class="kind">'+esc(e.type)+'</span></td><td><span class="right">'+esc(e.correction)+'</span></td><td>'+esc(e.explanation)+'</td></tr>'});
+    h+='</tbody></table></div>'}
+  document.getElementById("res-"+id).innerHTML=h;
+}
+
+async function check(id,t){
+  var ta=document.getElementById("ta-"+id), msg=document.getElementById("msg-"+id), btn=document.getElementById("chk-"+id), n=words(ta.value);
+  msg.className="msg";
+  var who=nm.value.trim();
+  if(!who){msg.className="msg bad";msg.textContent="Write your name at the top first.";document.getElementById("who").scrollIntoView({behavior:"smooth"});nm.focus();return}
+  if(n<t.min){msg.className="msg bad";msg.textContent="Write at least "+t.min+" words. You have "+n+".";return}
+  if(API_URL.indexOf("http")!==0){msg.className="msg bad";msg.textContent="The checker is not connected yet. Ask your teacher.";return}
+  btn.disabled=true;btn.textContent="Checking…";msg.textContent="The AI is reading your essay. This takes a few seconds.";
+  try{
+    var r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:who,title:t.title,topic:t.prompt,level:LEVEL,words:n,essay:ta.value})});
+    if(!r.ok){var bt="";try{bt=(await r.text()).slice(0,160)}catch(x){}throw new Error("Server said "+r.status+(bt?": "+bt:""))}
+    var d=await r.json(), txt=(d.text||"").replace(/```json|```/g,"").trim(), res=null;
+    if(txt){try{res=JSON.parse(txt)}catch(e){}}
+    store[id]=store[id]||{};store[id].text=ta.value;store[id].done=true;store[id].result=res;save();
+    if(res)render(id,res);else document.getElementById("res-"+id).innerHTML="";
+    msg.className="msg good";msg.textContent="Your essay was sent to your teacher.";
+    progress();
+    document.getElementById("res-"+id).scrollIntoView({behavior:"smooth",block:"nearest"});
+  }catch(e){msg.className="msg bad";msg.textContent=(/^Server said/.test(e.message)?"The server did not accept this essay ("+e.message+"). Your text is saved; tell your teacher.":"Your essay was not sent. Check your internet and try again.")}
+  btn.disabled=false;btn.textContent="Check my essay";
+}
+document.querySelectorAll(".tab").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tab,.pane").forEach(function(e){e.classList.remove("on")});b.classList.add("on");document.getElementById(b.dataset.p).classList.add("on")}});
+</script></body></html>
