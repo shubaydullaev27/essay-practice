@@ -112,7 +112,7 @@ details.ideas summary{cursor:pointer;font-weight:800;padding:12px 16px;font-size
 <div class="pane" id="g5"><div class="two"><div class="box avoid"><h4>Avoid</h4><ul><li>Copying the statement word for word in the introduction.</li><li>Giving a reason with no explanation.</li><li>Forgetting the example.</li><li>Forgetting advice or a recommendation at the end.</li><li>Repeating the same linking word again and again.</li><li>Writing under 100 or over 150 words.</li></ul></div><div class="box do"><h4>Do</h4><ul><li>Plan before you write: introduction, body, advice.</li><li>Answer every point listed under your topic.</li><li>One idea per sentence, with clear linking words.</li><li>Use a real-life example.</li><li>End with advice the reader can use.</li><li>Check your word count before sending.</li></ul></div></div></div></div>
 <div class="progress-bar"><span>Checked</span><div class="progress-track"><div class="progress-fill" id="fill"></div></div><span class="tally" id="tally"></span></div>
 <div class="jump-nav" id="nav"></div>
-<section class="block" id="who"><label class="rnum" for="stuName">Your name</label><input id="stuName" class="essay" style="min-height:0;height:48px;resize:none" placeholder="Write your full name" autocomplete="name"></section>
+<section class="block" id="who"><label class="rnum" for="stuName">Your name and PIN</label><div style="display:grid;grid-template-columns:2fr 1fr;gap:10px"><input id="stuName" class="essay" style="min-height:0;height:48px;resize:none" placeholder="Write your full name" autocomplete="name"><input id="stuPin" class="essay" style="min-height:0;height:48px;resize:none" inputmode="numeric" maxlength="4" placeholder="4-digit PIN" autocomplete="off"></div><div class="msg" id="syncMsg">Choose a 4-digit PIN and remember it. With your name and PIN your work is saved online, and you can continue on any phone or computer.</div></section>
 <div id="topics"></div>
 </div>
 <footer class="note">Your essay is saved in this browser and sent to your teacher when you press Check my essay.</footer>
@@ -156,13 +156,35 @@ TOPICS[9].ideas={"reasons": [{"h": "Different people bring different skills", "t
 TOPICS[10].ideas={"reasons": [{"h": "It opens better job opportunities", "t": "Many international companies need employees who speak English, and these jobs are often well paid.", "e": "Example: a graduate with good English can apply to foreign companies."}, {"h": "It gives access to education and information", "t": "Most science, technology and internet content is in English, as well as many university courses.", "e": "Example: students can follow free online lectures from famous universities."}, {"h": "It helps people travel and communicate", "t": "English is used as a common language between people from different countries.", "e": "Example: a tourist can ask for help in almost any airport or hotel."}, {"h": "It builds confidence and a wider network", "t": "People who speak English can make friends and business contacts all over the world.", "e": "Example: an online project can connect you with partners in other countries."}], "advice": ["Study a little every day, not only before exams.", "Watch films and listen to podcasts in English with subtitles.", "Speak with classmates or find an online speaking partner.", "Read short articles and write down new words.", "Set clear goals, for example an IELTS score."], "starters": ["The English language is a key factor for success because …", "Firstly, English gives people the chance to …", "Young people should start learning English by …"], "words": ["opportunity", "career", "international", "fluent", "communicate", "global language", "improve your skills", "qualification"], "plan": "Introduction: agree + English is a global language. Body 1: jobs and careers (reason + example). Body 2: education and communication (reason + example). Conclusion: recommend daily practice."};
 var KEY="essay_platform_inter_v1", store={};
 try{store=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
+var snap={},dirty=false,tmr,maxT,pt,PAGE="intermediate",storeOK=true;
+try{localStorage.setItem("_t","1");localStorage.removeItem("_t")}catch(e){storeOK=false}
+function sig(o){return JSON.stringify(o,function(k,v){return k==="u"?undefined:v})}
+TOPICS.forEach(function(t,i){var o=store["t"+i];if(o)snap["t"+i]=sig(o)});
+function save(q){if(!q){TOPICS.forEach(function(t,i){var id="t"+i,o=store[id];if(!o)return;var j=sig(o);if(snap[id]!==j){snap[id]=j;o.u=Date.now()}});dirty=true;schedulePush()}try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function words(t){return t.trim()?t.trim().split(/\s+/).length:0}
 
-var nm=document.getElementById("stuName");nm.value=store.name||"";nm.addEventListener("input",function(){store.name=nm.value;save()});
+var nm=document.getElementById("stuName"),pn=document.getElementById("stuPin"),sm=document.getElementById("syncMsg"),pulled="";
+nm.value=store.name||"";pn.value=store.pin||"";
+function say(t,c){sm.textContent=t;sm.className="msg "+(c||"")}
+function idok(){return nm.value.trim().length>1&&/^\d{4}$/.test(pn.value)&&API_URL.indexOf("http")===0}
+function api(path,body,ka){return fetch(API_URL.replace(/\/$/,"")+path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body),keepalive:!!ka}).then(function(r){if(!r.ok)throw 0;return r.json()})}
+function ident(){return {page:PAGE,name:nm.value.trim(),pin:pn.value}}
+function push(ka){clearTimeout(tmr);clearTimeout(maxT);maxT=0;if(!idok()||!dirty)return;dirty=false;var b=ident();b.data={};TOPICS.forEach(function(t,i){if(store["t"+i])b.data["t"+i]=store["t"+i]});
+  api("/save",b,ka).then(function(){say("Saved online ✓","good")}).catch(function(){dirty=true;say("Could not save online. Your work is still saved on this device.","bad")})}
+function schedulePush(){if(!idok())return;clearTimeout(tmr);tmr=setTimeout(push,20000);if(!maxT)maxT=setTimeout(push,90000)}
+function pull(){if(!idok())return;var k=nm.value.trim().toLowerCase()+"|"+pn.value;if(pulled===k)return;pulled=k;say("Looking for your saved work…");
+  api("/load",ident()).then(function(r){var c=r.data||{},ch=false;TOPICS.forEach(function(t,i){var id="t"+i,x=c[id],l=store[id];if(x&&(!l||(x.u||0)>(l.u||0))){store[id]=x;snap[id]=sig(x);ch=true}});
+    if(ch){save(true);build()}dirty=true;schedulePush();say(ch?"Your saved work was loaded ✓":"Ready. Your work will be saved online as you write.","good")}).catch(function(){pulled="";say("Could not reach the server. Your work is saved on this device.","bad")})}
+function ident2(){clearTimeout(pt);pt=setTimeout(pull,900)}
+nm.addEventListener("input",function(){store.name=nm.value;save(true);ident2()});
+pn.addEventListener("input",function(){pn.value=pn.value.replace(/\D/g,"").slice(0,4);store.pin=pn.value;save(true);ident2()});
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")push(true)});
+window.addEventListener("pagehide",function(){push(true)});
+if(!storeOK)say("This browser cannot keep your work. Enter your name and PIN to save online, or open the page in Chrome or Safari.","bad");
+
 var nav=document.getElementById("nav"), box=document.getElementById("topics");
-TOPICS.forEach(function(t,i){
+function build(){nav.innerHTML="";box.innerHTML="";TOPICS.forEach(function(t,i){
   var id="t"+i, s=store[id]||{};
   nav.insertAdjacentHTML("beforeend",'<a href="#section-'+id+'" id="nav-'+id+'">'+(i+1)+'</a>');
   box.insertAdjacentHTML("beforeend",
@@ -178,7 +200,9 @@ TOPICS.forEach(function(t,i){
   document.getElementById("clr-"+id).onclick=function(){if(!ta.value||confirm("Clear this essay?")){ta.value="";store[id]={};save();count(id,t);document.getElementById("res-"+id).innerHTML="";document.getElementById("msg-"+id).textContent="";progress()}};
   count(id,t); if(s.result)render(id,s.result);
 });
-progress();
+progress()}
+build();
+pull();
 
 function count(id,t){var n=words(document.getElementById("ta-"+id).value),el=document.getElementById("wc-"+id);el.textContent=n+" words"+(n>t.max?" — too long":n<t.min?" — "+(t.min-n)+" more to go":" — good length");el.className=n>t.max?"over":n>=t.min?"ok":""}
 function progress(){var d=0;TOPICS.forEach(function(t,i){var id="t"+i,ok=store[id]&&store[id].done;if(ok)d++;document.getElementById("nav-"+id).classList.toggle("done",!!ok)});
@@ -199,20 +223,23 @@ async function check(id,t){
   msg.className="msg";
   var who=nm.value.trim();
   if(!who){msg.className="msg bad";msg.textContent="Write your name at the top first.";document.getElementById("who").scrollIntoView({behavior:"smooth"});nm.focus();return}
+  if(!/^\d{4}$/.test(pn.value)){msg.className="msg bad";msg.textContent="Enter your 4-digit PIN at the top first, so your work can be saved online.";document.getElementById("who").scrollIntoView({behavior:"smooth"});pn.focus();return}
   if(n<t.min){msg.className="msg bad";msg.textContent="Write at least "+t.min+" words. You have "+n+".";return}
   if(API_URL.indexOf("http")!==0){msg.className="msg bad";msg.textContent="The checker is not connected yet. Ask your teacher.";return}
   btn.disabled=true;btn.textContent="Checking…";msg.textContent="The AI is reading your essay. This takes a few seconds.";
+  function fail(m){msg.className="msg bad";msg.textContent=m;btn.disabled=false;btn.textContent="Check my essay"}
+  var r;
+  try{r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:who,title:"[Intermediate] "+t.title,topic:t.prompt,level:LEVEL,words:n,essay:ta.value})})}
+  catch(e){console.error(e);fail("Could not reach the server ("+((e&&e.message)||"network error")+"). Your essay is saved on this device. Check your internet and try again.");return}
+  if(!r.ok){var bt="";try{bt=(await r.text()).slice(0,160)}catch(x){}fail("The server did not accept this essay (status "+r.status+(bt?": "+bt:"")+"). Your text is saved on this device; tell your teacher.");return}
   try{
-    var r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:who,title:"[Intermediate] "+t.title,topic:t.prompt,level:LEVEL,words:n,essay:ta.value})});
-    if(!r.ok)throw new Error("Server error "+r.status);
-    var d=await r.json(), txt=(d.text||"").replace(/```json|```/g,"").trim(), res=null;
+    var d=await r.json(),txt=(d.text||"").replace(/```json|```/g,"").trim(),res=null;
     if(txt){try{res=JSON.parse(txt)}catch(e){}}
     store[id]=store[id]||{};store[id].text=ta.value;store[id].done=true;store[id].result=res;save();
-    if(res)render(id,res);else document.getElementById("res-"+id).innerHTML="";
-    msg.className="msg good";msg.textContent="Your essay was sent to your teacher.";
-    progress();
-    document.getElementById("res-"+id).scrollIntoView({behavior:"smooth",block:"nearest"});
-  }catch(e){msg.className="msg bad";msg.textContent="Your essay was not sent. Check your internet and try again."}
+    msg.className="msg good";msg.textContent="Your essay was sent to your teacher and saved online.";
+  }catch(e){console.error(e);msg.className="msg good";msg.textContent="Your essay was sent to your teacher."}
+  try{if(res)render(id,res);else document.getElementById("res-"+id).innerHTML="";progress();document.getElementById("res-"+id).scrollIntoView({behavior:"smooth",block:"nearest"})}catch(e){console.error(e)}
+  try{dirty=true;push()}catch(e){console.error(e)}
   btn.disabled=false;btn.textContent="Check my essay";
 }
 document.querySelectorAll(".tab").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tab,.pane").forEach(function(e){e.classList.remove("on")});b.classList.add("on");document.getElementById(b.dataset.p).classList.add("on")}});
