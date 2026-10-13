@@ -1,0 +1,2764 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essay Practice — IELTS Task 2 Discussion Essay</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#141416;--black-soft:#232327;--yellow:#FFD530;--yellow-deep:#E7BC12;--white:#fff;--paper:#F6F6F3;--panel:#fff;--ink:#1B1B1D;--ink-soft:#5B5C60;--rule:#E4E3DC;--good:#1E8F52;--good-bg:#E6F5EB;--bad:#D1382F;--bad-bg:#FBEAE8;--teal:#1B8A86;--teal-bg:#E3F3F2;--plum:#7A4CC2;--plum-bg:#EFE8FA;--rose:#D6336C;--rose-bg:#FCE7EF}
+
+mark.h6{background:#FFD2A8}.tool.h6{background:#FFD2A8}
+.tool.ana{background:var(--black);color:var(--yellow);border-color:var(--black)}.tool.ana.on{box-shadow:0 0 0 3px var(--yellow)}
+.plabel{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:14px 0 2px}.plabel:first-child{margin-top:0}
+.sample[data-ana="1"] mark{cursor:help;border-radius:3px;padding:1px 0}
+.ideas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.icol{border:1.5px solid var(--black);border-radius:8px;padding:12px 14px;background:#fff}.icol.r{background:var(--good-bg)}.icol.l{background:var(--bad-bg)}
+.icol h4{margin:0 0 8px;font-family:'Fraunces',serif;font-size:15px}
+.idea{background:#fff;border:1.5px solid var(--rule);border-radius:6px;padding:9px 11px;margin-bottom:8px;font-size:13.5px}.idea:last-child{margin-bottom:0}.idea b{display:block}
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}.pill{background:#fff;border:1.5px solid var(--black);border-radius:20px;padding:6px 12px;font-size:13px}.pill b{font-weight:800}
+.pbtabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.pbtabs button{min-height:0;padding:6px 12px;font-size:12.5px;border-radius:20px;border:1.5px solid var(--rule);background:#fff;color:var(--ink-soft)}.pbtabs button.on{background:var(--black);color:var(--yellow);border-color:var(--black)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{min-height:0;padding:7px 11px;font-size:13px;line-height:1.35;text-align:left;border-radius:8px;border:1.5px dashed var(--black);background:#fff;color:var(--ink);cursor:pointer}.chip:hover{background:var(--yellow)}
+.ckbox{border:1.5px solid var(--rule);border-radius:8px;padding:10px 14px;background:#fff;margin-top:10px}
+.ck{font-size:13.5px;padding:3px 0}.ck i{font-style:normal;display:inline-block;width:20px;font-weight:800;color:var(--ink-soft)}.ck.ok i{color:var(--good)}.ck.no{color:var(--bad)}.ck.no i{color:var(--bad)}.ck small{display:block;margin-left:20px;color:var(--ink-soft);font-size:12px}
+.mapimg{width:100%;height:auto;border:1.5px solid var(--black);border-radius:6px;background:#fff;margin-bottom:14px;display:block}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Public Sans',sans-serif;line-height:1.55;font-size:16px;padding:clamp(16px,4vw,48px) clamp(12px,3vw,20px) 80px}
+.sheet{max-width:780px;margin:0 auto;background:var(--panel);border-radius:6px;overflow:hidden;box-shadow:0 1px 0 rgba(20,20,22,.04),0 24px 48px -30px rgba(20,20,22,.35)}
+.masthead{background:var(--black);color:#fff;padding:clamp(24px,5vw,40px) clamp(20px,5vw,44px) clamp(20px,4vw,26px);position:relative}
+.dot-motif{position:absolute;top:20px;right:24px;display:grid;grid-template-columns:repeat(3,7px);gap:6px}
+.dot-motif span{width:7px;height:7px;border-radius:50%;background:var(--yellow)}
+.dot-motif span:nth-child(5){background:#fff}
+.eyebrow-row{font-size:12.5px;color:rgba(255,255,255,.6);margin-bottom:14px;padding-right:50px}
+.brand{color:var(--yellow);font-weight:600}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(26px,6vw,38px);line-height:1.1;margin:0 0 8px;letter-spacing:-.01em}
+.sub{font-size:clamp(13.5px,3vw,15px);color:rgba(255,255,255,.72);margin:0;max-width:58ch}
+.progress-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:14px;padding:12px clamp(16px,5vw,44px);background:var(--black-soft);border-bottom:2px solid var(--yellow);font-size:12.5px;color:rgba(255,255,255,.65)}
+.progress-track{flex:1;height:6px;background:rgba(255,255,255,.16);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--yellow);transition:width .35s ease}
+.tally{color:#fff;font-weight:700;font-size:13px;white-space:nowrap}
+.jump-nav{display:flex;gap:8px;overflow-x:auto;padding:10px clamp(16px,5vw,44px);background:var(--panel);border-bottom:1px solid var(--rule)}
+.jump-nav a{flex:0 0 auto;font-size:12.5px;font-weight:700;color:var(--ink-soft);text-decoration:none;padding:7px 12px;border-radius:20px;border:1.5px solid var(--rule);white-space:nowrap}
+.jump-nav a:hover{color:var(--ink);border-color:var(--ink-soft)}
+.jump-nav a.done{background:var(--yellow);border-color:var(--yellow);color:var(--black)}
+section.block{padding:clamp(22px,5vw,34px) clamp(18px,5vw,44px);border-bottom:1px solid var(--rule);scroll-margin-top:60px}
+section.block:last-of-type{border-bottom:none}
+.rnum{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(20px,4vw,24px);margin:0 0 16px;position:relative;padding-bottom:8px}
+h2::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:4px;background:var(--yellow);border-radius:2px}
+.prompt{border:1.5px solid var(--black);border-radius:6px;padding:clamp(14px,3vw,22px);background:#fff;font-size:16px;line-height:1.7;margin-bottom:14px}
+.essay{width:100%;min-height:260px;resize:vertical;font-family:'Public Sans',sans-serif;font-size:16px;line-height:1.7;padding:14px 16px;border:1.5px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink)}
+.essay:focus{outline:none;border-color:var(--black);box-shadow:0 0 0 3px var(--yellow);background:#fff}
+.meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-soft);margin-top:6px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+button{font-family:'Public Sans',sans-serif;font-size:14px;font-weight:700;border-radius:5px;padding:12px 20px;cursor:pointer;border:1.5px solid transparent;min-height:44px}
+button:active{transform:translateY(1px)}
+button:disabled{opacity:.55;cursor:wait}
+.btn-check{background:var(--yellow);color:var(--black)}
+.btn-check:hover:not(:disabled){background:var(--yellow-deep)}
+.btn-ghost{background:transparent;color:var(--ink-soft);border-color:var(--rule)}
+.btn-ghost:hover{color:var(--ink);border-color:var(--ink-soft)}
+.msg{font-size:13px;font-weight:600;margin-top:14px;color:var(--ink-soft)}
+.msg.bad{color:var(--bad)}.msg.good{color:var(--good)}
+.result{margin-top:18px}
+.summary-line{font-size:14.5px;background:var(--good-bg);color:#145c36;border-radius:6px;padding:12px 14px;margin-bottom:12px}
+.gx-wrap{border:1px solid var(--rule);border-radius:10px;overflow:auto}
+.gx{width:100%;border-collapse:collapse;min-width:520px}
+.gx th{background:var(--black);color:var(--yellow);text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:11px 14px;border-bottom:2px solid var(--yellow)}
+.gx td{padding:10px 14px;font-size:13.5px;border-top:1px solid var(--rule);vertical-align:top}
+.gx tr:nth-child(even) td{background:#FAFAF9}
+.wrong{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:var(--bad);background:var(--bad-bg);padding:2px 6px;border-radius:4px}
+.right{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:var(--good);background:var(--good-bg);padding:2px 6px;border-radius:4px}
+.kind{display:block;font-size:11.5px;color:var(--ink-soft);margin-top:4px}
+footer.note{max-width:780px;margin:18px auto 0;font-size:12px;color:var(--ink-soft);text-align:center}
+@media(max-width:620px){.controls{flex-direction:column}.controls button{width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.guide{padding:clamp(22px,5vw,34px) clamp(18px,5vw,44px) clamp(26px,5vw,38px);background:radial-gradient(circle at 8% 0%,#fbf3d5 0%,var(--paper) 42%);border-bottom:3px solid var(--black)}
+.gs-title{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(22px,5vw,28px);margin:0 0 6px}
+.gs-intro{font-size:14.5px;color:var(--ink-soft);margin:0 0 16px;max-width:62ch}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:18px;padding-bottom:2px}
+.tab{flex:0 0 auto;min-height:0;padding:8px 14px;font-size:13px;background:#fff;color:var(--ink-soft);border:1.5px solid var(--rule);border-radius:20px}
+.tab.on{background:var(--black);color:var(--yellow);border-color:var(--black)}
+.pane{display:none}.pane.on{display:block}
+.pane h3{font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px}
+.pane p{margin:0 0 12px;font-size:14.5px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px}
+.box{background:#fff;border:1.5px solid var(--black);border-radius:6px;padding:12px 14px;font-size:14px}
+.box b{display:block;font-family:'Fraunces',serif;font-size:16px;margin-bottom:4px}
+.words{display:inline-block;background:var(--yellow);font-weight:800;padding:3px 10px;border-radius:20px;font-size:13px}
+.part{background:#fff;border:1.5px solid var(--rule);border-left:8px solid var(--yellow);border-radius:6px;padding:12px 14px;margin-bottom:10px;font-size:14px}
+.part h4{margin:0 0 4px;font-family:'Fraunces',serif;font-size:16px}
+.part .f{font-weight:600}.part .ph{color:var(--ink-soft);margin-top:6px;font-size:13px}
+.p2{border-left-color:var(--teal)}.p3{border-left-color:var(--plum)}.p4{border-left-color:var(--rose)}
+.tk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.tk{border-radius:8px;padding:12px 14px;font-size:13.5px;border:1.5px solid}
+.tk h4{margin:0 0 6px;font-size:13px;font-weight:800}.tk ul{margin:0;padding-left:18px}
+.k1{background:#FFF4C2;border-color:var(--yellow-deep)}.k2{background:var(--teal-bg);border-color:var(--teal)}.k3{background:var(--plum-bg);border-color:var(--plum)}
+.k4{background:var(--rose-bg);border-color:var(--rose)}.k5{background:var(--good-bg);border-color:var(--good)}.k6{background:#ECECE7;border-color:var(--ink-soft)}
+.model .part{line-height:1.7}.tag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:4px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.two ul{margin:0;padding-left:18px;font-size:14px}.two li{margin-bottom:6px}
+.avoid h4{color:var(--bad)}.do h4{color:var(--good)}
+.meta .ok{color:var(--good);font-weight:700}.meta .over{color:var(--bad);font-weight:700}
+
+.subhead{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:22px 0 8px}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.tool{min-height:0;padding:7px 12px;font-size:12.5px;border-radius:20px;border:1.5px solid var(--rule);background:#fff;color:var(--ink)}
+.tool.h1{background:#FFE98A}.tool.h2{background:#BFE8CF}.tool.h3{background:#F7C6D6}.tool.h4{background:#BDE3E1}.tool.h5{background:#DCC9FA}
+.tool.on{border-color:var(--black);box-shadow:0 0 0 2px var(--black)}
+.hint{font-size:12.5px;color:var(--ink-soft);margin-bottom:8px}
+.sample{border:1.5px solid var(--black);border-radius:6px;padding:clamp(14px,3vw,22px);background:#fff;font-size:16px;line-height:1.8}
+.sample[data-tool="erase"] mark{cursor:pointer;outline:1px dashed var(--bad)}
+.sp{margin:0 0 12px}.sp:last-child{margin:0}
+mark{border-radius:3px;padding:1px 2px;color:inherit}
+mark.h1{background:#FFE98A}mark.h2{background:#BFE8CF}mark.h3{background:#F7C6D6}mark.h4{background:#BDE3E1}mark.h5{background:#DCC9FA}
+.notes{min-height:90px}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:10px 0}
+.legend span{padding:8px 12px;border-radius:6px;font-size:13.5px;font-weight:600}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-bottom:6px}
+.vcard{background:#fff;border:1px solid var(--rule);border-top:6px solid var(--yellow);border-radius:12px;padding:14px 16px}
+.vh{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.vn{width:26px;height:26px;border-radius:50%;background:var(--black);color:var(--yellow);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.vt{font-family:'Fraunces',serif;font-weight:600;font-size:18px;line-height:1.2}
+.vl{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:10px 0 4px}
+.vm{font-size:14px}
+.vx{background:#FFF6D1;border-left:4px solid var(--yellow);border-radius:4px;padding:8px 10px;font-style:italic;font-size:14px;line-height:1.55}
+.vx mark{background:var(--yellow);font-weight:700;padding:1px 5px;border-radius:4px}
+.vcard.g{border-top-color:var(--teal)}.vcard.g .vn{background:var(--teal);color:#fff}
+.vx.q{background:var(--teal-bg);border-left-color:var(--teal);font-style:normal}.vx.q mark{background:#BDE3E1;font-weight:700}
+.tool.ref{background:#fff;border:1.5px solid var(--black);font-weight:800;color:var(--ink)}
+.tool.ref:hover{background:var(--yellow)}.tool.ref.gm{border-color:var(--teal);color:var(--teal)}.tool.ref.gm:hover{background:var(--teal-bg)}
+.tool.rf{margin-left:auto}
+.pop{position:fixed;inset:0;z-index:50;background:rgba(20,20,22,.62);display:flex;align-items:center;justify-content:center;padding:14px}.pop[hidden]{display:none}
+.popbox{background:#fff;border-radius:14px;border-top:6px solid var(--yellow);width:100%;max-width:860px;max-height:88vh;display:flex;flex-direction:column;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.popbox.gm{border-top-color:var(--teal)}
+.pophead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:16px 20px 10px}
+.poptag{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.pophead h3{margin:2px 0 0;font-family:'Fraunces',serif;font-size:21px}
+.popx{min-height:0;width:40px;height:40px;padding:0;border-radius:50%;background:var(--paper);border:1.5px solid var(--rule);font-size:22px;line-height:1;color:var(--ink);flex:0 0 auto}
+.popbody{overflow:auto;padding:4px 20px 20px}
+.toolbar{flex-wrap:nowrap;gap:14px;align-items:flex-start}
+.tbl{display:flex;flex-wrap:wrap;gap:6px;flex:1 1 auto;min-width:0}
+.tbr{display:flex;flex-direction:column;gap:8px;flex:0 0 auto;padding-left:14px;border-left:2px solid var(--rule)}
+.tool.ref{padding:11px 22px;font-size:14.5px;min-height:46px;min-width:140px}
+@media(max-width:620px){.toolbar{flex-wrap:wrap}.tbr{flex-direction:row;width:100%;padding-left:0;border-left:0;padding-top:10px;border-top:2px solid var(--rule)}.tbr .tool.ref{flex:1;min-width:0}}
+</style></head><body>
+<div class="sheet">
+<div class="masthead"><div class="dot-motif"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="eyebrow-row"><span class="brand">English Practice Sheet</span> · IELTS Task 2 · Writing</div>
+<h1>Discussion Essay</h1>
+<p class="sub">Plan the ideas, study the model essay with the colour analysis, then write your own essay with live suggestions.</p></div>
+<div class="guide" id="guide"><h2 class="gs-title">Discussion essay guide</h2>
+<p class="gs-intro">Understand the task, plan both sides, follow the four-paragraph structure, and use the phrase bank while you write.</p>
+<div class="tabs"><button class="tab on" data-p="g1">The task</button><button class="tab" data-p="g2">Plan ideas</button><button class="tab" data-p="g3">Structure</button><button class="tab" data-p="g4">Language bank</button><button class="tab" data-p="g5">Avoid these</button><button class="tab" data-p="g6">How to use this page</button></div>
+<div class="pane on" id="g1"><h3>What is a discussion essay?</h3><p>You are given two views on one topic. You <b>discuss both views</b> fairly. In most questions you must also <b>give your own opinion</b>.</p>
+<div class="three"><div class="box"><b>Question type</b>“Some people say … Others say … Discuss both views and give your opinion.”</div><div class="box"><b>You must</b>Explain why each side thinks the way they do, then state which side you support and why.</div><div class="box"><b>Key words</b><u>BOTH</u> views and <u>YOUR</u> opinion. Missing either one lowers your Task Response score.</div></div>
+<p>Length: at least <span class="words">250 words</span> · about 40 minutes</p>
+<div class="part"><h4>Two common versions</h4><div class="f">“Discuss both views and give your opinion”: opinion is required, so give it in the introduction and the conclusion.</div><div class="ph">“Discuss both views”: you may stay neutral, but you still need a clear conclusion.</div></div></div>
+<div class="pane" id="g2"><h3>Idea generation in three steps</h3>
+<div class="part"><h4>1. Analyse the question</h4><div class="f">Write the topic, the task, and your position before anything else.</div><div class="ph">Topic: the relevance of libraries · Task: discuss BOTH views and give YOUR opinion · Position: libraries are still important</div></div>
+<div class="part p2"><h4>2. Ask a question for each side</h4><div class="f">“Why do critics think …?” and “Why do others, including myself, believe …?”</div></div>
+<div class="part p3"><h4>3. Give each answer a main idea and an explanation</h4><div class="f">Choose the 2 strongest ideas for each side. One main idea, then one or two lines that explain it.</div><div class="ph">Main idea: atmosphere · Explanation: libraries are more than reading places (distraction-free, learning, cooperation)</div></div>
+<p>The plan for each topic is shown above its model essay.</p></div>
+<div class="pane" id="g3"><h3>Four paragraphs</h3>
+<div class="part"><h4>Introduction (3 sentences)</h4><div class="f">General statement · paraphrase both views · your opinion.</div></div>
+<div class="part p2"><h4>Body 1: the other side</h4><div class="f">Explain why critics think the way they do. Two main ideas, each with an explanation.</div></div>
+<div class="part p3"><h4>Body 2: your side</h4><div class="f">Start by accepting the other side is reasonable, then say which side you support. Two main ideas, each with an explanation.</div></div>
+<div class="part p4"><h4>Conclusion (1–2 sentences)</h4><div class="f">Restate your opinion and the main points. No new ideas.</div></div>
+<p>Why Body 1 is the other side: ending on your own view leaves the reader with your opinion.</p></div>
+<div class="pane" id="g4"><h3>Phrase bank</h3><div class="tk-grid">
+<div class="tk k1"><h4>Introduction</h4><ul><li>… have always played a crucial role in …</li><li>However, many people question …</li><li>… while others oppose this view.</li><li>In my opinion, … / I firmly believe that …</li></ul></div>
+<div class="tk k2"><h4>Presenting the other side</h4><ul><li>Critics of … point out numerous arguments.</li><li>Another compelling argument put forward is …</li><li>This convenience, as critics mention, makes …</li><li>For all these reasons, many people …</li></ul></div>
+<div class="tk k3"><h4>Accepting, then disagreeing</h4><ul><li>As plausible as these arguments are, I side with …</li><li>While I acknowledge …, I believe …</li><li>It is true that …; however, …</li></ul></div>
+<div class="tk k4"><h4>Adding and explaining</h4><ul><li>For one thing, …</li><li>In addition, …</li><li>In light of this, …</li><li>…, all of which reduce …</li><li>… such as …, …, and …</li></ul></div>
+<div class="tk k5"><h4>Concluding</h4><ul><li>Ultimately, while I acknowledge …, I am firmly of the view that …</li><li>In conclusion, …</li><li>To sum up, …</li></ul></div></div>
+<p style="margin-top:10px">The same phrases appear as clickable suggestions under each writing box.</p></div>
+<div class="pane" id="g5"><h3>Common mistakes</h3><div class="tk-grid">
+<div class="tk k1"><h4>Task</h4><ul><li>Writing only one view.</li><li>Giving no opinion, or hiding it until the last line.</li><li>Changing your opinion between paragraphs.</li></ul></div>
+<div class="tk k2"><h4>Ideas</h4><ul><li>Many ideas with no explanation.</li><li>New ideas in the conclusion.</li><li>Examples that are too personal (“my uncle…”).</li></ul></div>
+<div class="tk k3"><h4>Language</h4><ul><li>Contractions: don’t, can’t, it’s.</li><li>Copying the question word for word.</li><li>Repeating “I think” in every paragraph.</li></ul></div>
+<div class="tk k4"><h4>Layout</h4><ul><li>One long paragraph.</li><li>A very long introduction.</li><li>Only “firstly, secondly, thirdly” as linking.</li></ul></div></div></div>
+<div class="pane" id="g6"><h3>How to use each topic</h3><p>1. Read the question and the plan. 2. Press <b>Show model analysis</b> to see what each part of the model essay does. 3. Turn it off, then highlight the model yourself and write 2–3 notes. 4. Press <b>Vocabulary</b> or <b>Grammar</b> (on the right of the colour buttons) to open pop-up cards, and try to use some of them. 5. Write your essay. Click phrase suggestions to insert them. 6. Watch the live checklist, then press <b>Check my essay</b>.</p><div class="legend"><span style="background:#FFE98A">Hook &amp; paraphrase</span><span style="background:#BFE8CF">My opinion</span><span style="background:#F7C6D6">Main idea (topic sentence)</span><span style="background:#BDE3E1">Explanation &amp; support</span><span style="background:#DCC9FA">Linking words</span><span style="background:#FFD2A8">Wrap-up</span></div></div></div>
+<div class="progress-bar"><span>Sent</span><div class="progress-track"><div class="progress-fill" id="fill"></div></div><span class="tally" id="tally"></span></div>
+<div class="jump-nav" id="nav"></div>
+<section class="block" id="who"><label class="rnum" for="stuName">Your name and PIN</label><div style="display:grid;grid-template-columns:2fr 1fr;gap:10px"><input id="stuName" class="essay" style="min-height:0;height:48px;resize:none" placeholder="Write your full name" autocomplete="name"><input id="stuPin" class="essay" style="min-height:0;height:48px;resize:none" inputmode="numeric" maxlength="4" placeholder="4-digit PIN" autocomplete="off"></div><div class="msg" id="syncMsg">Choose a 4-digit PIN and remember it. With your name and PIN your work is saved online, and you can continue on any phone or computer.</div></section>
+<div id="topics"></div>
+</div>
+<footer class="note">Your work is saved in this browser. Your essay is sent to your teacher when you press Check my essay. Idea generation and model essay from the class handout.</footer>
+<div class="pop" id="pop" hidden><div class="popbox" id="popBox" role="dialog" aria-modal="true" aria-labelledby="popTitle"><div class="pophead"><div><div class="poptag" id="popTag"></div><h3 id="popTitle"></h3></div><button type="button" class="popx" id="popX" aria-label="Close">×</button></div><div class="popbody" id="popBody"></div></div></div>
+<script>
+var API_URL="https://bitter-thunder-6c8bessay-checker.sh-ubaydullaev27.workers.dev/";
+var LEVEL="IELTS Task 2: discussion essay (discuss both views and give your opinion)", MIN=250, MAX=350;
+var CATS=[["h1","Hook & paraphrase"],["h2","My opinion"],["h3","Main idea"],["h4","Explanation & support"],["h5","Linking words"],["h6","Wrap-up"]];
+var TOPICS=[
+ {
+  "title": "The relevance of libraries",
+  "prompt": "Some people say libraries are important in society as a place to get information and use books. Others say as computers are advanced, libraries are a waste of money and resources. Discuss both views and give your opinion.",
+  "topic": "The relevance of libraries",
+  "task": "Discuss BOTH views and give YOUR opinion",
+  "position": "Libraries are still important",
+  "plan": {
+   "lq": "Why do critics think that libraries are a waste of money and resources?",
+   "rq": "Why do others, including myself, believe that libraries are important?",
+   "left": [
+    [
+     "The internet has made it easy for people to access e-books",
+     "There are countless websites that offer a wide range of books for free. Convenience: there is no need to visit a library."
+    ],
+    [
+     "The operating cost of libraries is often high",
+     "Expenses on communal bills, employee wages and new books may be too much for some countries, but websites do not have such expenses."
+    ]
+   ],
+   "right": [
+    [
+     "Atmosphere",
+     "Libraries are more than just reading places. A cozy, distraction-free environment helps learning. Cooperation builds bonds."
+    ],
+    [
+     "Health risks of screen time",
+     "Too much time looking at a screen can cause poor eyesight, dizziness and constant headaches."
+    ]
+   ]
+  },
+  "body": [
+   [
+    "Introduction",
+    "General statement related to the topic · Paraphrase the statement (both views) · Clearly state your own opinion"
+   ],
+   [
+    "Body 1",
+    "Why do critics believe that libraries are a waste?"
+   ],
+   [
+    "Body 2",
+    "Why do others, including myself, believe that libraries are important?"
+   ],
+   [
+    "Conclusion",
+    "Restate your main points and finish"
+   ]
+  ],
+  "labels": [
+   "Introduction",
+   "Body 1 · The critics’ view",
+   "Body 2 · My view",
+   "Conclusion"
+  ],
+  "essay": [
+   "Libraries have always played a crucial role in educating society and sharing useful information with the public. However, we have come to question the relevance and usefulness of physical libraries, with many people arguing that libraries are nothing but a waste of money and resources, while others oppose this view. In my opinion, the role of libraries in today's world is pivotal.",
+   "Critics of physical libraries point out numerous arguments to support their stance. The rise of the internet and the advent of online reading platforms have facilitated reading and learning as a whole. People can now access a wide range of e-books for free in online libraries and read them anywhere at any time, whether it is on a subway, bus, or in a remote area where physical libraries are absent. This convenience, as critics mention, makes libraries irrelevant in today's world. Another compelling argument put forward is the operating costs of libraries. Unlike an online library that requires little to no cost to operate, physical libraries have to allocate a good amount of money to expenses, including but not limited to communal bills, employee wages, and the purchase of paper books. For all these reasons, many people go against the view that libraries are still important.",
+   "As plausible as these arguments are, I side with those who think libraries play a significant role in society. For one thing, libraries serve a greater purpose than critics realize and are not just reading places. In a world where people are constantly bombarded with notifications from different sites and unwanted messages from social media companies, many are unable to focus on a demanding task for a prolonged period of time, which is an important quality that high-level learners possess. In light of this, libraries offer a cozy and distraction-free environment, where people of all ages can study with full focus and cooperate with others who share the same interests. In addition, a worrying concern is raised by the proponents about the impact that technology can have on health. Spending an inordinate amount of time looking at a bright screen and reading e-books can result in several health issues, such as poor eyesight, constant headaches, and dizziness, all of which reduce quality of life.",
+   "Ultimately, while I acknowledge the credibility of arguments given by the critics, I am firmly of the view that libraries play a crucial part in today's world."
+  ],
+  "ann": [
+   [
+    0,
+    "Libraries have always played a crucial role in educating society and sharing useful information with the public.",
+    "h1"
+   ],
+   [
+    0,
+    "However,",
+    "h5"
+   ],
+   [
+    0,
+    "we have come to question the relevance and usefulness of physical libraries, with many people arguing that libraries are nothing but a waste of money and resources, while others oppose this view.",
+    "h1"
+   ],
+   [
+    0,
+    "In my opinion, the role of libraries in today's world is pivotal.",
+    "h2"
+   ],
+   [
+    1,
+    "Critics of physical libraries point out numerous arguments to support their stance.",
+    "h3"
+   ],
+   [
+    1,
+    "The rise of the internet and the advent of online reading platforms have facilitated reading and learning as a whole. People can now access a wide range of e-books for free in online libraries and read them anywhere at any time, whether it is on a subway, bus, or in a remote area where physical libraries are absent. This convenience, as critics mention, makes libraries irrelevant in today's world.",
+    "h4"
+   ],
+   [
+    1,
+    "Another compelling argument put forward is",
+    "h5"
+   ],
+   [
+    1,
+    "the operating costs of libraries.",
+    "h3"
+   ],
+   [
+    1,
+    "Unlike an online library that requires little to no cost to operate, physical libraries have to allocate a good amount of money to expenses, including but not limited to communal bills, employee wages, and the purchase of paper books.",
+    "h4"
+   ],
+   [
+    1,
+    "For all these reasons, many people go against the view that libraries are still important.",
+    "h6"
+   ],
+   [
+    2,
+    "As plausible as these arguments are,",
+    "h5"
+   ],
+   [
+    2,
+    "I side with those who think libraries play a significant role in society.",
+    "h2"
+   ],
+   [
+    2,
+    "For one thing,",
+    "h5"
+   ],
+   [
+    2,
+    "libraries serve a greater purpose than critics realize and are not just reading places.",
+    "h3"
+   ],
+   [
+    2,
+    "In a world where people are constantly bombarded with notifications from different sites and unwanted messages from social media companies, many are unable to focus on a demanding task for a prolonged period of time, which is an important quality that high-level learners possess.",
+    "h4"
+   ],
+   [
+    2,
+    "In light of this,",
+    "h5"
+   ],
+   [
+    2,
+    "libraries offer a cozy and distraction-free environment, where people of all ages can study with full focus and cooperate with others who share the same interests.",
+    "h4"
+   ],
+   [
+    2,
+    "In addition,",
+    "h5"
+   ],
+   [
+    2,
+    "a worrying concern is raised by the proponents about the impact that technology can have on health.",
+    "h3"
+   ],
+   [
+    2,
+    "Spending an inordinate amount of time looking at a bright screen and reading e-books can result in several health issues, such as poor eyesight, constant headaches, and dizziness, all of which reduce quality of life.",
+    "h4"
+   ],
+   [
+    3,
+    "Ultimately,",
+    "h5"
+   ],
+   [
+    3,
+    "while I acknowledge the credibility of arguments given by the critics,",
+    "h6"
+   ],
+   [
+    3,
+    "I am firmly of the view that libraries play a crucial part in today's world.",
+    "h2"
+   ]
+  ],
+  "vocab": [
+   [
+    "pivotal",
+    "extremely important; having a central role",
+    "Teachers play a [[pivotal]] role in shaping young minds."
+   ],
+   [
+    "advent",
+    "the arrival of something new, especially an invention",
+    "The [[advent]] of smartphones changed how people shop."
+   ],
+   [
+    "facilitate",
+    "to make a process easier",
+    "Online maps [[facilitate]] travel in unfamiliar cities."
+   ],
+   [
+    "allocate",
+    "to give money or resources for a particular purpose",
+    "The council decided to [[allocate]] more funds to public parks."
+   ],
+   [
+    "bombarded with",
+    "receiving a large amount of something unwanted",
+    "Teenagers are [[bombarded with]] adverts every time they go online."
+   ],
+   [
+    "inordinate",
+    "much greater than is reasonable",
+    "He spent an [[inordinate]] amount of time on a simple task."
+   ],
+   [
+    "proponents",
+    "people who support an idea or policy",
+    "[[Proponents]] of remote work say it saves time and money."
+   ],
+   [
+    "plausible",
+    "seeming reasonable and likely to be true",
+    "The explanation sounds [[plausible]], but there is no evidence."
+   ]
+  ],
+  "grammar": [
+   [
+    "Contrast with 'Unlike'",
+    "Unlike + noun phrase, + main clause",
+    "[[Unlike an online library that requires little to no cost to operate]], physical libraries have to allocate a good amount of money to expenses",
+    "[[Unlike public transport]], private cars give people complete freedom of movement."
+   ],
+   [
+    "Concession: As + adjective + as",
+    "As + adjective + as + subject + be, + main clause",
+    "[[As plausible as these arguments are]], I side with those who think libraries play a significant role in society.",
+    "[[As tempting as cheap flights are]], they harm the environment."
+   ],
+   [
+    "Relative clause with 'where'",
+    "place noun, + where + clause",
+    "libraries offer a cozy and distraction-free environment, [[where people of all ages can study with full focus]] and cooperate with others who share the same interests.",
+    "Libraries provide quiet rooms, [[where students can revise without interruption]]."
+   ],
+   [
+    "Adding a result: 'all of which'",
+    "list of nouns, + all of which + verb",
+    "can result in several health issues, such as poor eyesight, constant headaches, and dizziness, [[all of which reduce quality of life]].",
+    "Long commutes can cause stress, tiredness and boredom, [[all of which reduce productivity]]."
+   ]
+  ]
+ },
+ {
+  "title": "A maximum wage",
+  "prompt": "In many countries, a small number of people earn extremely high salaries. Some people believe that this is good for the country, but others think that governments should not allow salaries above a certain level. Discuss both these views and give your own opinion.",
+  "topic": "A maximum wage for high earners",
+  "task": "Discuss BOTH views and give YOUR opinion",
+  "position": "Governments should cap the highest salaries",
+  "plan": {
+   "lq": "Why do some people believe that extremely high salaries are good for the country?",
+   "rq": "Why do others, including myself, believe that there should be a maximum wage?",
+   "left": [
+    [
+     "Attracting talent",
+     "Excellent pay packages attract the most talented people, e.g. Google and the best programmers."
+    ],
+    [
+     "Motivation and the economy",
+     "Well-paid employees work hard, which drives business success, a thriving economy and higher tax revenues."
+    ]
+   ],
+   "right": [
+    [
+     "Reducing the pay-gap",
+     "A limit on earnings narrows the gap between bosses and employees. A huge gap demotivates workers who feel it is unfair."
+    ],
+    [
+     "Higher minimum wages and less poverty",
+     "Lower executive salaries make higher minimum wages feasible, so poverty and crime may fall as living standards improve."
+    ]
+   ]
+  },
+  "body": [
+   [
+    "Introduction",
+    "General statement on the topic · Paraphrase both views · Clearly state your own opinion"
+   ],
+   [
+    "Body 1",
+    "Why do some people believe that extremely high salaries are beneficial?"
+   ],
+   [
+    "Body 2",
+    "Why do others, including myself, believe that there should be a maximum wage?"
+   ],
+   [
+    "Conclusion",
+    "Restate your opinion and finish"
+   ]
+  ],
+  "labels": [
+   "Introduction",
+   "Body 1 · The view that high salaries are good",
+   "Body 2 · My view",
+   "Conclusion"
+  ],
+  "essay": [
+   "People have different views about whether governments should introduce a maximum wage. While in some ways it may seem reasonable to allow people to earn as much as companies are willing to pay, I personally believe that employee remuneration should be capped at a certain level.",
+   "There are various reasons why it might be considered beneficial to allow people to be paid extremely high salaries. If companies offer excellent pay packages, they can attract the most talented people in their fields to work for them. For example, technology companies like Google are able to employ the best programmers because of the huge sums that they are willing to pay. Furthermore, these well-paid employees are likely to be highly motivated to work hard and therefore drive their businesses successfully. In theory, this should result in a thriving economy and increased tax revenues, which means that paying high salaries benefits everyone.",
+   "However, I agree with those who argue that there should be a maximum wage. By introducing a limit on earnings, the pay-gap between bosses and employees can be reduced. Currently, the difference between normal and top salaries is huge, and this can demotivate workers who feel that the situation is unfair. With lower executive salaries, it might become feasible to introduce higher minimum wages, and everybody would be better off. One possible consequence of greater equality could be that poverty and crime rates fall because the general population will experience an improved standard of living.",
+   "In conclusion, it seems to me that it would be better, on balance, for governments to set a limit on the wages of the highest earners in society."
+  ],
+  "ann": [
+   [
+    0,
+    "People have different views about whether governments should introduce a maximum wage.",
+    "h1"
+   ],
+   [
+    0,
+    "While",
+    "h5"
+   ],
+   [
+    0,
+    "in some ways it may seem reasonable to allow people to earn as much as companies are willing to pay,",
+    "h1"
+   ],
+   [
+    0,
+    "I personally believe that employee remuneration should be capped at a certain level.",
+    "h2"
+   ],
+   [
+    1,
+    "There are various reasons why it might be considered beneficial to allow people to be paid extremely high salaries.",
+    "h3"
+   ],
+   [
+    1,
+    "If companies offer excellent pay packages, they can attract the most talented people in their fields to work for them.",
+    "h4"
+   ],
+   [
+    1,
+    "For example,",
+    "h5"
+   ],
+   [
+    1,
+    "technology companies like Google are able to employ the best programmers because of the huge sums that they are willing to pay.",
+    "h4"
+   ],
+   [
+    1,
+    "Furthermore,",
+    "h5"
+   ],
+   [
+    1,
+    "these well-paid employees are likely to be highly motivated to work hard and therefore drive their businesses successfully.",
+    "h3"
+   ],
+   [
+    1,
+    "In theory,",
+    "h5"
+   ],
+   [
+    1,
+    "this should result in a thriving economy and increased tax revenues, which means that paying high salaries benefits everyone.",
+    "h6"
+   ],
+   [
+    2,
+    "However,",
+    "h5"
+   ],
+   [
+    2,
+    "I agree with those who argue that there should be a maximum wage.",
+    "h2"
+   ],
+   [
+    2,
+    "By introducing a limit on earnings, the pay-gap between bosses and employees can be reduced.",
+    "h3"
+   ],
+   [
+    2,
+    "Currently,",
+    "h5"
+   ],
+   [
+    2,
+    "the difference between normal and top salaries is huge, and this can demotivate workers who feel that the situation is unfair.",
+    "h4"
+   ],
+   [
+    2,
+    "With lower executive salaries, it might become feasible to introduce higher minimum wages, and everybody would be better off.",
+    "h3"
+   ],
+   [
+    2,
+    "One possible consequence of greater equality could be that poverty and crime rates fall because the general population will experience an improved standard of living.",
+    "h4"
+   ],
+   [
+    3,
+    "In conclusion,",
+    "h5"
+   ],
+   [
+    3,
+    "it seems to me that it would be better, on balance, for governments to set a limit on the wages of the highest earners in society.",
+    "h2"
+   ]
+  ],
+  "vocab": [
+   [
+    "remuneration",
+    "payment for work, including salary and benefits",
+    "Executive [[remuneration]] has risen faster than average pay."
+   ],
+   [
+    "capped",
+    "limited to a maximum amount (to cap)",
+    "Rents in the city have been [[capped]] by the government."
+   ],
+   [
+    "pay packages",
+    "a worker's salary together with other benefits",
+    "Banks offer generous [[pay packages]] to attract graduates."
+   ],
+   [
+    "thriving",
+    "growing and being very successful",
+    "A [[thriving]] tourism industry brings jobs to the region."
+   ],
+   [
+    "demotivate",
+    "to make someone feel less eager to work",
+    "Unfair treatment can [[demotivate]] even the best employees."
+   ],
+   [
+    "feasible",
+    "possible and practical to do",
+    "It is not [[feasible]] to build a new hospital in a year."
+   ],
+   [
+    "pay-gap",
+    "the difference in income between two groups",
+    "The [[pay-gap]] between men and women is slowly closing."
+   ],
+   [
+    "standard of living",
+    "the level of wealth and comfort people have",
+    "A higher [[standard of living]] often means longer life expectancy."
+   ]
+  ],
+  "grammar": [
+   [
+    "Concession with 'While'",
+    "While + clause, + I (personally) believe that + clause",
+    "[[While in some ways it may seem reasonable to allow people to earn as much as companies are willing to pay]], I personally believe that employee remuneration should be capped at a certain level.",
+    "[[While it may seem convenient to shop online]], I personally believe that local shops matter more."
+   ],
+   [
+    "Passive with a modal verb",
+    "modal + be + past participle",
+    "By introducing a limit on earnings, the pay-gap between bosses and employees [[can be reduced]].",
+    "Traffic [[could be reduced]] by improving public transport."
+   ],
+   [
+    "First conditional",
+    "If + present simple, + subject + can/will + verb",
+    "[[If companies offer excellent pay packages]], they can attract the most talented people in their fields to work for them.",
+    "[[If governments invest in schools]], they can raise literacy rates."
+   ],
+   [
+    "With + noun phrase, it might become feasible to…",
+    "With + noun phrase, + it might become + adjective + to + verb",
+    "[[With lower executive salaries]], it might become feasible to introduce higher minimum wages, and everybody would be better off.",
+    "[[With more funding for hospitals]], it might become possible to cut waiting times."
+   ],
+   [
+    "Consequence: 'One possible consequence … could be that'",
+    "One possible consequence of + noun + could be that + clause",
+    "[[One possible consequence of greater equality could be that]] poverty and crime rates fall because the general population will experience an improved standard of living.",
+    "[[One possible consequence of cheaper housing could be that]] more young people leave their parents' homes."
+   ]
+  ]
+ },
+ {
+  "title": "Economic progress and other types of progress",
+  "prompt": "Many governments think that economic progress is their most important goal. Some people, however, think that other types of progress are equally important for a country. Discuss both these views and give your own opinion.",
+  "topic": "Economic progress and other types of progress",
+  "task": "Discuss BOTH views and give YOUR opinion",
+  "position": "Other types of progress are equally important",
+  "plan": {
+   "lq": "Why do governments see economic progress as the most important goal?",
+   "rq": "Why do others, including myself, believe that other types of progress matter just as much?",
+   "left": [
+    [
+     "Jobs and higher incomes",
+     "A healthy economy creates jobs, a high level of employment and better salaries."
+    ],
+    [
+     "Money for public services",
+     "Higher revenues pay for transport, education and hospitals."
+    ],
+    [
+     "Global standing",
+     "A strong economy brings political influence and trading power."
+    ]
+   ],
+   "right": [
+    [
+     "Social justice and human rights",
+     "Equality, democracy and the treatment of minorities reflect a society's moral standards."
+    ],
+    [
+     "The environment",
+     "Protecting nature and moving towards sustainability."
+    ],
+    [
+     "Health and happiness",
+     "The well-being of residents is a measure of success."
+    ]
+   ]
+  },
+  "body": [
+   [
+    "Introduction",
+    "General statement on the topic · Paraphrase both views · Clearly state your own opinion"
+   ],
+   [
+    "Body 1",
+    "Why do governments see economic growth as a fundamental goal?"
+   ],
+   [
+    "Body 2",
+    "Why are other forms of progress just as significant?"
+   ],
+   [
+    "Conclusion",
+    "Restate your opinion and finish"
+   ]
+  ],
+  "labels": [
+   "Introduction",
+   "Body 1 · The economic view",
+   "Body 2 · My view",
+   "Conclusion"
+  ],
+  "essay": [
+   "People have different views about how governments should measure their countries' progress. While economic progress is of course essential, I agree with those who believe that other measures of progress are just as important.",
+   "There are three key reasons why economic growth is seen as a fundamental goal for countries. Firstly, a healthy economy results in job creation, a high level of employment, and better salaries for all citizens. Secondly, economic progress ensures that more money is available for governments to spend on infrastructure and public services. For example, a government with higher revenues can invest in the country's transport network, its education system and its hospitals. Finally, a strong economy can help a country's standing on the global stage, in terms of its political influence and trading power.",
+   "However, I would argue that various other forms of progress are just as significant as the economic factors mentioned above. In particular, we should consider the area of social justice, human rights, equality and democracy itself. For example, the treatment of minority groups is often seen as a reflection of the moral standards and level of development of a society. Perhaps another key consideration when judging the progress of a modern country should be how well that country protects the natural environment, and whether it is moving towards environmental sustainability. Alternatively, the success of a nation could be measured by looking at the health, well-being and happiness of its residents.",
+   "In conclusion, the economy is obviously a key marker of a country's success, but social, environmental and health criteria are equally significant."
+  ],
+  "ann": [
+   [
+    0,
+    "People have different views about how governments should measure their countries' progress.",
+    "h1"
+   ],
+   [
+    0,
+    "While",
+    "h5"
+   ],
+   [
+    0,
+    "economic progress is of course essential,",
+    "h1"
+   ],
+   [
+    0,
+    "I agree with those who believe that other measures of progress are just as important.",
+    "h2"
+   ],
+   [
+    1,
+    "There are three key reasons why economic growth is seen as a fundamental goal for countries.",
+    "h3"
+   ],
+   [
+    1,
+    "Firstly,",
+    "h5"
+   ],
+   [
+    1,
+    "a healthy economy results in job creation, a high level of employment, and better salaries for all citizens.",
+    "h3"
+   ],
+   [
+    1,
+    "Secondly,",
+    "h5"
+   ],
+   [
+    1,
+    "economic progress ensures that more money is available for governments to spend on infrastructure and public services.",
+    "h3"
+   ],
+   [
+    1,
+    "For example,",
+    "h5"
+   ],
+   [
+    1,
+    "a government with higher revenues can invest in the country's transport network, its education system and its hospitals.",
+    "h4"
+   ],
+   [
+    1,
+    "Finally,",
+    "h5"
+   ],
+   [
+    1,
+    "a strong economy can help a country's standing on the global stage, in terms of its political influence and trading power.",
+    "h3"
+   ],
+   [
+    2,
+    "However,",
+    "h5"
+   ],
+   [
+    2,
+    "I would argue that various other forms of progress are just as significant as the economic factors mentioned above.",
+    "h2"
+   ],
+   [
+    2,
+    "In particular,",
+    "h5"
+   ],
+   [
+    2,
+    "we should consider the area of social justice, human rights, equality and democracy itself.",
+    "h3"
+   ],
+   [
+    2,
+    "For example,",
+    "h5"
+   ],
+   [
+    2,
+    "the treatment of minority groups is often seen as a reflection of the moral standards and level of development of a society.",
+    "h4"
+   ],
+   [
+    2,
+    "Perhaps another key consideration when judging the progress of a modern country should be how well that country protects the natural environment, and whether it is moving towards environmental sustainability.",
+    "h3"
+   ],
+   [
+    2,
+    "Alternatively,",
+    "h5"
+   ],
+   [
+    2,
+    "the success of a nation could be measured by looking at the health, well-being and happiness of its residents.",
+    "h3"
+   ],
+   [
+    3,
+    "In conclusion,",
+    "h5"
+   ],
+   [
+    3,
+    "the economy is obviously a key marker of a country's success,",
+    "h6"
+   ],
+   [
+    3,
+    "but",
+    "h5"
+   ],
+   [
+    3,
+    "social, environmental and health criteria are equally significant.",
+    "h2"
+   ]
+  ],
+  "vocab": [
+   [
+    "fundamental",
+    "basic and extremely important",
+    "Clean water is a [[fundamental]] human need."
+   ],
+   [
+    "job creation",
+    "the process of making new jobs available",
+    "Government policy should focus on [[job creation]] in rural areas."
+   ],
+   [
+    "infrastructure",
+    "basic systems such as roads, railways and power supplies",
+    "The country spends billions on [[infrastructure]] every year."
+   ],
+   [
+    "revenues",
+    "income, especially money a government or company receives",
+    "Tourism brings in large [[revenues]] for small islands."
+   ],
+   [
+    "social justice",
+    "fair treatment of all groups in society",
+    "Many young people campaign for [[social justice]]."
+   ],
+   [
+    "moral standards",
+    "accepted ideas about right and wrong behaviour",
+    "Politicians are expected to keep high [[moral standards]]."
+   ],
+   [
+    "environmental sustainability",
+    "protecting natural resources so they last for the future",
+    "Companies are under pressure to improve their [[environmental sustainability]]."
+   ],
+   [
+    "well-being",
+    "the state of being healthy, comfortable and happy",
+    "Regular exercise improves both physical and mental [[well-being]]."
+   ]
+  ],
+  "grammar": [
+   [
+    "Concession with 'While … of course'",
+    "While + clause (of course), + I agree with those who + verb",
+    "[[While economic progress is of course essential]], I agree with those who believe that other measures of progress are just as important.",
+    "[[While exams are of course necessary]], I agree with those who think they should not be the only measure of success."
+   ],
+   [
+    "Equal comparison: just as … as",
+    "just as + adjective + as + noun phrase",
+    "I would argue that various other forms of progress are [[just as significant as]] the economic factors mentioned above.",
+    "Practical skills are [[just as valuable as]] academic qualifications."
+   ],
+   [
+    "Noun clauses with how / whether",
+    "be + how + adverb + clause, and whether + clause",
+    "Perhaps another key consideration when judging the progress of a modern country should be [[how well that country protects the natural environment]], and [[whether it is moving towards environmental sustainability]].",
+    "A key question is [[how fairly the school treats its students]], and [[whether it listens to their opinions]]."
+   ],
+   [
+    "Specifying with 'in terms of'",
+    "clause, + in terms of + noun phrase",
+    "a strong economy can help a country's standing on the global stage, [[in terms of]] its political influence and trading power.",
+    "The city has improved [[in terms of]] public transport and air quality."
+   ]
+  ]
+ },
+ {
+  "title": "Saving minority languages",
+  "prompt": "Several languages are in danger of extinction because they are spoken by very small numbers of people. Some people say that governments should spend public money on saving these languages, while others believe that would be a waste of money. Discuss both these views and give your opinion.",
+  "topic": "Saving languages in danger of extinction",
+  "task": "Discuss BOTH views and give YOUR opinion",
+  "position": "Governments should protect minority languages",
+  "plan": {
+   "lq": "Why do some people think saving minority languages is a waste of money?",
+   "rq": "Why do others, including myself, believe that governments should protect them?",
+   "left": [
+    [
+     "Education programmes are expensive",
+     "The state must pay for facilities, teachers and marketing, which could be spent on other public services."
+    ],
+    [
+     "One language is cheaper",
+     "It is more efficient to have a single language and cut the cost of communicating with each minority group."
+    ]
+   ],
+   "right": [
+    [
+     "Language and cultural identity",
+     "A language is more than communication; it is connected to the identity of its speakers."
+    ],
+    [
+     "Diversity and history",
+     "A whole way of life disappears with a language, along with traditions and customs."
+    ]
+   ]
+  },
+  "body": [
+   [
+    "Introduction",
+    "General statement on the topic · Paraphrase both views · Clearly state your own opinion"
+   ],
+   [
+    "Body 1",
+    "Why could saving minority languages be seen as a waste of money?"
+   ],
+   [
+    "Body 2",
+    "Why should governments preserve less widely spoken languages?"
+   ],
+   [
+    "Conclusion",
+    "Restate your opinion and finish"
+   ]
+  ],
+  "labels": [
+   "Introduction",
+   "Body 1 · The ‘waste of money’ view",
+   "Body 2 · My view",
+   "Conclusion"
+  ],
+  "essay": [
+   "It is true that some minority languages may disappear in the near future. Although it can be argued that governments could save money by allowing this to happen, I believe that these languages should be protected and preserved.",
+   "There are several reasons why saving minority languages could be seen as a waste of money. Firstly, if a language is only spoken by a small number of people, expensive education programmes will be needed to make sure that more people learn it, and the state will have to pay for facilities, teachers and marketing. This money might be better spent on other public services. Secondly, it would be much cheaper and more efficient for countries to have just one language. Governments could cut all kinds of costs related to communicating with each minority group.",
+   "Despite the above arguments, I believe that governments should try to preserve languages that are less widely spoken. A language is much more than simply a means of communication; it has a vital connection with the cultural identity of the people who speak it. If a language disappears, a whole way of life will disappear with it, and we will lose the rich cultural diversity that makes societies more interesting. By spending money to protect minority languages, governments can also preserve traditions, customs and behaviours that are part of a country's history.",
+   "In conclusion, it may save money in the short term if we allow minority languages to disappear, but in the long term this would have an extremely negative impact on our cultural heritage."
+  ],
+  "ann": [
+   [
+    0,
+    "It is true that some minority languages may disappear in the near future.",
+    "h1"
+   ],
+   [
+    0,
+    "Although",
+    "h5"
+   ],
+   [
+    0,
+    "it can be argued that governments could save money by allowing this to happen,",
+    "h1"
+   ],
+   [
+    0,
+    "I believe that these languages should be protected and preserved.",
+    "h2"
+   ],
+   [
+    1,
+    "There are several reasons why saving minority languages could be seen as a waste of money.",
+    "h3"
+   ],
+   [
+    1,
+    "Firstly,",
+    "h5"
+   ],
+   [
+    1,
+    "if a language is only spoken by a small number of people, expensive education programmes will be needed to make sure that more people learn it,",
+    "h3"
+   ],
+   [
+    1,
+    "and the state will have to pay for facilities, teachers and marketing. This money might be better spent on other public services.",
+    "h4"
+   ],
+   [
+    1,
+    "Secondly,",
+    "h5"
+   ],
+   [
+    1,
+    "it would be much cheaper and more efficient for countries to have just one language.",
+    "h3"
+   ],
+   [
+    1,
+    "Governments could cut all kinds of costs related to communicating with each minority group.",
+    "h4"
+   ],
+   [
+    2,
+    "Despite the above arguments,",
+    "h5"
+   ],
+   [
+    2,
+    "I believe that governments should try to preserve languages that are less widely spoken.",
+    "h2"
+   ],
+   [
+    2,
+    "A language is much more than simply a means of communication;",
+    "h3"
+   ],
+   [
+    2,
+    "it has a vital connection with the cultural identity of the people who speak it. If a language disappears, a whole way of life will disappear with it, and we will lose the rich cultural diversity that makes societies more interesting.",
+    "h4"
+   ],
+   [
+    2,
+    "By spending money to protect minority languages, governments can also preserve traditions, customs and behaviours that are part of a country's history.",
+    "h3"
+   ],
+   [
+    3,
+    "In conclusion,",
+    "h5"
+   ],
+   [
+    3,
+    "it may save money in the short term if we allow minority languages to disappear,",
+    "h6"
+   ],
+   [
+    3,
+    "but",
+    "h5"
+   ],
+   [
+    3,
+    "in the long term this would have an extremely negative impact on our cultural heritage.",
+    "h2"
+   ]
+  ],
+  "vocab": [
+   [
+    "preserve",
+    "to keep something in its original state",
+    "Museums [[preserve]] objects from the past for future generations."
+   ],
+   [
+    "cultural identity",
+    "the sense of belonging to a particular culture",
+    "Food is an important part of a nation's [[cultural identity]]."
+   ],
+   [
+    "cultural diversity",
+    "the existence of many different cultures in one place",
+    "[[Cultural diversity]] makes big cities more exciting to live in."
+   ],
+   [
+    "cultural heritage",
+    "traditions, buildings and customs passed down from the past",
+    "The old town is part of the country's [[cultural heritage]]."
+   ],
+   [
+    "means of communication",
+    "a way of sharing information or ideas",
+    "Letters were once the main [[means of communication]] between countries."
+   ],
+   [
+    "efficient",
+    "working well without wasting time or money",
+    "Trains are a more [[efficient]] way to travel than cars."
+   ],
+   [
+    "customs",
+    "traditional ways of behaving in a society",
+    "Wedding [[customs]] vary widely from region to region."
+   ],
+   [
+    "public services",
+    "services provided by the state, such as healthcare and education",
+    "Taxes pay for [[public services]] such as schools."
+   ]
+  ],
+  "grammar": [
+   [
+    "Concession: 'Although … it can be argued that'",
+    "Although + it can be argued that + clause, + I believe that + clause",
+    "[[Although it can be argued that governments could save money by allowing this to happen]], I believe that these languages should be protected and preserved.",
+    "[[Although it can be argued that technology saves time]], I believe that it also creates stress."
+   ],
+   [
+    "Semicolon + 'much more than'",
+    "A is much more than + noun; it + verb …",
+    "A language is [[much more than simply a means of communication]]; it has a vital connection with the cultural identity of the people who speak it.",
+    "A university is [[much more than just a place to get a degree]]; it is where people build their future."
+   ],
+   [
+    "First conditional: result chain",
+    "If + present simple, + will + verb, and + will + verb",
+    "[[If a language disappears, a whole way of life will disappear with it]], and we will lose the rich cultural diversity that makes societies more interesting.",
+    "[[If forests disappear, many animals will disappear with them]], and we will lose clean air."
+   ],
+   [
+    "'By' + -ing to show a method",
+    "By + gerund, + subject + can + verb",
+    "[[By spending money to protect minority languages]], governments can also preserve traditions, customs and behaviours that are part of a country's history.",
+    "[[By investing in public transport]], cities can also reduce air pollution."
+   ],
+   [
+    "It + be + adjective + for + noun + to-infinitive",
+    "it would be + comparative + for + noun + to + verb",
+    "Secondly, [[it would be much cheaper and more efficient for countries to have just one language]].",
+    "[[It would be much easier for students to study online]]."
+   ]
+  ]
+ },
+ {
+  "title": "Choosing university subjects",
+  "prompt": "Some people think that all university students should study whatever they like. Others believe that they should only be allowed to study subjects that will be useful in the future, such as those related to science and technology. Discuss both these views and give your own opinion.",
+  "topic": "Freedom to choose university subjects",
+  "task": "Discuss BOTH views and give YOUR opinion",
+  "position": "Students should be free to choose what they study",
+  "plan": {
+   "lq": "Why do some people think students should only study useful subjects?",
+   "rq": "Why do others, including myself, believe that students should choose freely?",
+   "left": [
+    [
+     "Better jobs and quality of life",
+     "Medicine, engineering and IT offer more job opportunities, career progression and higher salaries."
+    ],
+    [
+     "Benefits for the economy",
+     "Governments can fill skill gaps, and a focus on technology brings inventions and growth."
+    ]
+   ],
+   "right": [
+    [
+     "Passion benefits society",
+     "Students who are passionate about what they learn contribute more to society."
+    ],
+    [
+     "The future is unpredictable",
+     "Nobody knows which knowledge will matter; employers may value creative thinking over technical skills."
+    ]
+   ]
+  },
+  "body": [
+   [
+    "Introduction",
+    "General statement on the topic · Paraphrase both views · Clearly state your own opinion"
+   ],
+   [
+    "Body 1",
+    "Why should universities only offer subjects that will be useful?"
+   ],
+   [
+    "Body 2",
+    "Why should students be free to choose their preferred areas of study?"
+   ],
+   [
+    "Conclusion",
+    "Restate your opinion and finish"
+   ]
+  ],
+  "labels": [
+   "Introduction",
+   "Body 1 · The ‘useful subjects only’ view",
+   "Body 2 · My view",
+   "Conclusion"
+  ],
+  "essay": [
+   "People have different views about how much choice students should have with regard to what they can study at university. While some argue that it would be better for students to be forced into certain key subject areas, I believe that everyone should be able to study the course of their choice.",
+   "There are various reasons why people believe that universities should only offer subjects that will be useful in the future. They may assert that university courses like medicine, engineering and information technology are more likely to be beneficial than certain art degrees. From a personal perspective, it can be argued that these courses provide more job opportunities, career progression, better salaries, and therefore an improved quality of life for students who take them. On the societal level, by forcing people to choose particular university subjects, governments can ensure that any knowledge and skill gaps in the economy are covered. Finally, a focus on technology in higher education could lead to new inventions, economic growth, and greater future prosperity.",
+   "In spite of these arguments, I believe that university students should be free to choose their preferred areas of study. In my opinion, society will benefit more if our students are passionate about what they are learning. Besides, nobody can really predict which areas of knowledge will be most useful to society in the future, and it may be that employers begin to value creative thinking skills above practical or technical skills. If this were the case, perhaps we would need more students of art, history and philosophy than of science or technology.",
+   "In conclusion, although it might seem sensible for universities to focus only on the most useful subjects, I personally prefer the current system in which people have the right to study whatever they like."
+  ],
+  "ann": [
+   [
+    0,
+    "People have different views about how much choice students should have with regard to what they can study at university.",
+    "h1"
+   ],
+   [
+    0,
+    "While",
+    "h5"
+   ],
+   [
+    0,
+    "some argue that it would be better for students to be forced into certain key subject areas,",
+    "h1"
+   ],
+   [
+    0,
+    "I believe that everyone should be able to study the course of their choice.",
+    "h2"
+   ],
+   [
+    1,
+    "There are various reasons why people believe that universities should only offer subjects that will be useful in the future.",
+    "h3"
+   ],
+   [
+    1,
+    "They may assert that university courses like medicine, engineering and information technology are more likely to be beneficial than certain art degrees.",
+    "h4"
+   ],
+   [
+    1,
+    "From a personal perspective,",
+    "h5"
+   ],
+   [
+    1,
+    "it can be argued that these courses provide more job opportunities, career progression, better salaries, and therefore an improved quality of life for students who take them.",
+    "h3"
+   ],
+   [
+    1,
+    "On the societal level,",
+    "h5"
+   ],
+   [
+    1,
+    "by forcing people to choose particular university subjects, governments can ensure that any knowledge and skill gaps in the economy are covered.",
+    "h3"
+   ],
+   [
+    1,
+    "Finally,",
+    "h5"
+   ],
+   [
+    1,
+    "a focus on technology in higher education could lead to new inventions, economic growth, and greater future prosperity.",
+    "h3"
+   ],
+   [
+    2,
+    "In spite of these arguments,",
+    "h5"
+   ],
+   [
+    2,
+    "I believe that university students should be free to choose their preferred areas of study.",
+    "h2"
+   ],
+   [
+    2,
+    "In my opinion, society will benefit more if our students are passionate about what they are learning.",
+    "h3"
+   ],
+   [
+    2,
+    "Besides,",
+    "h5"
+   ],
+   [
+    2,
+    "nobody can really predict which areas of knowledge will be most useful to society in the future, and it may be that employers begin to value creative thinking skills above practical or technical skills.",
+    "h3"
+   ],
+   [
+    2,
+    "If this were the case,",
+    "h5"
+   ],
+   [
+    2,
+    "perhaps we would need more students of art, history and philosophy than of science or technology.",
+    "h4"
+   ],
+   [
+    3,
+    "In conclusion,",
+    "h5"
+   ],
+   [
+    3,
+    "although it might seem sensible for universities to focus only on the most useful subjects,",
+    "h6"
+   ],
+   [
+    3,
+    "I personally prefer the current system in which people have the right to study whatever they like.",
+    "h2"
+   ]
+  ],
+  "vocab": [
+   [
+    "assert",
+    "to state something firmly as a fact",
+    "Critics [[assert]] that the new law will harm small businesses."
+   ],
+   [
+    "beneficial",
+    "helpful and having a good effect",
+    "Regular exercise is [[beneficial]] to mental health."
+   ],
+   [
+    "career progression",
+    "moving forward to better and higher jobs over time",
+    "Good training programmes help [[career progression]]."
+   ],
+   [
+    "societal",
+    "relating to society as a whole",
+    "Unemployment is a major [[societal]] problem."
+   ],
+   [
+    "skill gaps",
+    "areas where there are not enough trained workers",
+    "The government is trying to fill [[skill gaps]] in healthcare."
+   ],
+   [
+    "higher education",
+    "education at university or college level",
+    "[[Higher education]] is free in some countries."
+   ],
+   [
+    "prosperity",
+    "a state of being successful and wealthy",
+    "Peace and [[prosperity]] often go together."
+   ],
+   [
+    "passionate about",
+    "having a strong interest in something",
+    "She is [[passionate about]] marine biology."
+   ]
+  ],
+  "grammar": [
+   [
+    "Reporting with a modal: 'They may assert that'",
+    "subject + may / might + reporting verb + that + clause",
+    "[[They may assert that]] university courses like medicine, engineering and information technology are more likely to be beneficial than certain art degrees.",
+    "[[Critics may argue that]] online lessons are less effective than classroom teaching."
+   ],
+   [
+    "Impersonal passive: 'it can be argued that'",
+    "it can be argued / said / claimed that + clause",
+    "From a personal perspective, [[it can be argued that]] these courses provide more job opportunities, career progression, better salaries, and therefore an improved quality of life for students who take them.",
+    "[[It can be claimed that]] social media has made people more connected."
+   ],
+   [
+    "Method + result: 'by -ing … can ensure that'",
+    "by + gerund, + subject + can ensure that + clause",
+    "On the societal level, [[by forcing people to choose particular university subjects, governments can ensure that]] any knowledge and skill gaps in the economy are covered.",
+    "[[By offering free training, employers can ensure that]] all staff have the skills they need."
+   ],
+   [
+    "Second conditional for speculation",
+    "If + past simple (were), + perhaps + subject + would + verb",
+    "[[If this were the case, perhaps we would need]] more students of art, history and philosophy than of science or technology.",
+    "[[If robots did most jobs, perhaps we would need]] fewer office workers."
+   ]
+  ]
+ },
+ {
+  "title": "Punishments and road safety",
+  "prompt": "Some people think that strict punishments for driving offences are the key to reducing traffic accidents. Others, however, believe that other measures would be more effective in improving road safety. Discuss both these views and give your own opinion.",
+  "topic": "Road safety and punishments for driving offences",
+  "task": "Discuss BOTH views and give YOUR opinion",
+  "position": "Punishments and other measures should work together",
+  "plan": {
+   "lq": "Why do some people believe that strict punishments are the key to road safety?",
+   "rq": "Why do others, including myself, believe that other measures are needed too?",
+   "left": [
+    [
+     "Punishments act as a deterrent",
+     "Fines, licence suspension, awareness courses and prison sentences stop people repeating offences."
+    ],
+    [
+     "Consequences create discipline",
+     "Drivers learn that their actions have negative results, so they become more alert and follow the rules."
+    ]
+   ],
+   "right": [
+    [
+     "Education",
+     "Teach people before they drive: in schools or through an extended, more difficult driving test."
+    ],
+    [
+     "Safe road design",
+     "Signs, speed bumps, road bends and speed cameras calm traffic and deter speeding."
+    ],
+    [
+     "Better public transport",
+     "Fewer people need to travel by car, so there are fewer accidents."
+    ]
+   ]
+  },
+  "body": [
+   [
+    "Introduction",
+    "General statement on the topic · Paraphrase both views · Clearly state your own opinion"
+   ],
+   [
+    "Body 1",
+    "Why can strict punishments improve road safety?"
+   ],
+   [
+    "Body 2",
+    "Why can safe driving also be promoted in ways that do not punish drivers?"
+   ],
+   [
+    "Conclusion",
+    "Restate your opinion and finish"
+   ]
+  ],
+  "labels": [
+   "Introduction",
+   "Body 1 · View 1: strict punishments",
+   "Body 2 · View 2: other measures",
+   "Conclusion"
+  ],
+  "essay": [
+   "People have differing views with regard to the question of how to make our roads safer. In my view, both punishments and a range of other measures can be used together to promote better driving habits.",
+   "On the one hand, strict punishments can certainly help to encourage people to drive more safely. Penalties for dangerous drivers can act as a deterrent, meaning that people avoid repeating the same offence. There are various types of driving penalty, such as small fines, licence suspension, driver awareness courses, and even prison sentences. The aim of these punishments is to show dangerous drivers that their actions have negative consequences. As a result, we would hope that drivers become more disciplined and alert, and that they follow the rules more carefully.",
+   "On the other hand, I believe that safe driving can be promoted in several different ways that do not punish drivers. Firstly, it is vitally important to educate people properly before they start to drive, and this could be done in schools or even as part of an extended or more difficult driving test. Secondly, more attention could be paid to safe road design. For example, signs can be used to warn people, speed bumps and road bends can be added to calm traffic, and speed cameras can help to deter people from driving too quickly. Finally, governments or local councils could reduce road accidents by investing in better public transport, which would mean that fewer people would need to travel by car.",
+   "In conclusion, while punishments can help to prevent bad driving, I believe that other road safety measures should also be introduced."
+  ],
+  "ann": [
+   [
+    0,
+    "People have differing views with regard to the question of how to make our roads safer.",
+    "h1"
+   ],
+   [
+    0,
+    "In my view, both punishments and a range of other measures can be used together to promote better driving habits.",
+    "h2"
+   ],
+   [
+    1,
+    "On the one hand,",
+    "h5"
+   ],
+   [
+    1,
+    "strict punishments can certainly help to encourage people to drive more safely.",
+    "h3"
+   ],
+   [
+    1,
+    "Penalties for dangerous drivers can act as a deterrent, meaning that people avoid repeating the same offence. There are various types of driving penalty, such as small fines, licence suspension, driver awareness courses, and even prison sentences. The aim of these punishments is to show dangerous drivers that their actions have negative consequences.",
+    "h4"
+   ],
+   [
+    1,
+    "As a result,",
+    "h5"
+   ],
+   [
+    1,
+    "we would hope that drivers become more disciplined and alert, and that they follow the rules more carefully.",
+    "h6"
+   ],
+   [
+    2,
+    "On the other hand,",
+    "h5"
+   ],
+   [
+    2,
+    "I believe that safe driving can be promoted in several different ways that do not punish drivers.",
+    "h2"
+   ],
+   [
+    2,
+    "Firstly,",
+    "h5"
+   ],
+   [
+    2,
+    "it is vitally important to educate people properly before they start to drive,",
+    "h3"
+   ],
+   [
+    2,
+    "and this could be done in schools or even as part of an extended or more difficult driving test.",
+    "h4"
+   ],
+   [
+    2,
+    "Secondly,",
+    "h5"
+   ],
+   [
+    2,
+    "more attention could be paid to safe road design.",
+    "h3"
+   ],
+   [
+    2,
+    "For example,",
+    "h5"
+   ],
+   [
+    2,
+    "signs can be used to warn people, speed bumps and road bends can be added to calm traffic, and speed cameras can help to deter people from driving too quickly.",
+    "h4"
+   ],
+   [
+    2,
+    "Finally,",
+    "h5"
+   ],
+   [
+    2,
+    "governments or local councils could reduce road accidents by investing in better public transport,",
+    "h3"
+   ],
+   [
+    2,
+    "which would mean that fewer people would need to travel by car.",
+    "h4"
+   ],
+   [
+    3,
+    "In conclusion,",
+    "h5"
+   ],
+   [
+    3,
+    "while punishments can help to prevent bad driving,",
+    "h6"
+   ],
+   [
+    3,
+    "I believe that other road safety measures should also be introduced.",
+    "h2"
+   ]
+  ],
+  "vocab": [
+   [
+    "deterrent",
+    "something that discourages people from doing something",
+    "Heavy fines are a strong [[deterrent]] against littering."
+   ],
+   [
+    "offence",
+    "an illegal act; a crime",
+    "Speeding is a serious driving [[offence]]."
+   ],
+   [
+    "penalty",
+    "a punishment for breaking a law or rule",
+    "The [[penalty]] for parking here is a fine of fifty pounds."
+   ],
+   [
+    "licence suspension",
+    "officially stopping someone from holding a licence for a time",
+    "A six-month [[licence suspension]] made him drive more carefully."
+   ],
+   [
+    "disciplined",
+    "able to control your behaviour and follow rules",
+    "[[Disciplined]] students usually do well in exams."
+   ],
+   [
+    "calm traffic",
+    "to slow cars down and make roads less dangerous",
+    "Speed bumps are used to [[calm traffic]] near schools."
+   ],
+   [
+    "deter",
+    "to make someone decide not to do something",
+    "Cameras in shops [[deter]] people from stealing."
+   ],
+   [
+    "investing in",
+    "spending money to improve something",
+    "The city is [[investing in]] cycle lanes."
+   ]
+  ],
+  "grammar": [
+   [
+    "Participle clause with 'meaning that'",
+    "main clause, + meaning that + clause",
+    "Penalties for dangerous drivers can act as a deterrent, [[meaning that people avoid repeating the same offence]].",
+    "Cheap flights are very popular, [[meaning that airports are always crowded]]."
+   ],
+   [
+    "'We would hope that' + parallel clauses",
+    "we would hope that + clause, and that + clause",
+    "As a result, [[we would hope that drivers become more disciplined and alert, and that they follow the rules more carefully]].",
+    "[[We would hope that students become more independent, and that they take responsibility for their learning]]."
+   ],
+   [
+    "It + be + adverb + adjective + to-infinitive",
+    "it is vitally important to + verb",
+    "Firstly, [[it is vitally important to educate people properly]] before they start to drive,",
+    "[[It is vitally important to protect]] forests for future generations."
+   ],
+   [
+    "Method + result: 'by -ing, which would mean that'",
+    "reduce X by + -ing, which would mean that + clause",
+    "governments or local councils could reduce road accidents [[by investing in better public transport, which would mean that fewer people would need to travel by car]].",
+    "Cities could reduce pollution [[by banning cars from the centre, which would mean that fewer people would need to drive]]."
+   ]
+  ]
+ },
+ {
+  "title": "Dependence and independence",
+  "prompt": "Some people think that in the modern world we are more dependent on each other, while others think that people have become more independent. Discuss both views and give your own opinion.",
+  "topic": "Dependence and independence in the modern world",
+  "task": "Discuss BOTH views and give YOUR opinion",
+  "position": "People are more independent nowadays",
+  "plan": {
+   "lq": "Why do some people think we are more dependent on each other now?",
+   "rq": "Why do others, including myself, believe that people are more independent?",
+   "left": [
+    [
+     "The cost of living",
+     "Property prices are so high that young adults need their parents' help to pay a deposit and a mortgage."
+    ],
+    [
+     "Ambition and childcare",
+     "Both parents work full-time and depend on grandparents and babysitters."
+    ]
+   ],
+   "right": [
+    [
+     "Smaller, dispersed families",
+     "People cannot count on relatives; students who study abroad learn to live alone."
+    ],
+    [
+     "Technology",
+     "We can work alone and from any part of the world."
+    ]
+   ]
+  },
+  "body": [
+   [
+    "Introduction",
+    "General statement on the topic · Paraphrase both views · Clearly state your own opinion"
+   ],
+   [
+    "Body 1",
+    "Why could it be argued that we are more dependent on each other?"
+   ],
+   [
+    "Body 2",
+    "Why are people more independent these days?"
+   ],
+   [
+    "Conclusion",
+    "Restate your opinion and finish"
+   ]
+  ],
+  "labels": [
+   "Introduction",
+   "Body 1 · The ‘more dependent’ view",
+   "Body 2 · My view",
+   "Conclusion"
+  ],
+  "essay": [
+   "People have different views about whether we are more or less dependent on others nowadays. In my view, modern life forces us to be more independent than people were in the past.",
+   "There are two main reasons why it could be argued that we are more dependent on each other now. Firstly, life is more complex and difficult, especially because the cost of living has increased so dramatically. For example, young adults tend to rely on their parents for help when buying a house. Property prices are higher than ever, and without help it would be impossible for many people to pay a deposit and a mortgage. Secondly, people seem to be more ambitious nowadays, and they want a better quality of life for their families. This means that both parents usually need to work full-time, and they depend on support from grandparents and babysitters for child care.",
+   "However, I would agree with those who believe that people are more independent these days. In most countries, families are becoming smaller and more dispersed, which means that people cannot count on relatives as much as they used to. We also have more freedom to travel and live far away from our home towns. For example, many students choose to study abroad instead of going to their local university, and this experience makes them more independent as they learn to live alone. Another factor in this growing independence is technology, which allows us to work alone and from any part of the world.",
+   "In conclusion, while there are some reasons to believe that people now depend on each other more, my own view is that we are more independent than ever."
+  ],
+  "ann": [
+   [
+    0,
+    "People have different views about whether we are more or less dependent on others nowadays.",
+    "h1"
+   ],
+   [
+    0,
+    "In my view, modern life forces us to be more independent than people were in the past.",
+    "h2"
+   ],
+   [
+    1,
+    "There are two main reasons why it could be argued that we are more dependent on each other now.",
+    "h3"
+   ],
+   [
+    1,
+    "Firstly,",
+    "h5"
+   ],
+   [
+    1,
+    "life is more complex and difficult, especially because the cost of living has increased so dramatically.",
+    "h3"
+   ],
+   [
+    1,
+    "For example,",
+    "h5"
+   ],
+   [
+    1,
+    "young adults tend to rely on their parents for help when buying a house. Property prices are higher than ever, and without help it would be impossible for many people to pay a deposit and a mortgage.",
+    "h4"
+   ],
+   [
+    1,
+    "Secondly,",
+    "h5"
+   ],
+   [
+    1,
+    "people seem to be more ambitious nowadays, and they want a better quality of life for their families.",
+    "h3"
+   ],
+   [
+    1,
+    "This means that both parents usually need to work full-time, and they depend on support from grandparents and babysitters for child care.",
+    "h4"
+   ],
+   [
+    2,
+    "However,",
+    "h5"
+   ],
+   [
+    2,
+    "I would agree with those who believe that people are more independent these days.",
+    "h2"
+   ],
+   [
+    2,
+    "In most countries, families are becoming smaller and more dispersed, which means that people cannot count on relatives as much as they used to.",
+    "h3"
+   ],
+   [
+    2,
+    "We also have more freedom to travel and live far away from our home towns.",
+    "h3"
+   ],
+   [
+    2,
+    "For example,",
+    "h5"
+   ],
+   [
+    2,
+    "many students choose to study abroad instead of going to their local university, and this experience makes them more independent as they learn to live alone.",
+    "h4"
+   ],
+   [
+    2,
+    "Another factor in this growing independence is",
+    "h5"
+   ],
+   [
+    2,
+    "technology, which allows us to work alone and from any part of the world.",
+    "h3"
+   ],
+   [
+    3,
+    "In conclusion,",
+    "h5"
+   ],
+   [
+    3,
+    "while there are some reasons to believe that people now depend on each other more,",
+    "h6"
+   ],
+   [
+    3,
+    "my own view is that we are more independent than ever.",
+    "h2"
+   ]
+  ],
+  "vocab": [
+   [
+    "cost of living",
+    "the amount of money needed for basic needs",
+    "The [[cost of living]] has risen sharply in big cities."
+   ],
+   [
+    "rely on",
+    "to depend on someone or something",
+    "Many students [[rely on]] their parents for money."
+   ],
+   [
+    "deposit",
+    "a first payment when buying something expensive",
+    "It took them years to save a [[deposit]] for a flat."
+   ],
+   [
+    "mortgage",
+    "a loan from a bank to buy a house",
+    "They pay a [[mortgage]] of nine hundred pounds a month."
+   ],
+   [
+    "ambitious",
+    "having a strong wish to be successful",
+    "She is an [[ambitious]] young lawyer."
+   ],
+   [
+    "dispersed",
+    "spread over a wide area",
+    "Her relatives are [[dispersed]] across several countries."
+   ],
+   [
+    "count on",
+    "to be sure that someone will help you",
+    "You can always [[count on]] a good friend."
+   ],
+   [
+    "quality of life",
+    "how comfortable and happy people's lives are",
+    "Parks and clean air improve people's [[quality of life]]."
+   ]
+  ],
+  "grammar": [
+   [
+    "Present perfect + 'so' + adverb",
+    "because + subject + has/have + past participle + so + adverb",
+    "life is more complex and difficult, especially because the cost of living [[has increased so dramatically]].",
+    "Prices [[have risen so sharply]] that many families struggle."
+   ],
+   [
+    "Second conditional with 'without'",
+    "Without + noun, + it would be + adjective + for + noun + to + verb",
+    "[[without help it would be impossible for many people to pay a deposit and a mortgage]].",
+    "[[Without a scholarship, it would be impossible for many students to study abroad]]."
+   ],
+   [
+    "Result clause: ', which means that'",
+    "clause, + which means that + clause; as … as + used to",
+    "families are becoming smaller and more dispersed, [[which means that people cannot count on relatives as much as they used to]].",
+    "Shops are closing early, [[which means that workers cannot shop as easily as they used to]]."
+   ],
+   [
+    "'instead of' + -ing",
+    "choose to + verb + instead of + gerund",
+    "many students [[choose to study abroad instead of going to their local university]], and this experience makes them more independent as they learn to live alone.",
+    "Many people [[choose to cycle instead of driving]] to work."
+   ]
+  ]
+ },
+ {
+  "title": "Funding for creative artists",
+  "prompt": "Some people think that governments should give financial support to creative artists such as painters and musicians. Others believe that creative artists should be funded by alternative sources. Discuss both views and give your own opinion.",
+  "topic": "Government funding for creative artists",
+  "task": "Discuss BOTH views and give YOUR opinion",
+  "position": "Government help is sometimes necessary",
+  "plan": {
+   "lq": "Why do some people oppose government funding for artists?",
+   "rq": "Why do others, including myself, believe that governments should sometimes pay artists?",
+   "left": [
+    [
+     "Governments have more important concerns",
+     "Budgets must cover education, healthcare, infrastructure and security; art is a luxury."
+    ],
+    [
+     "Artists are professionals",
+     "Like other professionals, they should earn money by selling their work."
+    ]
+   ],
+   "right": [
+    [
+     "Public art needs state help",
+     "Statues and sculptures in city spaces, e.g. Liverpool's docks, represent culture, heritage and history."
+    ],
+    [
+     "Cities become more attractive",
+     "Public art educates people, and acts as landmarks and talking points for tourists."
+    ]
+   ]
+  },
+  "body": [
+   [
+    "Introduction",
+    "General statement on the topic · Paraphrase both views · Clearly state your own opinion"
+   ],
+   [
+    "Body 1",
+    "Why should governments and councils pay artists for public art? (my view)"
+   ],
+   [
+    "Body 2",
+    "Why do some people argue against government funding for art?"
+   ],
+   [
+    "Conclusion",
+    "Restate your opinion and finish"
+   ]
+  ],
+  "labels": [
+   "Introduction",
+   "Body 1 · Why government help is needed (my view)",
+   "Body 2 · The case against government funding",
+   "Conclusion"
+  ],
+  "essay": [
+   "People have different views about the funding of creative artists. While some people disagree with the idea of government support for artists, I believe that money for art projects should come from both governments and other sources.",
+   "Some art projects definitely require help from the state. In the UK, there are many works of art in public spaces, such as streets or squares in city centres. In Liverpool, for example, there are several new statues and sculptures in the docks area of the city, which has been redeveloped recently. These artworks represent culture, heritage and history. They serve to educate people about the city, and act as landmarks or talking points for visitors and tourists. Governments and local councils should pay creative artists to produce this kind of art, because without their funding our cities would be much less interesting and attractive.",
+   "On the other hand, I can understand the arguments against government funding for art. The main reason for this view is that governments have more important concerns. For example, state budgets need to be spent on education, healthcare, infrastructure and security, among other areas. These public services are vital for a country to function properly, whereas the work of creative artists, even in public places, is a luxury. Another reason for this opinion is that artists do a job like any other professional, and they should therefore earn their own money by selling their work.",
+   "In conclusion, there are good reasons why artists should rely on alternative sources of financial support, but in my opinion government help is sometimes necessary."
+  ],
+  "ann": [
+   [
+    0,
+    "People have different views about the funding of creative artists.",
+    "h1"
+   ],
+   [
+    0,
+    "While",
+    "h5"
+   ],
+   [
+    0,
+    "some people disagree with the idea of government support for artists,",
+    "h1"
+   ],
+   [
+    0,
+    "I believe that money for art projects should come from both governments and other sources.",
+    "h2"
+   ],
+   [
+    1,
+    "Some art projects definitely require help from the state.",
+    "h3"
+   ],
+   [
+    1,
+    "In the UK, there are many works of art in public spaces, such as streets or squares in city centres.",
+    "h4"
+   ],
+   [
+    1,
+    "In Liverpool, for example,",
+    "h5"
+   ],
+   [
+    1,
+    "there are several new statues and sculptures in the docks area of the city, which has been redeveloped recently. These artworks represent culture, heritage and history. They serve to educate people about the city, and act as landmarks or talking points for visitors and tourists.",
+    "h4"
+   ],
+   [
+    1,
+    "Governments and local councils should pay creative artists to produce this kind of art,",
+    "h2"
+   ],
+   [
+    1,
+    "because without their funding our cities would be much less interesting and attractive.",
+    "h4"
+   ],
+   [
+    2,
+    "On the other hand,",
+    "h5"
+   ],
+   [
+    2,
+    "I can understand the arguments against government funding for art.",
+    "h3"
+   ],
+   [
+    2,
+    "The main reason for this view is that",
+    "h5"
+   ],
+   [
+    2,
+    "governments have more important concerns.",
+    "h3"
+   ],
+   [
+    2,
+    "For example,",
+    "h5"
+   ],
+   [
+    2,
+    "state budgets need to be spent on education, healthcare, infrastructure and security, among other areas. These public services are vital for a country to function properly, whereas the work of creative artists, even in public places, is a luxury.",
+    "h4"
+   ],
+   [
+    2,
+    "Another reason for this opinion is that",
+    "h5"
+   ],
+   [
+    2,
+    "artists do a job like any other professional, and they should therefore earn their own money by selling their work.",
+    "h3"
+   ],
+   [
+    3,
+    "In conclusion,",
+    "h5"
+   ],
+   [
+    3,
+    "there are good reasons why artists should rely on alternative sources of financial support, but",
+    "h6"
+   ],
+   [
+    3,
+    "in my opinion government help is sometimes necessary.",
+    "h2"
+   ]
+  ],
+  "vocab": [
+   [
+    "public spaces",
+    "areas open to everyone, such as parks and squares",
+    "Statues make [[public spaces]] more attractive."
+   ],
+   [
+    "redeveloped",
+    "rebuilt or improved (an area)",
+    "The old factory district was [[redeveloped]] into flats and cafes."
+   ],
+   [
+    "heritage",
+    "traditions and buildings from the past that are valued",
+    "The castle is an important part of Welsh [[heritage]]."
+   ],
+   [
+    "landmarks",
+    "buildings or objects that are easy to recognise",
+    "The tower and the bridge are famous [[landmarks]] in the city."
+   ],
+   [
+    "talking points",
+    "interesting topics that people discuss",
+    "The new sculptures became [[talking points]] among tourists."
+   ],
+   [
+    "infrastructure",
+    "basic systems such as roads, power and water",
+    "Poor [[infrastructure]] slows economic growth."
+   ],
+   [
+    "luxury",
+    "something enjoyable that is not necessary",
+    "For many families, foreign holidays are a [[luxury]]."
+   ],
+   [
+    "alternative sources",
+    "other places money or supplies can come from",
+    "Schools are looking for [[alternative sources]] of funding."
+   ]
+  ],
+  "grammar": [
+   [
+    "Adverb of certainty before the verb",
+    "subject + definitely / certainly + verb",
+    "Some art projects [[definitely require]] help from the state.",
+    "Some jobs [[definitely need]] a university degree."
+   ],
+   [
+    "Non-defining relative clause",
+    "noun phrase, + which + present perfect passive",
+    "there are several new statues and sculptures in the docks area of the city, [[which has been redeveloped recently]].",
+    "The harbour, [[which has been cleaned recently]], now attracts many visitors."
+   ],
+   [
+    "'serve to' + infinitive",
+    "subject + serve(s) to + verb, and act as + noun",
+    "They [[serve to educate people about the city]], and act as landmarks or talking points for visitors and tourists.",
+    "Museums [[serve to preserve history]], and act as places of learning."
+   ],
+   [
+    "Contrast with 'whereas'",
+    "clause (fact), + whereas + clause (contrast)",
+    "These public services are vital for a country to function properly, [[whereas the work of creative artists, even in public places, is a luxury]].",
+    "Primary education is compulsory, [[whereas university study is a personal choice]]."
+   ]
+  ]
+ },
+ {
+  "title": "Animal experiments",
+  "prompt": "Nowadays animal experiments are widely used to develop new medicines and to test the safety of other products. Some people argue that these experiments should be banned because it is morally wrong to cause animals to suffer, while others are in favour of them because of their benefits to humanity. Discuss both views and give your own opinion.",
+  "topic": "Animal experiments for medicines and other products",
+  "task": "Discuss BOTH views and give YOUR opinion",
+  "position": "Limited animal testing for medicines only",
+  "plan": {
+   "lq": "Why do some people want animal experiments banned?",
+   "rq": "Why do others, including myself, accept some animal experiments?",
+   "left": [
+    [
+     "Humans have no right to cause trauma",
+     "Laboratory mice are given illnesses to test drugs; the lives of all creatures should be respected."
+    ],
+    [
+     "Alternative methods exist",
+     "The benefits to humans do not justify the suffering; scientists should use other research methods."
+    ]
+   ],
+   "right": [
+    [
+     "Alternatives are not always reliable",
+     "A certain amount of suffering of mice or rats can be justified if human lives are saved."
+    ],
+    [
+     "Personal stakes",
+     "Opponents might feel differently if a family member needed a treatment developed this way."
+    ]
+   ]
+  },
+  "body": [
+   [
+    "Introduction",
+    "General statement on the topic · Paraphrase both views · Clearly state your own opinion"
+   ],
+   [
+    "Body 1",
+    "Why are there clear ethical arguments against animal experimentation?"
+   ],
+   [
+    "Body 2",
+    "Why may animal experiments still be necessary for medicines?"
+   ],
+   [
+    "Conclusion",
+    "Restate your opinion and finish"
+   ]
+  ],
+  "labels": [
+   "Introduction",
+   "Body 1 · Against animal experiments",
+   "Body 2 · For animal experiments (my limited support)",
+   "Conclusion"
+  ],
+  "essay": [
+   "It is true that medicines and other products are routinely tested on animals before they are cleared for human use. While I tend towards the viewpoint that animal testing is morally wrong, I would have to support a limited amount of animal experimentation for the development of medicines.",
+   "On the one hand, there are clear ethical arguments against animal experimentation. To use a common example of this practice, laboratory mice may be given an illness so that the effectiveness of a new drug can be measured. Opponents of such research argue that humans have no right to subject animals to this kind of trauma, and that the lives of all creatures should be respected. They believe that the benefits to humans do not justify the suffering caused, and that scientists should use alternative methods of research.",
+   "On the other hand, reliable alternatives to animal experimentation may not always be available. Supporters of the use of animals in medical research believe that a certain amount of suffering on the part of mice or rats can be justified if human lives are saved. They argue that opponents of such research might feel differently if a member of their own families needed a medical treatment that had been developed through the use of animal experimentation. Personally, I agree with the banning of animal testing for non-medical products, but I feel that it may be a necessary evil where new drugs and medical procedures are concerned.",
+   "In conclusion, it seems to me that it would be wrong to ban testing on animals for vital medical research until equally effective alternatives have been developed."
+  ],
+  "ann": [
+   [
+    0,
+    "It is true that medicines and other products are routinely tested on animals before they are cleared for human use.",
+    "h1"
+   ],
+   [
+    0,
+    "While",
+    "h5"
+   ],
+   [
+    0,
+    "I tend towards the viewpoint that animal testing is morally wrong, I would have to support a limited amount of animal experimentation for the development of medicines.",
+    "h2"
+   ],
+   [
+    1,
+    "On the one hand,",
+    "h5"
+   ],
+   [
+    1,
+    "there are clear ethical arguments against animal experimentation.",
+    "h3"
+   ],
+   [
+    1,
+    "To use a common example of this practice,",
+    "h5"
+   ],
+   [
+    1,
+    "laboratory mice may be given an illness so that the effectiveness of a new drug can be measured.",
+    "h4"
+   ],
+   [
+    1,
+    "Opponents of such research argue that humans have no right to subject animals to this kind of trauma, and that the lives of all creatures should be respected.",
+    "h3"
+   ],
+   [
+    1,
+    "They believe that the benefits to humans do not justify the suffering caused, and that scientists should use alternative methods of research.",
+    "h4"
+   ],
+   [
+    2,
+    "On the other hand,",
+    "h5"
+   ],
+   [
+    2,
+    "reliable alternatives to animal experimentation may not always be available.",
+    "h3"
+   ],
+   [
+    2,
+    "Supporters of the use of animals in medical research believe that a certain amount of suffering on the part of mice or rats can be justified if human lives are saved. They argue that opponents of such research might feel differently if a member of their own families needed a medical treatment that had been developed through the use of animal experimentation.",
+    "h4"
+   ],
+   [
+    2,
+    "Personally, I agree with the banning of animal testing for non-medical products, but I feel that it may be a necessary evil where new drugs and medical procedures are concerned.",
+    "h2"
+   ],
+   [
+    3,
+    "In conclusion,",
+    "h5"
+   ],
+   [
+    3,
+    "it seems to me that it would be wrong to ban testing on animals for vital medical research",
+    "h2"
+   ],
+   [
+    3,
+    "until equally effective alternatives have been developed.",
+    "h6"
+   ]
+  ],
+  "vocab": [
+   [
+    "routinely",
+    "regularly, as a normal part of a process",
+    "Passengers are [[routinely]] checked at airports."
+   ],
+   [
+    "ethical",
+    "connected with what is morally right or wrong",
+    "Many people have [[ethical]] concerns about fast fashion."
+   ],
+   [
+    "subject animals to",
+    "to make animals experience something unpleasant",
+    "It is wrong to [[subject animals to]] unnecessary pain."
+   ],
+   [
+    "trauma",
+    "a very upsetting experience that causes lasting harm",
+    "The refugees suffered terrible [[trauma]] during their journey."
+   ],
+   [
+    "justify",
+    "to show that something is reasonable or right",
+    "Nothing can [[justify]] violence against children."
+   ],
+   [
+    "alternative methods",
+    "other ways of doing something",
+    "Researchers are developing [[alternative methods]] of testing medicines."
+   ],
+   [
+    "necessary evil",
+    "something unpleasant that must be accepted for a good result",
+    "Many people see taxes as a [[necessary evil]]."
+   ],
+   [
+    "morally wrong",
+    "not acceptable according to ideas of right and wrong",
+    "Most people think that cheating in exams is [[morally wrong]]."
+   ]
+  ],
+  "grammar": [
+   [
+    "Concession: 'While I tend towards … I would have to'",
+    "While + I tend towards + noun clause, + I would have to + verb",
+    "[[While I tend towards the viewpoint that animal testing is morally wrong]], I would have to support a limited amount of animal experimentation for the development of medicines.",
+    "[[While I tend towards the view that cars should be banned]], I would have to accept that some people need them."
+   ],
+   [
+    "Passive + purpose clause with 'so that'",
+    "subject + may be + past participle + so that + noun + can be + past participle",
+    "laboratory mice [[may be given an illness so that the effectiveness of a new drug can be measured]].",
+    "Students [[may be tested every week so that their progress can be monitored]]."
+   ],
+   [
+    "Second conditional + past perfect passive",
+    "might + verb + if + past simple, noun + that + had been + past participle",
+    "They argue that opponents of such research [[might feel differently if a member of their own families needed a medical treatment]] that had been developed through the use of animal experimentation.",
+    "Critics [[might think differently if their own town needed a hospital]] that had been funded by tourism."
+   ],
+   [
+    "'have no right to' + parallel that-clauses",
+    "argue that + clause (have no right to + verb), and that + clause (should be + past participle)",
+    "Opponents of such research argue that humans [[have no right to subject animals to this kind of trauma]], and that the lives of all creatures should be respected.",
+    "Critics argue that companies [[have no right to pollute rivers]], and that nature should be protected."
+   ],
+   [
+    "'until' + present perfect passive",
+    "it would be wrong to + verb + until + noun + have been + past participle",
+    "it would be wrong to ban testing on animals for vital medical research [[until equally effective alternatives have been developed]].",
+    "Old buildings should not be demolished [[until safe housing has been provided]]."
+   ]
+  ]
+ },
+ {
+  "title": "University or work after school",
+  "prompt": "Some people believe that studying at university or college is the best route to a successful career, while others believe that it is better to get a job straight after school. Discuss both views and give your opinion.",
+  "topic": "Going to university or getting a job after school",
+  "task": "Discuss BOTH views and give YOUR opinion",
+  "position": "University or college is the better choice",
+  "plan": {
+   "lq": "Why do some people think it is better to get a job straight after school?",
+   "rq": "Why do others, including myself, believe that continuing to study is better?",
+   "left": [
+    [
+     "Earning money early",
+     "Young people become independent and can afford their own house or start a family."
+    ],
+    [
+     "Faster career progress",
+     "Real experience and practical skills may lead to promotions."
+    ]
+   ],
+   "right": [
+    [
+     "Qualifications are required",
+     "Doctors, teachers and lawyers need degrees; graduates get better jobs and higher salaries."
+    ],
+    [
+     "A competitive job market",
+     "There can be hundreds of applicants for one position, and those without qualifications cannot compete."
+    ]
+   ]
+  },
+  "body": [
+   [
+    "Introduction",
+    "General statement on the topic · Paraphrase both views · Clearly state your own opinion"
+   ],
+   [
+    "Body 1",
+    "Why is starting work straight after school attractive?"
+   ],
+   [
+    "Body 2",
+    "Why is it more beneficial to continue studying?"
+   ],
+   [
+    "Conclusion",
+    "Restate your opinion and finish"
+   ]
+  ],
+  "labels": [
+   "Introduction",
+   "Body 1 · The ‘get a job’ view",
+   "Body 2 · My view",
+   "Conclusion"
+  ],
+  "essay": [
+   "When they finish school, teenagers face the dilemma of whether to get a job or continue their education. While there are some benefits to getting a job straight after school, I would argue that it is better to go to college or university.",
+   "The option to start work straight after school is attractive for several reasons. Many young people want to start earning money as soon as possible. In this way, they can become independent, and they will be able to afford their own house or start a family. In terms of their career, young people who decide to find work, rather than continue their studies, may progress more quickly. They will have the chance to gain real experience and learn practical skills related to their chosen profession. This may lead to promotions and a successful career.",
+   "On the other hand, I believe that it is more beneficial for students to continue their studies. Firstly, academic qualifications are required in many professions. For example, it is impossible to become a doctor, teacher or lawyer without having the relevant degree. As a result, university graduates have access to more and better job opportunities, and they tend to earn higher salaries than those with fewer qualifications. Secondly, the job market is becoming increasingly competitive, and sometimes there are hundreds of applicants for one position in a company. Young people who do not have qualifications from a university or college will not be able to compete.",
+   "For the reasons mentioned above, it seems to me that students are more likely to be successful in their careers if they continue their studies beyond school level."
+  ],
+  "ann": [
+   [
+    0,
+    "When they finish school, teenagers face the dilemma of whether to get a job or continue their education.",
+    "h1"
+   ],
+   [
+    0,
+    "While",
+    "h5"
+   ],
+   [
+    0,
+    "there are some benefits to getting a job straight after school,",
+    "h1"
+   ],
+   [
+    0,
+    "I would argue that it is better to go to college or university.",
+    "h2"
+   ],
+   [
+    1,
+    "The option to start work straight after school is attractive for several reasons.",
+    "h3"
+   ],
+   [
+    1,
+    "Many young people want to start earning money as soon as possible.",
+    "h3"
+   ],
+   [
+    1,
+    "In this way,",
+    "h5"
+   ],
+   [
+    1,
+    "they can become independent, and they will be able to afford their own house or start a family.",
+    "h4"
+   ],
+   [
+    1,
+    "In terms of their career,",
+    "h5"
+   ],
+   [
+    1,
+    "young people who decide to find work, rather than continue their studies, may progress more quickly.",
+    "h3"
+   ],
+   [
+    1,
+    "They will have the chance to gain real experience and learn practical skills related to their chosen profession. This may lead to promotions and a successful career.",
+    "h4"
+   ],
+   [
+    2,
+    "On the other hand,",
+    "h5"
+   ],
+   [
+    2,
+    "I believe that it is more beneficial for students to continue their studies.",
+    "h2"
+   ],
+   [
+    2,
+    "Firstly,",
+    "h5"
+   ],
+   [
+    2,
+    "academic qualifications are required in many professions.",
+    "h3"
+   ],
+   [
+    2,
+    "For example,",
+    "h5"
+   ],
+   [
+    2,
+    "it is impossible to become a doctor, teacher or lawyer without having the relevant degree.",
+    "h4"
+   ],
+   [
+    2,
+    "As a result,",
+    "h5"
+   ],
+   [
+    2,
+    "university graduates have access to more and better job opportunities, and they tend to earn higher salaries than those with fewer qualifications.",
+    "h4"
+   ],
+   [
+    2,
+    "Secondly,",
+    "h5"
+   ],
+   [
+    2,
+    "the job market is becoming increasingly competitive, and sometimes there are hundreds of applicants for one position in a company.",
+    "h3"
+   ],
+   [
+    2,
+    "Young people who do not have qualifications from a university or college will not be able to compete.",
+    "h4"
+   ],
+   [
+    3,
+    "For the reasons mentioned above,",
+    "h5"
+   ],
+   [
+    3,
+    "it seems to me that students are more likely to be successful in their careers if they continue their studies beyond school level.",
+    "h2"
+   ]
+  ],
+  "vocab": [
+   [
+    "dilemma",
+    "a difficult choice between two options",
+    "She faced a [[dilemma]] between family and career."
+   ],
+   [
+    "promotion",
+    "a move to a higher position at work",
+    "He worked hard and won a [[promotion]] within two years."
+   ],
+   [
+    "academic qualifications",
+    "certificates or degrees from schools and universities",
+    "Many jobs require strong [[academic qualifications]]."
+   ],
+   [
+    "relevant",
+    "closely connected to the subject being discussed",
+    "Please attach any [[relevant]] documents to your application."
+   ],
+   [
+    "graduates",
+    "people who have finished a university degree",
+    "Each year thousands of [[graduates]] enter the job market."
+   ],
+   [
+    "competitive",
+    "involving a strong struggle between people to succeed",
+    "The job market for lawyers is highly [[competitive]]."
+   ],
+   [
+    "applicants",
+    "people who formally ask for a job",
+    "There were over a hundred [[applicants]] for the post."
+   ],
+   [
+    "job market",
+    "the situation of how many jobs are available",
+    "The [[job market]] is difficult for young people."
+   ]
+  ],
+  "grammar": [
+   [
+    "Noun + 'of whether' + infinitive",
+    "the dilemma of whether to + verb or + verb",
+    "When they finish school, teenagers face [[the dilemma of whether to get a job or continue their education]].",
+    "Many graduates face [[the dilemma of whether to travel or start work]]."
+   ],
+   [
+    "'rather than' + base verb",
+    "people who decide to + verb, rather than + verb",
+    "young people who decide to find work, [[rather than continue their studies]], may progress more quickly.",
+    "Some people decide to rent, [[rather than buy a house]], to stay flexible."
+   ],
+   [
+    "'without' + gerund",
+    "it is impossible to + verb + without + having + noun",
+    "[[it is impossible to become a doctor, teacher or lawyer without having the relevant degree]].",
+    "[[It is impossible to drive legally without having a licence]]."
+   ],
+   [
+    "Comparatives: 'more and better' + 'those with'",
+    "access to + more and better + noun; earn + comparative + than those with + noun",
+    "university graduates have access to [[more and better job opportunities]], and they tend to earn [[higher salaries than those with fewer qualifications]].",
+    "Experienced staff tend to make [[fewer mistakes than those with little training]]."
+   ]
+  ]
+ }
+];
+var KEY="essay_platform_discussion_v1", store={}, tool=null;
+try{store=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+var snap={},dirty=false,tmr,maxT,pt,PAGE="discussion",storeOK=true;
+try{localStorage.setItem("_t","1");localStorage.removeItem("_t")}catch(e){storeOK=false}
+function sig(o){return JSON.stringify(o,function(k,v){return k==="u"?undefined:v})}
+TOPICS.forEach(function(t,i){var o=store["t"+i];if(o)snap["t"+i]=sig(o)});
+function save(q){if(!q){TOPICS.forEach(function(t,i){var id="t"+i,o=store[id];if(!o)return;var j=sig(o);if(snap[id]!==j){snap[id]=j;o.u=Date.now()}});dirty=true;schedulePush()}try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){}}
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function words(t){return t.trim()?t.trim().split(/\s+/).length:0}
+function st(id){return store[id]=store[id]||{}}
+function $(i){return document.getElementById(i)}
+var nm=document.getElementById("stuName"),pn=document.getElementById("stuPin"),sm=document.getElementById("syncMsg"),pulled="";
+nm.value=store.name||"";pn.value=store.pin||"";
+function say(t,c){sm.textContent=t;sm.className="msg "+(c||"")}
+function idok(){return nm.value.trim().length>1&&/^\d{4}$/.test(pn.value)&&API_URL.indexOf("http")===0}
+function api(path,body,ka){return fetch(API_URL.replace(/\/$/,"")+path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body),keepalive:!!ka}).then(function(r){if(!r.ok)throw 0;return r.json()})}
+function ident(){return {page:PAGE,name:nm.value.trim(),pin:pn.value}}
+function push(ka){clearTimeout(tmr);clearTimeout(maxT);maxT=0;if(!idok()||!dirty)return;dirty=false;var b=ident();b.data={};TOPICS.forEach(function(t,i){if(store["t"+i])b.data["t"+i]=store["t"+i]});
+  api("/save",b,ka).then(function(){say("Saved online ✓","good")}).catch(function(){dirty=true;say("Could not save online. Your work is still saved on this device.","bad")})}
+function schedulePush(){if(!idok())return;clearTimeout(tmr);tmr=setTimeout(push,20000);if(!maxT)maxT=setTimeout(push,90000)}
+function pull(){if(!idok())return;var k=nm.value.trim().toLowerCase()+"|"+pn.value;if(pulled===k)return;pulled=k;say("Looking for your saved work…");
+  api("/load",ident()).then(function(r){var c=r.data||{},ch=false;TOPICS.forEach(function(t,i){var id="t"+i,x=c[id],l=store[id];if(x&&(!l||(x.u||0)>(l.u||0))){store[id]=x;snap[id]=sig(x);ch=true}});
+    if(ch){save(true);build()}dirty=true;schedulePush();say(ch?"Your saved work was loaded ✓":"Ready. Your work will be saved online as you write.","good")}).catch(function(){pulled="";say("Could not reach the server. Your work is saved on this device.","bad")})}
+function ident2(){clearTimeout(pt);pt=setTimeout(pull,900)}
+nm.addEventListener("input",function(){store.name=nm.value;save(true);ident2()});
+pn.addEventListener("input",function(){pn.value=pn.value.replace(/\D/g,"").slice(0,4);store.pin=pn.value;save(true);ident2()});
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")push(true)});
+window.addEventListener("pagehide",function(){push(true)});
+if(!storeOK)say("This browser cannot keep your work. Enter your name and PIN to save online, or open the page in Chrome or Safari.","bad");
+pull();
+var nav=$("nav"),box=$("topics");
+var SHOWA={},PB=[
+["Introduction",["… have always played a crucial role in …","However, many people question whether …","Some people argue that …, while others believe that …","In my opinion, … / I firmly believe that …","This essay will discuss both views before giving my opinion."]],
+["Body 1 · other side",["Critics of … point out numerous arguments to support their stance.","The rise of … has made it much easier to …","Another compelling argument put forward is …","This convenience, as critics mention, makes … irrelevant.","Unlike …, … have to …","For all these reasons, many people go against the view that …"]],
+["Body 2 · my side",["As plausible as these arguments are, I side with those who think …","For one thing, … serve a greater purpose than …","In light of this, … offer …","In addition, a worrying concern is raised about …","… can result in …, such as …, …, and …, all of which …"]],
+["Conclusion",["Ultimately, while I acknowledge …, I am firmly of the view that …","In conclusion, although …, I believe that …","To sum up, … remain …"]]];
+var LINKS=["however","in addition","for one thing","moreover","furthermore","in contrast","on the other hand","therefore","as a result","for example","for instance","in light of this","ultimately","in conclusion","to sum up","while","whereas","although","unlike","another","for all these reasons","as plausible as"];
+var OPIN=/\b(in my opinion|in my view|i (strongly |firmly |personally )?(believe|think|feel|side with|agree|disagree|would argue)|i am (firmly |strongly )?of the view|my own view|from my perspective)\b/i;
+function resolveAnn(t){var o=[];(t.ann||[]).forEach(function(a){var s=t.essay[a[0]].indexOf(a[1]);if(s>=0)o.push({p:a[0],s:s,e:s+a[1].length,c:a[2]})});return o}
+function catName(c){for(var i=0;i<CATS.length;i++)if(CATS[i][0]===c)return CATS[i][1];return ""}
+function ideasHTML(t){var p=t.plan;function col(cls,q,arr){return '<div class="icol '+cls+'"><h4>'+esc(q)+'</h4>'+arr.map(function(x){return '<div class="idea"><b>Main idea: '+esc(x[0])+'</b>'+esc(x[1])+'</div>'}).join("")+'</div>'}
+  return '<div class="pillrow"><span class="pill"><b>Topic:</b> '+esc(t.topic)+'</span><span class="pill"><b>Task:</b> '+esc(t.task)+'</span><span class="pill"><b>Position:</b> '+esc(t.position)+'</span></div>'+
+  '<div class="ideas">'+col("l",p.lq,p.left)+col("r",p.rq,p.right)+'</div>'}
+function bodyHTML(t){var cl=["","p2","p3","p4"];return t.body.map(function(b,i){return '<div class="part '+cl[i]+'"><h4>'+esc(b[0])+'</h4><div class="f">'+esc(b[1])+'</div></div>'}).join("")}
+function chipsHTML(id,g){return PB[g][1].map(function(x,i){return '<button type="button" class="chip" data-i="'+i+'" data-g="'+g+'">'+esc(x)+'</button>'}).join("")}
+function ins(id,txt){var ta=$("ta-"+id),v=ta.value,s=ta.selectionStart==null?v.length:ta.selectionStart,e=ta.selectionEnd==null?s:ta.selectionEnd,pre=v.slice(0,s),post=v.slice(e),sp=(pre&&!/\s$/.test(pre))?" ":"";
+  ta.value=pre+sp+txt+post;var p=(pre+sp+txt).length;ta.focus();try{ta.setSelectionRange(p,p)}catch(x){}ta.dispatchEvent(new Event("input"))}
+function ck(id){var v=$("ta-"+id).value,n=words(v),el=$("ck-"+id);if(!v.trim()){el.innerHTML='<div class="ck"><i>○</i>Your checklist appears as you write.</div>';return}
+  var low=v.toLowerCase(),paras=v.split(/\n\s*\n/).filter(function(x){return x.trim()}),last=paras[paras.length-1]||"";
+  var lk=LINKS.filter(function(w){return low.indexOf(w)>-1}).length;
+  var items=[
+   [n>=MIN,"Length: "+n+" words (aim for "+MIN+" or more)","Write "+(MIN-n)+" more words."],
+   [paras.length>=4&&paras.length<=5,"4 paragraphs (you have "+paras.length+")","Leave an empty line between introduction, body 1, body 2 and conclusion."],
+   [OPIN.test(paras[0]||""),"Opinion in the introduction","Add: In my opinion, … / I firmly believe that …"],
+   [/\b(critics|opponents|proponents|others|some people|those who|many people|supporters)\b/i.test(v)&&/\b(however|while|whereas|although|plausible|acknowledge|it is true|on the other hand)\b/i.test(v),"Both views are discussed","Name the other side (critics, others, those who) and the contrast (however, while)."],
+   [paras.length>1&&OPIN.test(last),"Opinion repeated in the conclusion","End with: Ultimately, … I am firmly of the view that …"],
+   [lk>=4,"Linking words: "+lk+" found (aim for 4+)","Try: however, for one thing, in addition, in light of this, ultimately."],
+   [/\b(for example|for instance|such as|including|like)\b/i.test(v),"Examples or details given","Add an example: such as …, including …"],
+   [!/\b\w+(n't|'re|'ve|'ll|'m|'d)\b/i.test(v),"No contractions","Write do not, cannot, it is."]];
+  el.innerHTML=items.map(function(x){return '<div class="ck '+(x[0]?"ok":"no")+'"><i>'+(x[0]?"✓":"✗")+'</i>'+esc(x[1])+(x[0]?"":'<small>'+esc(x[2])+'</small>')+'</div>'}).join("")}
+function mk(s){return esc(s).replace(/\[\[(.*?)\]\]/g,'<mark>$1</mark>')}
+function vCards(t){return '<div class="vgrid">'+(t.vocab||[]).map(function(v,i){return '<div class="vcard"><div class="vh"><span class="vn">'+(i+1)+'</span><span class="vt">'+esc(v[0])+'</span></div><div class="vl">Meaning</div><div class="vm">'+esc(v[1])+'</div><div class="vl">Example</div><div class="vx">'+mk(v[2])+'</div></div>'}).join("")+'</div>'}
+function gCards(t){return '<div class="vgrid">'+(t.grammar||[]).map(function(g,i){return '<div class="vcard g"><div class="vh"><span class="vn">'+(i+1)+'</span><span class="vt">'+esc(g[0])+'</span></div><div class="vl">Structure</div><div class="vm">'+esc(g[1])+'</div><div class="vl">From the essay</div><div class="vx q">'+mk(g[2])+'</div><div class="vl">Your turn: another example</div><div class="vx">'+mk(g[3])+'</div></div>'}).join("")+'</div>'}
+function openPop(id,k){var t=TOPICS[+id.slice(1)],v=k==="vocab";$("popTag").textContent=t.title;$("popTitle").textContent=v?"Advanced vocabulary and phrases":"Advanced grammar";$("popBox").className="popbox"+(v?"":" gm");$("popBody").innerHTML=v?vCards(t):gCards(t);$("pop").hidden=false;$("popBody").scrollTop=0;document.body.style.overflow="hidden";$("popX").focus()}
+function closePop(){$("pop").hidden=true;document.body.style.overflow=""}
+function build(){nav.innerHTML="";box.innerHTML="";TOPICS.forEach(function(t,i){
+  var id="t"+i;t._ann=resolveAnn(t);
+  nav.insertAdjacentHTML("beforeend",'<a href="#section-'+id+'" id="nav-'+id+'">'+(i+1)+'</a>');
+  box.insertAdjacentHTML("beforeend",
+   '<section class="block" id="section-'+id+'"><div class="rnum">Essay '+(i+1)+'</div><h2>'+esc(t.title)+'</h2>'+
+   '<div class="prompt"><strong>'+esc(t.prompt)+'</strong></div>'+
+   '<div class="subhead">Step 1 · Analyse the question and generate ideas</div>'+ideasHTML(t)+
+   '<div class="subhead">Step 2 · Organise the essay</div>'+bodyHTML(t)+
+   '<div class="subhead">Step 3 · Model essay: highlight and analyse</div>'+
+   '<div class="toolbar" id="tb-'+id+'"><div class="tbl"><button class="tool ana" data-t="analysis" id="an-'+id+'">Show model analysis</button>'+CATS.map(function(c){return '<button class="tool '+c[0]+'" data-t="'+c[0]+'">'+c[1]+'</button>'}).join("")+'<button class="tool" data-t="erase">Eraser</button><button class="tool" data-t="clear">Clear all</button></div><div class="tbr"><button class="tool ref" data-t="vocab">Vocabulary</button><button class="tool ref gm" data-t="grammar">Grammar</button></div></div>'+
+   '<div class="hint" id="ht-'+id+'">Choose a colour, then select words in the model essay. Tap the colour again to stop. Or press Show model analysis to see the colour code used by the teacher.</div>'+
+   '<div class="sample" id="sm-'+id+'"></div>'+
+   '<div class="subhead">My analysis notes</div><textarea class="essay notes" id="nt-'+id+'" placeholder="Why is this a strong discussion essay? Write 2–3 observations." style="min-height:110px"></textarea>'+
+   '<div class="subhead">Step 4 · Your essay on the same question</div>'+
+   '<div class="pbtabs" id="pt-'+id+'">'+PB.map(function(g,k){return '<button type="button" data-g="'+k+'"'+(k===0?' class="on"':'')+'>'+esc(g[0])+'</button>'}).join("")+'</div>'+
+   '<div class="chips" id="ch-'+id+'">'+chipsHTML(id,0)+'</div><div class="hint" style="margin:6px 0 8px">Tap a suggestion to put it into your essay, then finish the sentence in your own words.</div>'+
+   '<textarea class="essay" id="ta-'+id+'" placeholder="Write your essay here…" spellcheck="false" style="min-height:340px"></textarea>'+
+   '<div class="meta"><span id="wc-'+id+'"></span><span>Target: '+MIN+'+ words</span></div>'+
+   '<div class="ckbox"><div class="subhead" style="margin:0 0 4px">Live checklist · a guide, not a rule</div><div id="ck-'+id+'"></div></div>'+
+   '<div class="controls"><button class="btn-check" id="chk-'+id+'">Check my essay</button><button class="btn-ghost" id="clr-'+id+'">Clear</button></div>'+
+   '<div class="msg" id="msg-'+id+'"></div><div class="result" id="res-'+id+'"></div></section>');
+  var s=st(id),ta=$("ta-"+id),nt=$("nt-"+id);
+  ta.value=s.text||"";nt.value=s.notes||"";draw(id);count(id);ck(id);
+  ta.addEventListener("input",function(){st(id).text=ta.value;save();count(id);ck(id)});
+  nt.addEventListener("input",function(){st(id).notes=nt.value;save()});
+  $("pt-"+id).addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;this.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});$("ch-"+id).innerHTML=chipsHTML(id,+b.dataset.g)});
+  $("ch-"+id).addEventListener("click",function(e){var b=e.target.closest(".chip");if(!b)return;ins(id,PB[+b.dataset.g][1][+b.dataset.i])});
+  $("tb-"+id).addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var k=b.dataset.t;
+    if(k==="vocab"||k==="grammar"){openPop(id,k);return}
+    if(k==="analysis"){SHOWA[id]=!SHOWA[id];if(SHOWA[id])tool=null;syncTools();draw(id);return}
+    if(k==="clear"){if(confirm("Remove all highlights in this essay?")){st(id).hl=[];save();draw(id)}return}
+    if(SHOWA[id]){SHOWA[id]=false;draw(id)}
+    tool=(tool===k)?null:k;syncTools()});
+  $("sm-"+id).addEventListener("click",function(e){if(tool!=="erase"||SHOWA[id])return;var m=e.target.closest("mark");if(!m)return;st(id).hl.splice(+m.dataset.k,1);save();draw(id)});
+  $("chk-"+id).onclick=function(){check(id,t)};
+  $("clr-"+id).onclick=function(){if(!ta.value||confirm("Clear your essay?")){ta.value="";var o=st(id);o.text="";o.done=false;o.result=null;save();count(id);ck(id);$("res-"+id).innerHTML="";$("msg-"+id).textContent="";progress()}};
+  if(s.result)render(id,s.result);
+});progress()}
+build();
+function syncTools(){document.querySelectorAll(".tool:not(.ana)").forEach(function(b){b.classList.toggle("on",b.dataset.t===tool)});document.querySelectorAll(".sample").forEach(function(x){x.dataset.tool=tool||""});
+  TOPICS.forEach(function(t,i){var id="t"+i,on=!!SHOWA[id],a=$("an-"+id);if(!a)return;a.classList.toggle("on",on);a.textContent=on?"Hide model analysis":"Show model analysis";
+    $("ht-"+id).textContent=on?"Model analysis: each colour shows the job of that part of the essay. Tap a coloured part to read its label. Pick a colour above to highlight it yourself.":"Choose a colour, then select words in the model essay. Tap the colour again to stop. Or press Show model analysis to see the colour code used by the teacher."})}
+function draw(id){var t=TOPICS[+id.slice(1)],ana=!!SHOWA[id],hl=ana?t._ann:(st(id).hl||[]);
+  $("sm-"+id).dataset.ana=ana?"1":"";
+  $("sm-"+id).innerHTML=t.essay.map(function(p,pi){var rs=[];hl.forEach(function(h,k){if(h.p===pi)rs.push({s:h.s,e:h.e,c:h.c,k:k})});
+    rs.sort(function(a,b){return a.s-b.s});var out="",pos=0;
+    rs.forEach(function(r){out+=esc(p.slice(pos,r.s))+'<mark class="'+r.c+'" data-k="'+r.k+'"'+(ana?' title="'+esc(catName(r.c))+'" onclick="this.dataset.tip=1"':'')+'>'+esc(p.slice(r.s,r.e))+'</mark>';pos=r.e});
+    return '<div class="plabel">'+esc(t.labels[pi]||"")+'</div><p class="sp" data-id="'+id+'" data-p="'+pi+'">'+out+esc(p.slice(pos))+'</p>'}).join("")}
+function up(n){var el=n.nodeType===3?n.parentElement:n;return el&&el.closest?el.closest(".sp"):null}
+function applySel(){if(!tool||tool==="erase")return;var sel=window.getSelection();if(!sel.rangeCount||sel.isCollapsed)return;
+  var r=sel.getRangeAt(0),a=up(r.startContainer),b=up(r.endContainer);if(!a||a!==b)return;
+  var pre=document.createRange();pre.selectNodeContents(a);pre.setEnd(r.startContainer,r.startOffset);
+  var txt=a.textContent,s=pre.toString().length,e=s+r.toString().length;
+  while(s<e&&/\s/.test(txt[s]))s++;while(e>s&&/\s/.test(txt[e-1]))e--;if(e<=s)return;
+  var id=a.dataset.id,p=+a.dataset.p,o=st(id);
+  o.hl=(o.hl||[]).filter(function(x){return x.p!==p||x.e<=s||x.s>=e});o.hl.push({p:p,s:s,e:e,c:tool});
+  save();draw(id);sel.removeAllRanges()}
+var tm;document.addEventListener("selectionchange",function(){clearTimeout(tm);tm=setTimeout(applySel,600)});
+document.addEventListener("mouseup",function(){setTimeout(applySel,20)});
+function count(id){var n=words($("ta-"+id).value),el=$("wc-"+id);el.textContent=n+" words"+(n<MIN?" — "+(MIN-n)+" more to go":" — good length");el.className=n>=MIN?"ok":""}
+function progress(){var d=0;TOPICS.forEach(function(t,i){var id="t"+i,ok=st(id).done;if(ok)d++;$("nav-"+id).classList.toggle("done",!!ok)});
+  $("fill").style.width=(d/TOPICS.length*100)+"%";$("tally").textContent=d+" / "+TOPICS.length}
+function render(id,r){var errs=r.errors||[],h="";if(r.summary)h+='<div class="summary-line">'+esc(r.summary)+'</div>';
+  if(errs.length){h+='<div class="gx-wrap"><table class="gx"><thead><tr><th>Your sentence</th><th>Correction</th><th>Why</th></tr></thead><tbody>';
+    errs.forEach(function(e){h+='<tr><td><span class="wrong">'+esc(e.original)+'</span><span class="kind">'+esc(e.type)+'</span></td><td><span class="right">'+esc(e.correction)+'</span></td><td>'+esc(e.explanation)+'</td></tr>'});h+='</tbody></table></div>'}
+  $("res-"+id).innerHTML=h}
+async function check(id,t){
+  var ta=$("ta-"+id),msg=$("msg-"+id),btn=$("chk-"+id),n=words(ta.value);msg.className="msg";
+  var who=nm.value.trim();
+  if(!who){msg.className="msg bad";msg.textContent="Write your name at the top first.";$("who").scrollIntoView({behavior:"smooth"});nm.focus();return}
+  if(n<1){msg.className="msg bad";msg.textContent="Write your essay first.";return}
+  btn.disabled=true;btn.textContent="Sending…";msg.textContent="Sending your essay…";
+  try{
+    var r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:who,title:"[Discussion Essay] "+t.title,topic:t.prompt,level:LEVEL,words:n,essay:ta.value})});
+    if(!r.ok)throw new Error("Server error "+r.status);
+    var d=await r.json(),txt=(d.text||"").replace(/```json|```/g,"").trim(),res=null;
+    if(txt){try{res=JSON.parse(txt)}catch(e){}}
+    var o=st(id);o.text=ta.value;o.done=true;o.result=res;save();
+    if(res)render(id,res);else $("res-"+id).innerHTML="";
+    msg.className="msg good";msg.textContent="Your essay was sent to your teacher.";progress();
+  }catch(e){msg.className="msg bad";msg.textContent="Your essay was not sent. Check your internet and try again."}
+  btn.disabled=false;btn.textContent="Check my essay";
+}
+document.querySelectorAll(".tab").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tab,.pane").forEach(function(e){e.classList.remove("on")});b.classList.add("on");$(b.dataset.p).classList.add("on")}});
+$("popX").onclick=closePop;$("pop").addEventListener("click",function(e){if(e.target===this)closePop()});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!$("pop").hidden)closePop()});
+</script></body></html>
