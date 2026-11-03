@@ -165,14 +165,14 @@ var nm=document.getElementById("stuName"),pn=document.getElementById("stuPin"),s
 nm.value=store.name||"";pn.value=store.pin||"";
 function say(t,c){sm.textContent=t;sm.className="msg "+(c||"")}
 function idok(){return nm.value.trim().length>1&&/^\d{4}$/.test(pn.value)&&API_URL.indexOf("http")===0}
-function api(path,body,ka){return fetch(API_URL.replace(/\/$/,"")+path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body),keepalive:!!ka}).then(function(r){if(!r.ok)throw 0;return r.json()})}
+function api(path,body,ka){return fetch(API_URL.replace(/\/$/,"")+path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body),keepalive:!!ka}).then(function(r){if(!r.ok)throw new Error("status "+r.status);return r.json()})}
 function ident(){return {page:PAGE,name:nm.value.trim(),pin:pn.value}}
 function push(ka){clearTimeout(tmr);clearTimeout(maxT);maxT=0;if(!idok()||!dirty)return;dirty=false;var b=ident();b.data={};TOPICS.forEach(function(t,i){if(store["t"+i])b.data["t"+i]=store["t"+i]});
   api("/save",b,ka).then(function(){say("Saved online ✓","good")}).catch(function(){dirty=true;say("Could not save online. Your work is still saved on this device.","bad")})}
 function schedulePush(){if(!idok())return;clearTimeout(tmr);tmr=setTimeout(push,20000);if(!maxT)maxT=setTimeout(push,90000)}
 function pull(){if(!idok())return;var k=nm.value.trim().toLowerCase()+"|"+pn.value;if(pulled===k)return;pulled=k;say("Looking for your saved work…");
   api("/load",ident()).then(function(r){var c=r.data||{},ch=false;TOPICS.forEach(function(t,i){var id="t"+i,x=c[id],l=store[id];if(x&&(!l||(x.u||0)>(l.u||0))){store[id]=x;snap[id]=sig(x);ch=true}});
-    if(ch){save(true);build()}dirty=true;schedulePush();say(ch?"Your saved work was loaded ✓":"Ready. Your work will be saved online as you write.","good")}).catch(function(){pulled="";say("Could not reach the server. Your work is saved on this device.","bad")})}
+    if(ch){save(true);build()}dirty=true;schedulePush();say(ch?"Your saved work was loaded ✓":"Ready. Your work will be saved online as you write.","good")}).catch(function(e){pulled="";say("Could not reach the server ["+(e&&e.message?e.message:e)+"] from "+location.origin+". Your work is saved on this device.","bad")})}
 function ident2(){clearTimeout(pt);pt=setTimeout(pull,900)}
 nm.addEventListener("input",function(){store.name=nm.value;save(true);ident2()});
 pn.addEventListener("input",function(){pn.value=pn.value.replace(/\D/g,"").slice(0,4);store.pin=pn.value;save(true);ident2()});
@@ -258,7 +258,7 @@ async function check(id,t){
   if(API_URL.indexOf("http")!==0){msg.className="msg bad";msg.textContent="The checker is not connected yet. Ask your teacher.";return}
   btn.disabled=true;btn.textContent="Checking…";msg.textContent="The AI is reading your essay. This takes a few seconds.";
   try{
-    var r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:who,title:t.title,topic:t.prompt,level:LEVEL,words:n,essay:ta.value})});
+    var r=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:who,title:"[Pre-intermediate] "+t.title,topic:t.prompt,level:LEVEL,words:n,essay:ta.value})});
     if(!r.ok){var bt="";try{bt=(await r.text()).slice(0,160)}catch(x){}throw new Error("Server said "+r.status+(bt?": "+bt:""))}
     var d=await r.json(), txt=(d.text||"").replace(/```json|```/g,"").trim(), res=null;
     if(txt){try{res=JSON.parse(txt)}catch(e){}}
